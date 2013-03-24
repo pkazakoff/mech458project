@@ -24,3 +24,6 @@ extern item ringBuf[RING_BUF_SIZE];
 
 // function prototypes
 void initRingBuf();
+int newRingBufItem();
+void popBuf();
+int getBufOffset(int index, int offset);
