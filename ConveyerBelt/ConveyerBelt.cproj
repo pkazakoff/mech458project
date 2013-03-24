@@ -76,6 +76,12 @@
     <Compile Include="interrupts.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ringbuffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ringbuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="SevenSegmentDisplay.h">
       <SubType>compile</SubType>
     </Compile>

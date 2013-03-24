@@ -7,7 +7,7 @@
 
 #include "ringbuffer.h"
 
-int ringTop
+int ringTop;
 int ringBottom;
 item ringBuf[RING_BUF_SIZE];
 
@@ -36,7 +36,7 @@ int newRingBufItem() {
    */
 void popBuf() {
 	// if the buffer is empty, break
-	if ((ringBottom - ringTop) = 0) break;
+	if ((ringBottom - ringTop) == 0) return;
 	ringTop = getBufOffset(ringTop, 1);
 }
 
@@ -51,7 +51,7 @@ int getBufOffset(int index, int offset) {
 	}
 	// case for wrapping around bottom end
 	if((index + offset) < 0) {
-		return ((index + offset) + RING_BUF_SIZE)
+		return ((index + offset) + RING_BUF_SIZE);
 	}
 	// didn't wrap
 	return (index + offset);

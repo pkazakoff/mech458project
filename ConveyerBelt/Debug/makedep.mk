@@ -6,6 +6,8 @@ interrupts.c
 
 ConveyerBelt.c
 
+ringbuffer.c
+
 SevenSegmentDisplay.c
 
 timer.c

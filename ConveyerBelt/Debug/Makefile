@@ -37,6 +37,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../interrupts.c \
 ../ConveyerBelt.c \
+../ringbuffer.c \
 ../SevenSegmentDisplay.c \
 ../timer.c
 
@@ -50,6 +51,7 @@ ASM_SRCS +=
 OBJS +=  \
 interrupts.o \
 ConveyerBelt.o \
+ringbuffer.o \
 SevenSegmentDisplay.o \
 timer.o
 
@@ -57,6 +59,7 @@ timer.o
 OBJS_AS_ARGS +=  \
 interrupts.o \
 ConveyerBelt.o \
+ringbuffer.o \
 SevenSegmentDisplay.o \
 timer.o
 
@@ -64,6 +67,7 @@ timer.o
 C_DEPS +=  \
 interrupts.d \
 ConveyerBelt.d \
+ringbuffer.d \
 SevenSegmentDisplay.d \
 timer.d
 
@@ -71,6 +75,7 @@ timer.d
 C_DEPS_AS_ARGS +=  \
 interrupts.d \
 ConveyerBelt.d \
+ringbuffer.d \
 SevenSegmentDisplay.d \
 timer.d
 
@@ -84,6 +89,8 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
 
 
 
