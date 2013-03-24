@@ -10,6 +10,7 @@
 #include "timer.h"
 #include "SevenSegmentDisplay.h"
 #include "interrupts.h"
+#include "ringbuffer.h"
 
 int main(void)
 {
