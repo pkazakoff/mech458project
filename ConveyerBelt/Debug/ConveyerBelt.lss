@@ -1,0 +1,1126 @@
+
+ConveyerBelt.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000005e8  0000065c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000005e8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006cc  00000000  00000000  0000065c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000d28  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000120  00000000  00000000  00000db0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000082e  00000000  00000000  00000ed0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000285  00000000  00000000  000016fe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000070f  00000000  00000000  00001983  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000378  00000000  00000000  00002094  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000019d  00000000  00000000  0000240c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000876  00000000  00000000  000025a9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4c 00 	jmp	0x98	; 0x98 <__ctors_end>
+   4:	0c 94 ad 00 	jmp	0x15a	; 0x15a <__vector_1>
+   8:	0c 94 d7 00 	jmp	0x1ae	; 0x1ae <__vector_2>
+   c:	0c 94 01 01 	jmp	0x202	; 0x202 <__vector_3>
+  10:	0c 94 2b 01 	jmp	0x256	; 0x256 <__vector_4>
+  14:	0c 94 55 01 	jmp	0x2aa	; 0x2aa <__vector_5>
+  18:	0c 94 7f 01 	jmp	0x2fe	; 0x2fe <__vector_6>
+  1c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__vector_7>
+  20:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  24:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  28:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  2c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  30:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  34:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  38:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  3c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  40:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  44:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  48:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  4c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  50:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  54:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  58:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  5c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  60:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  64:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  68:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  6c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  70:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  74:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  78:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  7c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  80:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  84:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  88:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  8c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  90:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  94:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+
+00000098 <__ctors_end>:
+  98:	11 24       	eor	r1, r1
+  9a:	1f be       	out	0x3f, r1	; 63
+  9c:	cf ef       	ldi	r28, 0xFF	; 255
+  9e:	d0 e2       	ldi	r29, 0x20	; 32
+  a0:	de bf       	out	0x3e, r29	; 62
+  a2:	cd bf       	out	0x3d, r28	; 61
+
+000000a4 <__do_copy_data>:
+  a4:	11 e0       	ldi	r17, 0x01	; 1
+  a6:	a0 e0       	ldi	r26, 0x00	; 0
+  a8:	b1 e0       	ldi	r27, 0x01	; 1
+  aa:	e8 ee       	ldi	r30, 0xE8	; 232
+  ac:	f5 e0       	ldi	r31, 0x05	; 5
+  ae:	00 e0       	ldi	r16, 0x00	; 0
+  b0:	0b bf       	out	0x3b, r16	; 59
+  b2:	02 c0       	rjmp	.+4      	; 0xb8 <__do_copy_data+0x14>
+  b4:	07 90       	elpm	r0, Z+
+  b6:	0d 92       	st	X+, r0
+  b8:	a0 30       	cpi	r26, 0x00	; 0
+  ba:	b1 07       	cpc	r27, r17
+  bc:	d9 f7       	brne	.-10     	; 0xb4 <__do_copy_data+0x10>
+  be:	1b be       	out	0x3b, r1	; 59
+
+000000c0 <__do_clear_bss>:
+  c0:	11 e0       	ldi	r17, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	01 c0       	rjmp	.+2      	; 0xca <.do_clear_bss_start>
+
+000000c8 <.do_clear_bss_loop>:
+  c8:	1d 92       	st	X+, r1
+
+000000ca <.do_clear_bss_start>:
+  ca:	a0 30       	cpi	r26, 0x00	; 0
+  cc:	b1 07       	cpc	r27, r17
+  ce:	e1 f7       	brne	.-8      	; 0xc8 <.do_clear_bss_loop>
+  d0:	0e 94 d3 01 	call	0x3a6	; 0x3a6 <main>
+  d4:	0c 94 f2 02 	jmp	0x5e4	; 0x5e4 <_exit>
+
+000000d8 <__bad_interrupt>:
+  d8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000dc <vectorInterrupts>:
+   external interrupts on the desired pins
+   */
+void vectorInterrupts() {
+	
+	// disable external interrupts temporarily
+	EIMSK &= 0b10000000;
+  dc:	8d b3       	in	r24, 0x1d	; 29
+  de:	80 78       	andi	r24, 0x80	; 128
+  e0:	8d bb       	out	0x1d, r24	; 29
+	
+	// Set all interrupt pins to input
+	DDRD = DDRD & 0xF0;
+  e2:	8a b1       	in	r24, 0x0a	; 10
+  e4:	80 7f       	andi	r24, 0xF0	; 240
+  e6:	8a b9       	out	0x0a, r24	; 10
+	DDRE = DDRE & 0x0F;
+  e8:	8d b1       	in	r24, 0x0d	; 13
+  ea:	8f 70       	andi	r24, 0x0F	; 15
+  ec:	8d b9       	out	0x0d, r24	; 13
+	
+	// INT0 - First Laser
+	// Falling-edge interrupt
+	EICRA |= _BV(ISC01);
+  ee:	e9 e6       	ldi	r30, 0x69	; 105
+  f0:	f0 e0       	ldi	r31, 0x00	; 0
+  f2:	80 81       	ld	r24, Z
+  f4:	82 60       	ori	r24, 0x02	; 2
+  f6:	80 83       	st	Z, r24
+	EICRA &= ~(_BV(ISC00));
+  f8:	80 81       	ld	r24, Z
+  fa:	8e 7f       	andi	r24, 0xFE	; 254
+  fc:	80 83       	st	Z, r24
+	
+	// INT1 - Metal Detector
+	// Falling-edge interrupt
+	EICRA |= _BV(ISC11);
+  fe:	80 81       	ld	r24, Z
+ 100:	88 60       	ori	r24, 0x08	; 8
+ 102:	80 83       	st	Z, r24
+	EICRA &= ~(_BV(ISC10));
+ 104:	80 81       	ld	r24, Z
+ 106:	8b 7f       	andi	r24, 0xFB	; 251
+ 108:	80 83       	st	Z, r24
+	
+	// INT2 - Second Laser
+	// Rising and falling edge interrupt
+	EICRA &= ~(_BV(ISC21));
+ 10a:	80 81       	ld	r24, Z
+ 10c:	8f 7d       	andi	r24, 0xDF	; 223
+ 10e:	80 83       	st	Z, r24
+	EICRA |= _BV(ISC20);
+ 110:	80 81       	ld	r24, Z
+ 112:	80 61       	ori	r24, 0x10	; 16
+ 114:	80 83       	st	Z, r24
+	
+	// INT3 - Exit Sensor
+	// Falling-edge interrupt
+	EICRA |= _BV(ISC31);
+ 116:	80 81       	ld	r24, Z
+ 118:	80 68       	ori	r24, 0x80	; 128
+ 11a:	80 83       	st	Z, r24
+	EICRA &= ~(_BV(ISC30));	
+ 11c:	80 81       	ld	r24, Z
+ 11e:	8f 7b       	andi	r24, 0xBF	; 191
+ 120:	80 83       	st	Z, r24
+	
+	// INT4 - Hall-effect sensor
+	// Falling-edge interrupt
+	EICRB |= _BV(ISC41);
+ 122:	ea e6       	ldi	r30, 0x6A	; 106
+ 124:	f0 e0       	ldi	r31, 0x00	; 0
+ 126:	80 81       	ld	r24, Z
+ 128:	82 60       	ori	r24, 0x02	; 2
+ 12a:	80 83       	st	Z, r24
+	EICRB &= ~(_BV(ISC40));
+ 12c:	80 81       	ld	r24, Z
+ 12e:	8e 7f       	andi	r24, 0xFE	; 254
+ 130:	80 83       	st	Z, r24
+	
+	// INT5 - Button2
+	// Falling-edge interrupt
+	EICRB |= _BV(ISC51);
+ 132:	80 81       	ld	r24, Z
+ 134:	88 60       	ori	r24, 0x08	; 8
+ 136:	80 83       	st	Z, r24
+	EICRB &= ~(_BV(ISC50));
+ 138:	80 81       	ld	r24, Z
+ 13a:	8b 7f       	andi	r24, 0xFB	; 251
+ 13c:	80 83       	st	Z, r24
+	
+	// INT6 - Button1
+	// Falling-edge interrupt
+	EICRB |= _BV(ISC61);
+ 13e:	80 81       	ld	r24, Z
+ 140:	80 62       	ori	r24, 0x20	; 32
+ 142:	80 83       	st	Z, r24
+	EICRB &= ~(_BV(ISC60));
+ 144:	80 81       	ld	r24, Z
+ 146:	8f 7e       	andi	r24, 0xEF	; 239
+ 148:	80 83       	st	Z, r24
+	
+	
+	// Enable interrupts
+	EIMSK |= 0b01111111;
+ 14a:	8d b3       	in	r24, 0x1d	; 29
+ 14c:	8f 67       	ori	r24, 0x7F	; 127
+ 14e:	8d bb       	out	0x1d, r24	; 29
+	EIFR |= 0b01111111;
+ 150:	8c b3       	in	r24, 0x1c	; 28
+ 152:	8f 67       	ori	r24, 0x7F	; 127
+ 154:	8c bb       	out	0x1c, r24	; 28
+	sei();
+ 156:	78 94       	sei
+}
+ 158:	08 95       	ret
+
+0000015a <__vector_1>:
+
+/* ISR(INT0_vect)
+   Purpose: Falling-edge interrupt vector
+   for FIRST LASER
+   */
+ISR(INT0_vect){
+ 15a:	1f 92       	push	r1
+ 15c:	0f 92       	push	r0
+ 15e:	0f b6       	in	r0, 0x3f	; 63
+ 160:	0f 92       	push	r0
+ 162:	0b b6       	in	r0, 0x3b	; 59
+ 164:	0f 92       	push	r0
+ 166:	11 24       	eor	r1, r1
+ 168:	2f 93       	push	r18
+ 16a:	3f 93       	push	r19
+ 16c:	4f 93       	push	r20
+ 16e:	5f 93       	push	r21
+ 170:	6f 93       	push	r22
+ 172:	7f 93       	push	r23
+ 174:	8f 93       	push	r24
+ 176:	9f 93       	push	r25
+ 178:	af 93       	push	r26
+ 17a:	bf 93       	push	r27
+ 17c:	ef 93       	push	r30
+ 17e:	ff 93       	push	r31
+	writeDecInt(0);
+ 180:	80 e0       	ldi	r24, 0x00	; 0
+ 182:	90 e0       	ldi	r25, 0x00	; 0
+ 184:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 188:	ff 91       	pop	r31
+ 18a:	ef 91       	pop	r30
+ 18c:	bf 91       	pop	r27
+ 18e:	af 91       	pop	r26
+ 190:	9f 91       	pop	r25
+ 192:	8f 91       	pop	r24
+ 194:	7f 91       	pop	r23
+ 196:	6f 91       	pop	r22
+ 198:	5f 91       	pop	r21
+ 19a:	4f 91       	pop	r20
+ 19c:	3f 91       	pop	r19
+ 19e:	2f 91       	pop	r18
+ 1a0:	0f 90       	pop	r0
+ 1a2:	0b be       	out	0x3b, r0	; 59
+ 1a4:	0f 90       	pop	r0
+ 1a6:	0f be       	out	0x3f, r0	; 63
+ 1a8:	0f 90       	pop	r0
+ 1aa:	1f 90       	pop	r1
+ 1ac:	18 95       	reti
+
+000001ae <__vector_2>:
+
+/* ISR(INT1_vect)
+   Purpose: Falling-edge interrupt vector
+   for INDUCTIVE SENSOR
+   */
+ISR(INT1_vect){
+ 1ae:	1f 92       	push	r1
+ 1b0:	0f 92       	push	r0
+ 1b2:	0f b6       	in	r0, 0x3f	; 63
+ 1b4:	0f 92       	push	r0
+ 1b6:	0b b6       	in	r0, 0x3b	; 59
+ 1b8:	0f 92       	push	r0
+ 1ba:	11 24       	eor	r1, r1
+ 1bc:	2f 93       	push	r18
+ 1be:	3f 93       	push	r19
+ 1c0:	4f 93       	push	r20
+ 1c2:	5f 93       	push	r21
+ 1c4:	6f 93       	push	r22
+ 1c6:	7f 93       	push	r23
+ 1c8:	8f 93       	push	r24
+ 1ca:	9f 93       	push	r25
+ 1cc:	af 93       	push	r26
+ 1ce:	bf 93       	push	r27
+ 1d0:	ef 93       	push	r30
+ 1d2:	ff 93       	push	r31
+	writeDecInt(1);
+ 1d4:	81 e0       	ldi	r24, 0x01	; 1
+ 1d6:	90 e0       	ldi	r25, 0x00	; 0
+ 1d8:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 1dc:	ff 91       	pop	r31
+ 1de:	ef 91       	pop	r30
+ 1e0:	bf 91       	pop	r27
+ 1e2:	af 91       	pop	r26
+ 1e4:	9f 91       	pop	r25
+ 1e6:	8f 91       	pop	r24
+ 1e8:	7f 91       	pop	r23
+ 1ea:	6f 91       	pop	r22
+ 1ec:	5f 91       	pop	r21
+ 1ee:	4f 91       	pop	r20
+ 1f0:	3f 91       	pop	r19
+ 1f2:	2f 91       	pop	r18
+ 1f4:	0f 90       	pop	r0
+ 1f6:	0b be       	out	0x3b, r0	; 59
+ 1f8:	0f 90       	pop	r0
+ 1fa:	0f be       	out	0x3f, r0	; 63
+ 1fc:	0f 90       	pop	r0
+ 1fe:	1f 90       	pop	r1
+ 200:	18 95       	reti
+
+00000202 <__vector_3>:
+
+/* ISR(INT2_vect)
+   Purpose: Rising and falling-edge interrupt
+   vector for SECOND LASER
+   */
+ISR(INT2_vect){
+ 202:	1f 92       	push	r1
+ 204:	0f 92       	push	r0
+ 206:	0f b6       	in	r0, 0x3f	; 63
+ 208:	0f 92       	push	r0
+ 20a:	0b b6       	in	r0, 0x3b	; 59
+ 20c:	0f 92       	push	r0
+ 20e:	11 24       	eor	r1, r1
+ 210:	2f 93       	push	r18
+ 212:	3f 93       	push	r19
+ 214:	4f 93       	push	r20
+ 216:	5f 93       	push	r21
+ 218:	6f 93       	push	r22
+ 21a:	7f 93       	push	r23
+ 21c:	8f 93       	push	r24
+ 21e:	9f 93       	push	r25
+ 220:	af 93       	push	r26
+ 222:	bf 93       	push	r27
+ 224:	ef 93       	push	r30
+ 226:	ff 93       	push	r31
+	writeDecInt(2);
+ 228:	82 e0       	ldi	r24, 0x02	; 2
+ 22a:	90 e0       	ldi	r25, 0x00	; 0
+ 22c:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 230:	ff 91       	pop	r31
+ 232:	ef 91       	pop	r30
+ 234:	bf 91       	pop	r27
+ 236:	af 91       	pop	r26
+ 238:	9f 91       	pop	r25
+ 23a:	8f 91       	pop	r24
+ 23c:	7f 91       	pop	r23
+ 23e:	6f 91       	pop	r22
+ 240:	5f 91       	pop	r21
+ 242:	4f 91       	pop	r20
+ 244:	3f 91       	pop	r19
+ 246:	2f 91       	pop	r18
+ 248:	0f 90       	pop	r0
+ 24a:	0b be       	out	0x3b, r0	; 59
+ 24c:	0f 90       	pop	r0
+ 24e:	0f be       	out	0x3f, r0	; 63
+ 250:	0f 90       	pop	r0
+ 252:	1f 90       	pop	r1
+ 254:	18 95       	reti
+
+00000256 <__vector_4>:
+
+/* ISR(INT3_vect)
+   Purpose: Falling-edge interrupt vector
+   for EXIT SENSOR
+   */
+ISR(INT3_vect) {
+ 256:	1f 92       	push	r1
+ 258:	0f 92       	push	r0
+ 25a:	0f b6       	in	r0, 0x3f	; 63
+ 25c:	0f 92       	push	r0
+ 25e:	0b b6       	in	r0, 0x3b	; 59
+ 260:	0f 92       	push	r0
+ 262:	11 24       	eor	r1, r1
+ 264:	2f 93       	push	r18
+ 266:	3f 93       	push	r19
+ 268:	4f 93       	push	r20
+ 26a:	5f 93       	push	r21
+ 26c:	6f 93       	push	r22
+ 26e:	7f 93       	push	r23
+ 270:	8f 93       	push	r24
+ 272:	9f 93       	push	r25
+ 274:	af 93       	push	r26
+ 276:	bf 93       	push	r27
+ 278:	ef 93       	push	r30
+ 27a:	ff 93       	push	r31
+	writeDecInt(3);
+ 27c:	83 e0       	ldi	r24, 0x03	; 3
+ 27e:	90 e0       	ldi	r25, 0x00	; 0
+ 280:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 284:	ff 91       	pop	r31
+ 286:	ef 91       	pop	r30
+ 288:	bf 91       	pop	r27
+ 28a:	af 91       	pop	r26
+ 28c:	9f 91       	pop	r25
+ 28e:	8f 91       	pop	r24
+ 290:	7f 91       	pop	r23
+ 292:	6f 91       	pop	r22
+ 294:	5f 91       	pop	r21
+ 296:	4f 91       	pop	r20
+ 298:	3f 91       	pop	r19
+ 29a:	2f 91       	pop	r18
+ 29c:	0f 90       	pop	r0
+ 29e:	0b be       	out	0x3b, r0	; 59
+ 2a0:	0f 90       	pop	r0
+ 2a2:	0f be       	out	0x3f, r0	; 63
+ 2a4:	0f 90       	pop	r0
+ 2a6:	1f 90       	pop	r1
+ 2a8:	18 95       	reti
+
+000002aa <__vector_5>:
+
+/* ISR(INT4_vect)
+   Purpose: Falling-edge interrupt vector
+   for HALL EFFECT SENSOR
+   */
+ISR(INT4_vect) {
+ 2aa:	1f 92       	push	r1
+ 2ac:	0f 92       	push	r0
+ 2ae:	0f b6       	in	r0, 0x3f	; 63
+ 2b0:	0f 92       	push	r0
+ 2b2:	0b b6       	in	r0, 0x3b	; 59
+ 2b4:	0f 92       	push	r0
+ 2b6:	11 24       	eor	r1, r1
+ 2b8:	2f 93       	push	r18
+ 2ba:	3f 93       	push	r19
+ 2bc:	4f 93       	push	r20
+ 2be:	5f 93       	push	r21
+ 2c0:	6f 93       	push	r22
+ 2c2:	7f 93       	push	r23
+ 2c4:	8f 93       	push	r24
+ 2c6:	9f 93       	push	r25
+ 2c8:	af 93       	push	r26
+ 2ca:	bf 93       	push	r27
+ 2cc:	ef 93       	push	r30
+ 2ce:	ff 93       	push	r31
+	writeDecInt(4);
+ 2d0:	84 e0       	ldi	r24, 0x04	; 4
+ 2d2:	90 e0       	ldi	r25, 0x00	; 0
+ 2d4:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 2d8:	ff 91       	pop	r31
+ 2da:	ef 91       	pop	r30
+ 2dc:	bf 91       	pop	r27
+ 2de:	af 91       	pop	r26
+ 2e0:	9f 91       	pop	r25
+ 2e2:	8f 91       	pop	r24
+ 2e4:	7f 91       	pop	r23
+ 2e6:	6f 91       	pop	r22
+ 2e8:	5f 91       	pop	r21
+ 2ea:	4f 91       	pop	r20
+ 2ec:	3f 91       	pop	r19
+ 2ee:	2f 91       	pop	r18
+ 2f0:	0f 90       	pop	r0
+ 2f2:	0b be       	out	0x3b, r0	; 59
+ 2f4:	0f 90       	pop	r0
+ 2f6:	0f be       	out	0x3f, r0	; 63
+ 2f8:	0f 90       	pop	r0
+ 2fa:	1f 90       	pop	r1
+ 2fc:	18 95       	reti
+
+000002fe <__vector_6>:
+
+/* ISR(INT5_vect)
+   Purpose: Falling-edge interrupt vector
+   for BUTTON 2
+   */
+ISR(INT5_vect) {
+ 2fe:	1f 92       	push	r1
+ 300:	0f 92       	push	r0
+ 302:	0f b6       	in	r0, 0x3f	; 63
+ 304:	0f 92       	push	r0
+ 306:	0b b6       	in	r0, 0x3b	; 59
+ 308:	0f 92       	push	r0
+ 30a:	11 24       	eor	r1, r1
+ 30c:	2f 93       	push	r18
+ 30e:	3f 93       	push	r19
+ 310:	4f 93       	push	r20
+ 312:	5f 93       	push	r21
+ 314:	6f 93       	push	r22
+ 316:	7f 93       	push	r23
+ 318:	8f 93       	push	r24
+ 31a:	9f 93       	push	r25
+ 31c:	af 93       	push	r26
+ 31e:	bf 93       	push	r27
+ 320:	ef 93       	push	r30
+ 322:	ff 93       	push	r31
+	writeDecInt(5);
+ 324:	85 e0       	ldi	r24, 0x05	; 5
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+}
+ 32c:	ff 91       	pop	r31
+ 32e:	ef 91       	pop	r30
+ 330:	bf 91       	pop	r27
+ 332:	af 91       	pop	r26
+ 334:	9f 91       	pop	r25
+ 336:	8f 91       	pop	r24
+ 338:	7f 91       	pop	r23
+ 33a:	6f 91       	pop	r22
+ 33c:	5f 91       	pop	r21
+ 33e:	4f 91       	pop	r20
+ 340:	3f 91       	pop	r19
+ 342:	2f 91       	pop	r18
+ 344:	0f 90       	pop	r0
+ 346:	0b be       	out	0x3b, r0	; 59
+ 348:	0f 90       	pop	r0
+ 34a:	0f be       	out	0x3f, r0	; 63
+ 34c:	0f 90       	pop	r0
+ 34e:	1f 90       	pop	r1
+ 350:	18 95       	reti
+
+00000352 <__vector_7>:
+
+/* ISR(INT6_vect)
+   Purpose: Falling-edge interrupt vector
+   for BUTTON 1
+   */
+ISR(INT6_vect){
+ 352:	1f 92       	push	r1
+ 354:	0f 92       	push	r0
+ 356:	0f b6       	in	r0, 0x3f	; 63
+ 358:	0f 92       	push	r0
+ 35a:	0b b6       	in	r0, 0x3b	; 59
+ 35c:	0f 92       	push	r0
+ 35e:	11 24       	eor	r1, r1
+ 360:	2f 93       	push	r18
+ 362:	3f 93       	push	r19
+ 364:	4f 93       	push	r20
+ 366:	5f 93       	push	r21
+ 368:	6f 93       	push	r22
+ 36a:	7f 93       	push	r23
+ 36c:	8f 93       	push	r24
+ 36e:	9f 93       	push	r25
+ 370:	af 93       	push	r26
+ 372:	bf 93       	push	r27
+ 374:	ef 93       	push	r30
+ 376:	ff 93       	push	r31
+	writeDecInt(6);
+ 378:	86 e0       	ldi	r24, 0x06	; 6
+ 37a:	90 e0       	ldi	r25, 0x00	; 0
+ 37c:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+ 380:	ff 91       	pop	r31
+ 382:	ef 91       	pop	r30
+ 384:	bf 91       	pop	r27
+ 386:	af 91       	pop	r26
+ 388:	9f 91       	pop	r25
+ 38a:	8f 91       	pop	r24
+ 38c:	7f 91       	pop	r23
+ 38e:	6f 91       	pop	r22
+ 390:	5f 91       	pop	r21
+ 392:	4f 91       	pop	r20
+ 394:	3f 91       	pop	r19
+ 396:	2f 91       	pop	r18
+ 398:	0f 90       	pop	r0
+ 39a:	0b be       	out	0x3b, r0	; 59
+ 39c:	0f 90       	pop	r0
+ 39e:	0f be       	out	0x3f, r0	; 63
+ 3a0:	0f 90       	pop	r0
+ 3a2:	1f 90       	pop	r1
+ 3a4:	18 95       	reti
+
+000003a6 <main>:
+
+int main(void)
+{
+	// Set the dev board's clock speed to the external oscillator with
+	// no prescaler (8MHz)
+	CLKPR = (1<<CLKPCE);
+ 3a6:	e1 e6       	ldi	r30, 0x61	; 97
+ 3a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 3aa:	80 e8       	ldi	r24, 0x80	; 128
+ 3ac:	80 83       	st	Z, r24
+	CLKPR = 0;
+ 3ae:	10 82       	st	Z, r1
+	
+	// Initialize hardware timer
+	initializeTimer();
+ 3b0:	0e 94 a4 02 	call	0x548	; 0x548 <initializeTimer>
+	
+	// enable output
+	DDRA = 0xFF;
+ 3b4:	8f ef       	ldi	r24, 0xFF	; 255
+ 3b6:	81 b9       	out	0x01, r24	; 1
+	// vector interrupts
+	//vectorInterrupts();
+	
+    while(1)
+    {
+		for(int i=60; i > 0; i--) {
+ 3b8:	cc e3       	ldi	r28, 0x3C	; 60
+ 3ba:	d0 e0       	ldi	r29, 0x00	; 0
+ 3bc:	08 c0       	rjmp	.+16     	; 0x3ce <main+0x28>
+			writeDecInt(i);
+ 3be:	ce 01       	movw	r24, r28
+ 3c0:	0e 94 57 02 	call	0x4ae	; 0x4ae <writeDecInt>
+			delaynms(1000);
+ 3c4:	88 ee       	ldi	r24, 0xE8	; 232
+ 3c6:	93 e0       	ldi	r25, 0x03	; 3
+ 3c8:	0e 94 aa 02 	call	0x554	; 0x554 <delaynms>
+	// vector interrupts
+	//vectorInterrupts();
+	
+    while(1)
+    {
+		for(int i=60; i > 0; i--) {
+ 3cc:	21 97       	sbiw	r28, 0x01	; 1
+ 3ce:	1c 16       	cp	r1, r28
+ 3d0:	1d 06       	cpc	r1, r29
+ 3d2:	ac f3       	brlt	.-22     	; 0x3be <main+0x18>
+			writeDecInt(i);
+			delaynms(1000);
+		}
+		writeHexInt(0xB00);
+ 3d4:	80 e0       	ldi	r24, 0x00	; 0
+ 3d6:	9b e0       	ldi	r25, 0x0B	; 11
+ 3d8:	0e 94 78 02 	call	0x4f0	; 0x4f0 <writeHexInt>
+		delaynms(2000);	
+ 3dc:	80 ed       	ldi	r24, 0xD0	; 208
+ 3de:	97 e0       	ldi	r25, 0x07	; 7
+ 3e0:	0e 94 aa 02 	call	0x554	; 0x554 <delaynms>
+	// vector interrupts
+	//vectorInterrupts();
+	
+    while(1)
+    {
+		for(int i=60; i > 0; i--) {
+ 3e4:	cc e3       	ldi	r28, 0x3C	; 60
+ 3e6:	d0 e0       	ldi	r29, 0x00	; 0
+			delaynms(1000);
+		}
+		writeHexInt(0xB00);
+		delaynms(2000);	
+        //TODO:: Please write your application code 
+    }
+ 3e8:	f2 cf       	rjmp	.-28     	; 0x3ce <main+0x28>
+
+000003ea <getPatFomHex>:
+   Purpose: looks up the appropriate pattern for 
+   the seven segment display for a given number.
+   If input is not between 0-F, returns blank pattern
+   */
+char getPatFomHex(char number) {
+	switch(number) {
+ 3ea:	87 30       	cpi	r24, 0x07	; 7
+ 3ec:	71 f1       	breq	.+92     	; 0x44a <getPatFomHex+0x60>
+ 3ee:	88 30       	cpi	r24, 0x08	; 8
+ 3f0:	70 f4       	brcc	.+28     	; 0x40e <getPatFomHex+0x24>
+ 3f2:	83 30       	cpi	r24, 0x03	; 3
+ 3f4:	11 f1       	breq	.+68     	; 0x43a <getPatFomHex+0x50>
+ 3f6:	84 30       	cpi	r24, 0x04	; 4
+ 3f8:	28 f4       	brcc	.+10     	; 0x404 <getPatFomHex+0x1a>
+ 3fa:	81 30       	cpi	r24, 0x01	; 1
+ 3fc:	d1 f1       	breq	.+116    	; 0x472 <getPatFomHex+0x88>
+ 3fe:	82 30       	cpi	r24, 0x02	; 2
+ 400:	d0 f4       	brcc	.+52     	; 0x436 <getPatFomHex+0x4c>
+ 402:	17 c0       	rjmp	.+46     	; 0x432 <getPatFomHex+0x48>
+ 404:	85 30       	cpi	r24, 0x05	; 5
+ 406:	e9 f0       	breq	.+58     	; 0x442 <getPatFomHex+0x58>
+ 408:	86 30       	cpi	r24, 0x06	; 6
+ 40a:	e8 f4       	brcc	.+58     	; 0x446 <getPatFomHex+0x5c>
+ 40c:	18 c0       	rjmp	.+48     	; 0x43e <getPatFomHex+0x54>
+ 40e:	8b 30       	cpi	r24, 0x0B	; 11
+ 410:	21 f1       	breq	.+72     	; 0x45a <getPatFomHex+0x70>
+ 412:	8c 30       	cpi	r24, 0x0C	; 12
+ 414:	28 f4       	brcc	.+10     	; 0x420 <getPatFomHex+0x36>
+ 416:	89 30       	cpi	r24, 0x09	; 9
+ 418:	e1 f0       	breq	.+56     	; 0x452 <getPatFomHex+0x68>
+ 41a:	8a 30       	cpi	r24, 0x0A	; 10
+ 41c:	e0 f4       	brcc	.+56     	; 0x456 <getPatFomHex+0x6c>
+ 41e:	17 c0       	rjmp	.+46     	; 0x44e <getPatFomHex+0x64>
+ 420:	8d 30       	cpi	r24, 0x0D	; 13
+ 422:	f9 f0       	breq	.+62     	; 0x462 <getPatFomHex+0x78>
+ 424:	8d 30       	cpi	r24, 0x0D	; 13
+ 426:	d8 f0       	brcs	.+54     	; 0x45e <getPatFomHex+0x74>
+ 428:	8e 30       	cpi	r24, 0x0E	; 14
+ 42a:	e9 f0       	breq	.+58     	; 0x466 <getPatFomHex+0x7c>
+ 42c:	8f 30       	cpi	r24, 0x0F	; 15
+ 42e:	f9 f4       	brne	.+62     	; 0x46e <getPatFomHex+0x84>
+ 430:	1c c0       	rjmp	.+56     	; 0x46a <getPatFomHex+0x80>
+		case 0:
+			return 0b11111100;
+ 432:	8c ef       	ldi	r24, 0xFC	; 252
+ 434:	08 95       	ret
+			break;
+		case 1:
+			return 0b01100000;
+			break;
+		case 2:
+			return 0b11011010;
+ 436:	8a ed       	ldi	r24, 0xDA	; 218
+ 438:	08 95       	ret
+			break;
+		case 3:
+			return 0b11110010;
+ 43a:	82 ef       	ldi	r24, 0xF2	; 242
+ 43c:	08 95       	ret
+			break;
+		case 4:
+			return 0b01100110;
+ 43e:	86 e6       	ldi	r24, 0x66	; 102
+ 440:	08 95       	ret
+			break;
+		case 5:
+			return 0b10110110;
+ 442:	86 eb       	ldi	r24, 0xB6	; 182
+ 444:	08 95       	ret
+			break;
+		case 6:
+			return 0b10111110;
+ 446:	8e eb       	ldi	r24, 0xBE	; 190
+ 448:	08 95       	ret
+			break;
+		case 7:
+			return 0b11100000;
+ 44a:	80 ee       	ldi	r24, 0xE0	; 224
+ 44c:	08 95       	ret
+			break;
+		case 8:
+			return 0b11111110;
+ 44e:	8e ef       	ldi	r24, 0xFE	; 254
+ 450:	08 95       	ret
+			break;
+		case 9:
+			return 0b11100110;
+ 452:	86 ee       	ldi	r24, 0xE6	; 230
+ 454:	08 95       	ret
+			break;
+		case 10:
+			return 0b11101110;
+ 456:	8e ee       	ldi	r24, 0xEE	; 238
+ 458:	08 95       	ret
+			break;
+		case 11:
+			return 0b00111110;
+ 45a:	8e e3       	ldi	r24, 0x3E	; 62
+ 45c:	08 95       	ret
+			break;
+		case 12:
+			return 0b10011100;
+ 45e:	8c e9       	ldi	r24, 0x9C	; 156
+ 460:	08 95       	ret
+			break;
+		case 13:
+			return 0b01111010;
+ 462:	8a e7       	ldi	r24, 0x7A	; 122
+ 464:	08 95       	ret
+			break;
+		case 14:
+			return 0b10011110;
+ 466:	8e e9       	ldi	r24, 0x9E	; 158
+ 468:	08 95       	ret
+			break;
+		case 15:
+			return 0b10001110;
+ 46a:	8e e8       	ldi	r24, 0x8E	; 142
+ 46c:	08 95       	ret
+		default:
+			break;			
+	}
+	return 0x00;
+ 46e:	80 e0       	ldi	r24, 0x00	; 0
+ 470:	08 95       	ret
+	switch(number) {
+		case 0:
+			return 0b11111100;
+			break;
+		case 1:
+			return 0b01100000;
+ 472:	80 e6       	ldi	r24, 0x60	; 96
+			return 0b10001110;
+		default:
+			break;			
+	}
+	return 0x00;
+}
+ 474:	08 95       	ret
+
+00000476 <writePattern>:
+/* void writePattern(char pattern)
+   Purpose: Bit-bangs out an integer over
+   the serial interface to the display
+   */
+void writePattern(char pattern) {
+	for (int i=0; i<8; i++) {
+ 476:	20 e0       	ldi	r18, 0x00	; 0
+ 478:	30 e0       	ldi	r19, 0x00	; 0
+		// assert the data
+		char databit = 0x01 & (pattern >> i);
+ 47a:	90 e0       	ldi	r25, 0x00	; 0
+		PORTA = (PORTA & 0b10111111) | (databit << 6);
+ 47c:	62 b1       	in	r22, 0x02	; 2
+   the serial interface to the display
+   */
+void writePattern(char pattern) {
+	for (int i=0; i<8; i++) {
+		// assert the data
+		char databit = 0x01 & (pattern >> i);
+ 47e:	ac 01       	movw	r20, r24
+ 480:	02 2e       	mov	r0, r18
+ 482:	02 c0       	rjmp	.+4      	; 0x488 <writePattern+0x12>
+ 484:	55 95       	asr	r21
+ 486:	47 95       	ror	r20
+ 488:	0a 94       	dec	r0
+ 48a:	e2 f7       	brpl	.-8      	; 0x484 <writePattern+0xe>
+ 48c:	41 70       	andi	r20, 0x01	; 1
+		PORTA = (PORTA & 0b10111111) | (databit << 6);
+ 48e:	42 95       	swap	r20
+ 490:	44 0f       	add	r20, r20
+ 492:	44 0f       	add	r20, r20
+ 494:	40 7c       	andi	r20, 0xC0	; 192
+ 496:	56 2f       	mov	r21, r22
+ 498:	5f 7b       	andi	r21, 0xBF	; 191
+ 49a:	45 2b       	or	r20, r21
+ 49c:	42 b9       	out	0x02, r20	; 2
+		// rising edge
+		PORTA = (PORTA & 0b01111111) | 0b10000000;
+ 49e:	17 9a       	sbi	0x02, 7	; 2
+		// falling edge
+		PORTA = (PORTA & 0b01111111);
+ 4a0:	17 98       	cbi	0x02, 7	; 2
+/* void writePattern(char pattern)
+   Purpose: Bit-bangs out an integer over
+   the serial interface to the display
+   */
+void writePattern(char pattern) {
+	for (int i=0; i<8; i++) {
+ 4a2:	2f 5f       	subi	r18, 0xFF	; 255
+ 4a4:	3f 4f       	sbci	r19, 0xFF	; 255
+ 4a6:	28 30       	cpi	r18, 0x08	; 8
+ 4a8:	31 05       	cpc	r19, r1
+ 4aa:	41 f7       	brne	.-48     	; 0x47c <writePattern+0x6>
+		// rising edge
+		PORTA = (PORTA & 0b01111111) | 0b10000000;
+		// falling edge
+		PORTA = (PORTA & 0b01111111);
+	}
+}
+ 4ac:	08 95       	ret
+
+000004ae <writeDecInt>:
+
+/* void writeDecInt(int number)
+   Purpose: fills the seven segment display with
+   an integer number, formatted as decimal.
+   */
+void writeDecInt(int number) {
+ 4ae:	ef 92       	push	r14
+ 4b0:	ff 92       	push	r15
+ 4b2:	0f 93       	push	r16
+ 4b4:	1f 93       	push	r17
+ 4b6:	cf 93       	push	r28
+ 4b8:	df 93       	push	r29
+ 4ba:	c3 e0       	ldi	r28, 0x03	; 3
+ 4bc:	d0 e0       	ldi	r29, 0x00	; 0
+	for (int i=0; i < DISPLAY_DIGITS; i++) {
+		writePattern(getPatFomHex(number % 10));
+ 4be:	0f 2e       	mov	r0, r31
+ 4c0:	fa e0       	ldi	r31, 0x0A	; 10
+ 4c2:	ef 2e       	mov	r14, r31
+ 4c4:	ff 24       	eor	r15, r15
+ 4c6:	f0 2d       	mov	r31, r0
+ 4c8:	b7 01       	movw	r22, r14
+ 4ca:	0e 94 cb 02 	call	0x596	; 0x596 <__divmodhi4>
+ 4ce:	16 2f       	mov	r17, r22
+ 4d0:	07 2f       	mov	r16, r23
+ 4d2:	0e 94 f5 01 	call	0x3ea	; 0x3ea <getPatFomHex>
+ 4d6:	0e 94 3b 02 	call	0x476	; 0x476 <writePattern>
+		number = number / 10;
+ 4da:	81 2f       	mov	r24, r17
+ 4dc:	90 2f       	mov	r25, r16
+ 4de:	21 97       	sbiw	r28, 0x01	; 1
+/* void writeDecInt(int number)
+   Purpose: fills the seven segment display with
+   an integer number, formatted as decimal.
+   */
+void writeDecInt(int number) {
+	for (int i=0; i < DISPLAY_DIGITS; i++) {
+ 4e0:	99 f7       	brne	.-26     	; 0x4c8 <writeDecInt+0x1a>
+		writePattern(getPatFomHex(number % 10));
+		number = number / 10;
+	}
+}
+ 4e2:	df 91       	pop	r29
+ 4e4:	cf 91       	pop	r28
+ 4e6:	1f 91       	pop	r17
+ 4e8:	0f 91       	pop	r16
+ 4ea:	ff 90       	pop	r15
+ 4ec:	ef 90       	pop	r14
+ 4ee:	08 95       	ret
+
+000004f0 <writeHexInt>:
+
+/* void writeHexInt(int number)
+   Purpose: fills the seven segment display with
+   an integer number, formatted as hexadecimal.
+   */
+void writeHexInt(int number) {
+ 4f0:	ef 92       	push	r14
+ 4f2:	ff 92       	push	r15
+ 4f4:	0f 93       	push	r16
+ 4f6:	1f 93       	push	r17
+ 4f8:	cf 93       	push	r28
+ 4fa:	df 93       	push	r29
+ 4fc:	ec 01       	movw	r28, r24
+ 4fe:	03 e0       	ldi	r16, 0x03	; 3
+ 500:	10 e0       	ldi	r17, 0x00	; 0
+	for (int i=0; i < DISPLAY_DIGITS; i++) {
+		writePattern(getPatFomHex(number % 16));
+ 502:	ee 24       	eor	r14, r14
+ 504:	ff 24       	eor	r15, r15
+ 506:	68 94       	set
+ 508:	e4 f8       	bld	r14, 4
+ 50a:	ce 01       	movw	r24, r28
+ 50c:	b7 01       	movw	r22, r14
+ 50e:	0e 94 cb 02 	call	0x596	; 0x596 <__divmodhi4>
+ 512:	0e 94 f5 01 	call	0x3ea	; 0x3ea <getPatFomHex>
+ 516:	0e 94 3b 02 	call	0x476	; 0x476 <writePattern>
+		number = number / 16;
+ 51a:	ce 01       	movw	r24, r28
+ 51c:	dd 23       	and	r29, r29
+ 51e:	0c f4       	brge	.+2      	; 0x522 <writeHexInt+0x32>
+ 520:	0f 96       	adiw	r24, 0x0f	; 15
+ 522:	ec 01       	movw	r28, r24
+ 524:	d5 95       	asr	r29
+ 526:	c7 95       	ror	r28
+ 528:	d5 95       	asr	r29
+ 52a:	c7 95       	ror	r28
+ 52c:	d5 95       	asr	r29
+ 52e:	c7 95       	ror	r28
+ 530:	d5 95       	asr	r29
+ 532:	c7 95       	ror	r28
+ 534:	01 50       	subi	r16, 0x01	; 1
+ 536:	10 40       	sbci	r17, 0x00	; 0
+/* void writeHexInt(int number)
+   Purpose: fills the seven segment display with
+   an integer number, formatted as hexadecimal.
+   */
+void writeHexInt(int number) {
+	for (int i=0; i < DISPLAY_DIGITS; i++) {
+ 538:	41 f7       	brne	.-48     	; 0x50a <writeHexInt+0x1a>
+		writePattern(getPatFomHex(number % 16));
+		number = number / 16;
+	}
+ 53a:	df 91       	pop	r29
+ 53c:	cf 91       	pop	r28
+ 53e:	1f 91       	pop	r17
+ 540:	0f 91       	pop	r16
+ 542:	ff 90       	pop	r15
+ 544:	ef 90       	pop	r14
+ 546:	08 95       	ret
+
+00000548 <initializeTimer>:
+#include <avr/io.h>
+
+void initializeTimer() {
+	// bitwise OR to set timer/counter control register
+	// to cpu clock, pure timer.
+	TCCR1B|=_BV(CS10);
+ 548:	e1 e8       	ldi	r30, 0x81	; 129
+ 54a:	f0 e0       	ldi	r31, 0x00	; 0
+ 54c:	80 81       	ld	r24, Z
+ 54e:	81 60       	ori	r24, 0x01	; 1
+ 550:	80 83       	st	Z, r24
+} 
+ 552:	08 95       	ret
+
+00000554 <delaynms>:
+
+void delaynms(int n)   // delay milliseconds
+{
+ 554:	9c 01       	movw	r18, r24
+	// Set waveform generator bits to 0100 (count up and
+	// reset on hit)
+	TCCR1B |=_BV(WGM12);
+ 556:	e1 e8       	ldi	r30, 0x81	; 129
+ 558:	f0 e0       	ldi	r31, 0x00	; 0
+ 55a:	80 81       	ld	r24, Z
+ 55c:	88 60       	ori	r24, 0x08	; 8
+ 55e:	80 83       	st	Z, r24
+	
+	// Set the clock prescaler to 1/64th
+	TCCR1B |= 0b00000011;
+ 560:	80 81       	ld	r24, Z
+ 562:	83 60       	ori	r24, 0x03	; 3
+ 564:	80 83       	st	Z, r24
+
+	for(int i=0; i<n; i++) {
+ 566:	12 16       	cp	r1, r18
+ 568:	13 06       	cpc	r1, r19
+ 56a:	a4 f4       	brge	.+40     	; 0x594 <delaynms+0x40>
+ 56c:	80 e0       	ldi	r24, 0x00	; 0
+ 56e:	90 e0       	ldi	r25, 0x00	; 0
+		// set the output compare register
+		// to 1 ms
+		OCR1A = 125;
+ 570:	e8 e8       	ldi	r30, 0x88	; 136
+ 572:	f0 e0       	ldi	r31, 0x00	; 0
+ 574:	4d e7       	ldi	r20, 0x7D	; 125
+ 576:	50 e0       	ldi	r21, 0x00	; 0
+
+		// set initial value to zero
+		TCNT1 = 0;
+ 578:	a4 e8       	ldi	r26, 0x84	; 132
+ 57a:	b0 e0       	ldi	r27, 0x00	; 0
+	TCCR1B |= 0b00000011;
+
+	for(int i=0; i<n; i++) {
+		// set the output compare register
+		// to 1 ms
+		OCR1A = 125;
+ 57c:	51 83       	std	Z+1, r21	; 0x01
+ 57e:	40 83       	st	Z, r20
+
+		// set initial value to zero
+		TCNT1 = 0;
+ 580:	11 96       	adiw	r26, 0x01	; 1
+ 582:	1c 92       	st	X, r1
+ 584:	1e 92       	st	-X, r1
+
+		// enable output compare interrupt enable
+		//TIMSK1|=0b00000010;
+
+		// begin timer
+		TIFR1|=_BV(OCF1A);
+ 586:	b1 9a       	sbi	0x16, 1	; 22
+
+		// poll until we reach our number of milliseconds
+		while(1) {
+			if((TIFR1 & 0x02) == 0x02) break;
+ 588:	b1 9b       	sbis	0x16, 1	; 22
+ 58a:	fe cf       	rjmp	.-4      	; 0x588 <delaynms+0x34>
+	TCCR1B |=_BV(WGM12);
+	
+	// Set the clock prescaler to 1/64th
+	TCCR1B |= 0b00000011;
+
+	for(int i=0; i<n; i++) {
+ 58c:	01 96       	adiw	r24, 0x01	; 1
+ 58e:	82 17       	cp	r24, r18
+ 590:	93 07       	cpc	r25, r19
+ 592:	a1 f7       	brne	.-24     	; 0x57c <delaynms+0x28>
+ 594:	08 95       	ret
+
+00000596 <__divmodhi4>:
+ 596:	97 fb       	bst	r25, 7
+ 598:	09 2e       	mov	r0, r25
+ 59a:	07 26       	eor	r0, r23
+ 59c:	0a d0       	rcall	.+20     	; 0x5b2 <__divmodhi4_neg1>
+ 59e:	77 fd       	sbrc	r23, 7
+ 5a0:	04 d0       	rcall	.+8      	; 0x5aa <__divmodhi4_neg2>
+ 5a2:	0c d0       	rcall	.+24     	; 0x5bc <__udivmodhi4>
+ 5a4:	06 d0       	rcall	.+12     	; 0x5b2 <__divmodhi4_neg1>
+ 5a6:	00 20       	and	r0, r0
+ 5a8:	1a f4       	brpl	.+6      	; 0x5b0 <__divmodhi4_exit>
+
+000005aa <__divmodhi4_neg2>:
+ 5aa:	70 95       	com	r23
+ 5ac:	61 95       	neg	r22
+ 5ae:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000005b0 <__divmodhi4_exit>:
+ 5b0:	08 95       	ret
+
+000005b2 <__divmodhi4_neg1>:
+ 5b2:	f6 f7       	brtc	.-4      	; 0x5b0 <__divmodhi4_exit>
+ 5b4:	90 95       	com	r25
+ 5b6:	81 95       	neg	r24
+ 5b8:	9f 4f       	sbci	r25, 0xFF	; 255
+ 5ba:	08 95       	ret
+
+000005bc <__udivmodhi4>:
+ 5bc:	aa 1b       	sub	r26, r26
+ 5be:	bb 1b       	sub	r27, r27
+ 5c0:	51 e1       	ldi	r21, 0x11	; 17
+ 5c2:	07 c0       	rjmp	.+14     	; 0x5d2 <__udivmodhi4_ep>
+
+000005c4 <__udivmodhi4_loop>:
+ 5c4:	aa 1f       	adc	r26, r26
+ 5c6:	bb 1f       	adc	r27, r27
+ 5c8:	a6 17       	cp	r26, r22
+ 5ca:	b7 07       	cpc	r27, r23
+ 5cc:	10 f0       	brcs	.+4      	; 0x5d2 <__udivmodhi4_ep>
+ 5ce:	a6 1b       	sub	r26, r22
+ 5d0:	b7 0b       	sbc	r27, r23
+
+000005d2 <__udivmodhi4_ep>:
+ 5d2:	88 1f       	adc	r24, r24
+ 5d4:	99 1f       	adc	r25, r25
+ 5d6:	5a 95       	dec	r21
+ 5d8:	a9 f7       	brne	.-22     	; 0x5c4 <__udivmodhi4_loop>
+ 5da:	80 95       	com	r24
+ 5dc:	90 95       	com	r25
+ 5de:	bc 01       	movw	r22, r24
+ 5e0:	cd 01       	movw	r24, r26
+ 5e2:	08 95       	ret
+
+000005e4 <_exit>:
+ 5e4:	f8 94       	cli
+
+000005e6 <__stop_program>:
+ 5e6:	ff cf       	rjmp	.-2      	; 0x5e6 <__stop_program>

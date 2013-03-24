@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ConveyerBelt", "ConveyerBelt\ConveyerBelt.cproj", "{A522F4D5-6BF5-4F1B-9A71-49884488C3FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A522F4D5-6BF5-4F1B-9A71-49884488C3FA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{A522F4D5-6BF5-4F1B-9A71-49884488C3FA}.Debug|AVR.Build.0 = Debug|AVR
+		{A522F4D5-6BF5-4F1B-9A71-49884488C3FA}.Release|AVR.ActiveCfg = Release|AVR
+		{A522F4D5-6BF5-4F1B-9A71-49884488C3FA}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
