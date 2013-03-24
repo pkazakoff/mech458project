@@ -20,6 +20,8 @@ typedef struct {
 // source files which include this header
 extern int ringTop;
 extern int ringBottom;
+extern int currentMetal;
+extern int currentRefl;
 extern item ringBuf[RING_BUF_SIZE];
 
 // function prototypes

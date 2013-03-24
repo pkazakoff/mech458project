@@ -9,6 +9,8 @@
 
 int ringTop;
 int ringBottom;
+int currentMetal;
+int currentRefl;
 item ringBuf[RING_BUF_SIZE];
 
 /* void initRingBuf()
@@ -17,6 +19,10 @@ item ringBuf[RING_BUF_SIZE];
 void initRingBuf() {
 	ringTop = 0;
 	ringBottom = 0;
+	currentMetal = 0;
+	currentRefl = 0;
+	incomingRefl = 0;
+	nextRefl = 0;
 }
 
 /* int newRingBufItem()

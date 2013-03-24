@@ -8,6 +8,7 @@
 #include <avr/io.h>
 #include "interrupts.h"
 #include "SevenSegmentDisplay.h"
+#include "ringbuffer.h"
 #include <avr/interrupt.h>
 
 /* void vectorInterrupts()
@@ -65,6 +66,41 @@ void vectorInterrupts() {
 	sei();
 }
 
+/* void firstLaserHandler()
+   Purpose: handler for the first laser
+   */
+void firstLaserHandler() {
+	currentMetal = newRingBufItem();
+}
+
+/* void metalHandler()
+   Purpose: handler for the inductive sensor
+   */
+void metalHandler() {
+	ringBuf[currentMetal].metal = 1;
+}
+
+/* void secondLaserHandler()
+   Purpose: on RE completes the inductive stage and starts
+   the reflectivity stage.
+   on FE completes the reflective stage */
+void secondLaserHandler() {
+	if(/*ADC is active*/) {
+		// stop ADC
+		// check number of samples
+		// make decision
+	} else {
+		currentRefl = currentMetal;
+		// start ADC
+	}
+}
+
+/* void exitHandler()
+   Purpose: handles the exit sensor
+   */
+void exitHandler() {
+	// TODO
+}
 
 /* ISR(INT0_vect)
    Purpose: Falling-edge interrupt vector
@@ -72,6 +108,7 @@ void vectorInterrupts() {
    */
 ISR(INT0_vect){
 	writeDecInt(0);
+	firstLaserHandler();
 }
 
 /* ISR(INT1_vect)
@@ -80,6 +117,7 @@ ISR(INT0_vect){
    */
 ISR(INT1_vect){
 	writeDecInt(1);
+	metalHandler();
 }
 
 /* ISR(INT2_vect)
@@ -87,6 +125,7 @@ ISR(INT1_vect){
    vector for SECOND LASER
    */
 ISR(INT2_vect){
+	secondLaserHandler();
 	writeDecInt(2);
 }
 
@@ -95,6 +134,7 @@ ISR(INT2_vect){
    for EXIT SENSOR
    */
 ISR(INT3_vect) {
+	exitHandler();
 	writeDecInt(3);
 }
 
