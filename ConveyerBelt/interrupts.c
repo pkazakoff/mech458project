@@ -10,6 +10,8 @@
 #include "SevenSegmentDisplay.h"
 #include "ringbuffer.h"
 #include <avr/interrupt.h>
+#include "adc.h"
+#include "stepper.h"
 
 /* void vectorInterrupts()
    Purpose: sets the interrupt registers to enable
@@ -66,6 +68,24 @@ void vectorInterrupts() {
 	sei();
 }
 
+void makeDecision(int index) {
+	if(ringBuf[index].reflSamples < REFL_MIN_SAMPLES) return; // TODO: goes to error
+	char refl = ringBuf[index].avgRefl;
+	if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
+		ringBuf[index].type = STEEL;
+	}
+	if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
+		ringBuf[index].type = ALUMINUM;
+	}
+	if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
+		ringBuf[index].type = BLACK;
+	}
+	if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
+		ringBuf[index].type = WHITE;
+	}
+	// TODO: jumps to error if gets here
+}
+
 /* void firstLaserHandler()
    Purpose: handler for the first laser
    */
@@ -85,13 +105,14 @@ void metalHandler() {
    the reflectivity stage.
    on FE completes the reflective stage */
 void secondLaserHandler() {
-	if(/*ADC is active*/) {
+	if(ADC_is_running == 1) {
 		// stop ADC
-		// check number of samples
-		// make decision
+		stopADC();
+		makeDecision(currentRefl);
+		// TODO
 	} else {
 		currentRefl = currentMetal;
-		// start ADC
+		startADC();
 	}
 }
 
@@ -143,6 +164,7 @@ ISR(INT3_vect) {
    for HALL EFFECT SENSOR
    */
 ISR(INT4_vect) {
+	hallLow = 1;
 	writeDecInt(4);
 }
 

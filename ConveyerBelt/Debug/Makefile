@@ -35,10 +35,13 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../adc.c \
+../dcmotor.c \
 ../interrupts.c \
 ../ConveyerBelt.c \
 ../ringbuffer.c \
 ../SevenSegmentDisplay.c \
+../stepper.c \
 ../timer.c
 
 
@@ -49,34 +52,46 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+adc.o \
+dcmotor.o \
 interrupts.o \
 ConveyerBelt.o \
 ringbuffer.o \
 SevenSegmentDisplay.o \
+stepper.o \
 timer.o
 
 
 OBJS_AS_ARGS +=  \
+adc.o \
+dcmotor.o \
 interrupts.o \
 ConveyerBelt.o \
 ringbuffer.o \
 SevenSegmentDisplay.o \
+stepper.o \
 timer.o
 
 
 C_DEPS +=  \
+adc.d \
+dcmotor.d \
 interrupts.d \
 ConveyerBelt.d \
 ringbuffer.d \
 SevenSegmentDisplay.d \
+stepper.d \
 timer.d
 
 
 C_DEPS_AS_ARGS +=  \
+adc.d \
+dcmotor.d \
 interrupts.d \
 ConveyerBelt.d \
 ringbuffer.d \
 SevenSegmentDisplay.d \
+stepper.d \
 timer.d
 
 
@@ -89,6 +104,12 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 

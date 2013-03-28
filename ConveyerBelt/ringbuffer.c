@@ -21,8 +21,6 @@ void initRingBuf() {
 	ringBottom = 0;
 	currentMetal = 0;
 	currentRefl = 0;
-	incomingRefl = 0;
-	nextRefl = 0;
 }
 
 /* int newRingBufItem()
@@ -33,7 +31,7 @@ int newRingBufItem() {
 	ringBuf[ringBottom].avgRefl = 0;
 	ringBuf[ringBottom].reflSamples = 0;
 	ringBuf[ringBottom].metal = 0;
-	ringBuf[ringBottom].type = 0;
+	ringBuf[ringBottom].type = UNDEF;
 	return ringBottom;
 }
 

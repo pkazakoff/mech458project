@@ -8,9 +8,18 @@
 // Number of elements in ring buffer
 #define RING_BUF_SIZE 64
 
+// define types
+typedef enum itemType {
+	UNDEF,
+	BLACK,
+	WHITE,
+	STEEL,
+	ALUMINUM
+	} itemType;
+
 // Structure definition for buffer element
 typedef struct {
-	char type;
+	itemType type;
 	char metal;
 	char avgRefl;
 	int reflSamples;

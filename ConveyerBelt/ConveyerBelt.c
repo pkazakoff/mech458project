@@ -11,6 +11,8 @@
 #include "SevenSegmentDisplay.h"
 #include "interrupts.h"
 #include "ringbuffer.h"
+#include "adc.h"
+#include "stepper.h"
 
 int main(void)
 {
@@ -24,11 +26,27 @@ int main(void)
 	
 	// enable output
 	DDRA = 0xFF;
-	
+
 	// vector interrupts
-	//vectorInterrupts();
+	vectorInterrupts();
+
+	// zero stepper
+	while(hallLow == 0){
+		stepTime(25,0);
+	}
+	// set steps from zero to 0 and respective position
+	steps = BLACK_POSITION;
+	// reset hall effect check
+	hallLow = 0;
+
+	setupADC();
+	startADC();
+
+	delaynms(100);
+
+	while(1);
 	
-    while(1)
+    /*while(1)
     {
 		for(int i=60; i > 0; i--) {
 			writeDecInt(i);
@@ -37,5 +55,5 @@ int main(void)
 		writeHexInt(0xB00);
 		delaynms(2000);	
         //TODO:: Please write your application code 
-    }
+    }*/
 }

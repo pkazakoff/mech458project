@@ -67,6 +67,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dcmotor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dcmotor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="interrupts.c">
       <SubType>compile</SubType>
     </Compile>
@@ -86,6 +98,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="SevenSegmentDisplay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="timer.c">
