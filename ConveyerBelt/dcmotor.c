@@ -7,6 +7,8 @@
 #include "dcmotor.h"
 #include <avr/io.h>
 
+int motorWaitForStepper;
+
 void setupMotor() {
 	// enable port for output
 	DDRC |= MOTOR_BITMASK;
@@ -24,6 +26,7 @@ void setupMotor() {
 	
 	// set duty cycle
 	OCR0A = MOTOR_DEF_SPEED;
+	motorWaitForStepper = 0;
 }
 
 void setMotorSpeed(char speed) {
@@ -36,6 +39,10 @@ void setMotorFwd() {
 
 void setMotorRev() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_REV_PATTERN;
+}
+
+void setMotorBrake() {
+	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_BRAKE_PATTERN;
 }
 
 void setMotorCoast() {

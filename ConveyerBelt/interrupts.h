@@ -17,6 +17,7 @@
 
 void vectorInterrupts();
 void makeDecision(int index);
+void exitHandler();
 
 /*ISR(INT0_vect);
 ISR(INT1_vect);

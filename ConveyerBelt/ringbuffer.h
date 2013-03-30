@@ -32,6 +32,7 @@ extern int ringBottom;
 extern int currentMetal;
 extern int currentRefl;
 extern item ringBuf[RING_BUF_SIZE];
+extern int bufLength;
 
 // function prototypes
 void initRingBuf();

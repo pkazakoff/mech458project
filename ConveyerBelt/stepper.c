@@ -7,6 +7,8 @@
 
 #include "stepper.h"
 #include "timer.h"
+#include "dcmotor.h"
+#include "interrupts.h"
 #include <avr/io.h>
 
 
@@ -56,16 +58,54 @@ void stepTime(int stepTime, char direction) {
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
-	char direction;
-	// calculate what direction stepper should turn
-	if(nextPosition > steps) direction = 0;
-	else direction = 1;
-	// calculate how many steps to move
-	int stepsRequired = abs(nextPosition-steps); 
-	// rotate stepper
-	for(int i=0; i<stepsRequired; i++){
-		stepTime(15,direction);
+	if(forwardSteps(nextPosition, steps) < reverseSteps(nextPosition, steps)) {
+		int j = forwardSteps(nextPosition, steps);
+		for(int i = 0;i < j;j++) {
+			stepTime(15,0);
+		}
 	}
-}	
+	
+	else {
+		int j = reverseSteps(nextPosition, steps);
+		for(int i = 0;i < j;j++) {
+			stepTime(15,0);
+		}
+	}
+	
+	if(motorWaitForStepper == 1) {
+		// start the motor back up
+		setMotorFwd();
+		// clear the flag
+		motorWaitForStepper = 0;
+		// fire the exit logic again
+		exitHandler();
+	}
+}
 
+
+
+
+int forwardSteps(int current, int target) {
+	int stepsRequired;
+	
+	// no wrap around
+	if(target > current) stepsRequired = abs(target - current);
+	
+	// wrap arround
+	else stepsRequired = abs(200 - (target - current));
+	
+	return stepsRequired;
+}
+
+int reverseSteps(int current, int target) {
+	int stepsRequired;
+	
+	// wrap around
+	if(target < current) stepsRequired = abs(target - current);
+
+	// no wrap around
+	else stepsRequired = abs(200 - (target - current));
+	
+	return stepsRequired;
+}
 

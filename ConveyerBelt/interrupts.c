@@ -12,6 +12,7 @@
 #include <avr/interrupt.h>
 #include "adc.h"
 #include "stepper.h"
+#include "dcmotor.h"
 
 /* void vectorInterrupts()
    Purpose: sets the interrupt registers to enable
@@ -120,7 +121,42 @@ void secondLaserHandler() {
    Purpose: handles the exit sensor
    */
 void exitHandler() {
-	// TODO
+	// is there an item on the queue?
+	if(bufLength==0) return; // Throw an error here
+	// are we in position?
+	switch(ringBuf[bufLength].type) {
+		case BLACK:
+			if(steps==BLACK_POSITION) {
+				popBuf();
+				return;
+			}
+			break;
+		case STEEL:
+			if(steps==STEEL_POSITION) {
+				popBuf();
+				return;
+			}
+			break;
+		case ALUMINUM:
+			if(steps==ALUMINUM_POSIITION) {
+				popBuf();
+				return;
+			}
+			break;
+		case WHITE:
+			if(steps==WHITE_POSITION) {
+				popBuf();
+				return;
+			}
+			break;
+		default:
+			break;
+	}			
+	// we got here, so we're not at the correct position yet.
+	// stop the motor
+	setMotorBrake();
+	// set a flag to let the stepper know we're waiting
+	motorWaitForStepper = 1;
 }
 
 /* ISR(INT0_vect)

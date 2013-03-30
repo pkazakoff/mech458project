@@ -42,18 +42,36 @@ int main(void)
 	setupADC();
 	startADC();
 
-	delaynms(100);
-
-	while(1);
+	// wait one second
+	delaynms(1000);
 	
-    /*while(1)
-    {
-		for(int i=60; i > 0; i--) {
-			writeDecInt(i);
-			delaynms(1000);
+	// start the motor
+	setupMotor();
+	setMotorFwd();
+
+	while(1) {
+		// check the next item off the conveyer belt, rotate to the correct position
+		if(bufLength > 0) {
+			switch(ringBuf[ringTop].type) {
+				case BLACK:
+					stepperMoveTo(BLACK_POSITION);
+					delaynms(500);
+					break;
+				case WHITE:
+					stepperMoveTo(WHITE_POSITION);
+					delaynms(500);
+					break;
+				case STEEL:
+					stepperMoveTo(STEEL_POSITION);
+					delaynms(500);
+					break;
+				case ALUMINUM:
+					stepperMoveTo(ALUMINUM_POSIITION);
+					delaynms(500);
+					break;
+				default:
+					break;
+			}
 		}
-		writeHexInt(0xB00);
-		delaynms(2000);	
-        //TODO:: Please write your application code 
-    }*/
+	}
 }

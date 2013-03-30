@@ -8,8 +8,8 @@
 // Define steps of bins from 0 
 #define BLACK_POSITION 0
 #define	ALUMINUM_POSIITION 50
-#define WHITE_POSITION 150
-#define STEEL_POSITION 200
+#define WHITE_POSITION 100
+#define STEEL_POSITION 150
 
 extern char hallLow;
 extern int steps;

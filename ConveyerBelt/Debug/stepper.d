@@ -1,4 +1,5 @@
 stepper.d stepper.o: .././stepper.c .././stepper.h .././timer.h \
+ .././dcmotor.h .././interrupts.h \
  c:\program\ files\ (x86)\atmel\atmel\ studio\ 6.0\extensions\atmel\avrgcc\3.4.1.95\avrtoolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/io.h \
  c:\program\ files\ (x86)\atmel\atmel\ studio\ 6.0\extensions\atmel\avrgcc\3.4.1.95\avrtoolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/sfr_defs.h \
  c:\program\ files\ (x86)\atmel\atmel\ studio\ 6.0\extensions\atmel\avrgcc\3.4.1.95\avrtoolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/inttypes.h \
@@ -15,6 +16,10 @@ stepper.d stepper.o: .././stepper.c .././stepper.h .././timer.h \
 .././stepper.h:
 
 .././timer.h:
+
+.././dcmotor.h:
+
+.././interrupts.h:
 
 c:\program\ files\ (x86)\atmel\atmel\ studio\ 6.0\extensions\atmel\avrgcc\3.4.1.95\avrtoolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/io.h:
 

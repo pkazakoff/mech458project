@@ -12,6 +12,7 @@ int ringBottom;
 int currentMetal;
 int currentRefl;
 item ringBuf[RING_BUF_SIZE];
+int bufLength;
 
 /* void initRingBuf()
    Purpose: initializes the ring buffer
@@ -21,6 +22,7 @@ void initRingBuf() {
 	ringBottom = 0;
 	currentMetal = 0;
 	currentRefl = 0;
+	bufLength = 0;
 }
 
 /* int newRingBufItem()
@@ -28,6 +30,7 @@ void initRingBuf() {
    */
 int newRingBufItem() {
 	ringBottom = getBufOffset(ringBottom, 1);
+	bufLength++;
 	ringBuf[ringBottom].avgRefl = 0;
 	ringBuf[ringBottom].reflSamples = 0;
 	ringBuf[ringBottom].metal = 0;
@@ -40,8 +43,9 @@ int newRingBufItem() {
    */
 void popBuf() {
 	// if the buffer is empty, break
-	if ((ringBottom - ringTop) == 0) return;
+	if (bufLength == 0) return;
 	ringTop = getBufOffset(ringTop, 1);
+	bufLength--;
 }
 
 /* int getBufOffset(int index, int offset)
@@ -57,6 +61,7 @@ int getBufOffset(int index, int offset) {
 	if((index + offset) < 0) {
 		return ((index + offset) + RING_BUF_SIZE);
 	}
+
 	// didn't wrap
 	return (index + offset);
 }
