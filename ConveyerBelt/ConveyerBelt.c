@@ -24,11 +24,17 @@ int main(void)
 	// Initialize hardware timer
 	initializeTimer();
 	
-	// enable output
+	// Initialize ring buffer
+	initRingBuf();
+	
+	// enable output for stepper and display.
 	DDRA = 0xFF;
 
 	// vector interrupts
 	vectorInterrupts();
+
+	// init stepper
+	initalizeStepper();
 
 	// zero stepper
 	while(hallLow == 0){
@@ -48,6 +54,7 @@ int main(void)
 	// start the motor
 	setupMotor();
 	setMotorFwd();
+	
 
 	while(1) {
 		// check the next item off the conveyer belt, rotate to the correct position

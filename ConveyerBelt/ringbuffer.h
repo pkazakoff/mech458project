@@ -21,7 +21,7 @@ typedef enum itemType {
 typedef struct {
 	itemType type;
 	char metal;
-	char avgRefl;
+	int avgRefl;
 	int reflSamples;
 } item;
 

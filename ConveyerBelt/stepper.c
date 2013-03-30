@@ -68,7 +68,7 @@ void stepperMoveTo(int nextPosition){
 	else {
 		int j = reverseSteps(nextPosition, steps);
 		for(int i = 0;i < j;j++) {
-			stepTime(15,0);
+			stepTime(15,1);
 		}
 	}
 	

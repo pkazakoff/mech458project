@@ -17,7 +17,7 @@ void setupADC() {
 	ADCSRA |= _BV(ADEN);
 	ADCSRA |= _BV(ADIE);
 	ADCSRA |= _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2);
-	ADMUX |= _BV(ADLAR) | _BV(REFS0) | 0b01;
+	ADMUX |= _BV(REFS0) | 0b01;
 	ADC_is_running = 0;
 	sei();
 }
@@ -39,13 +39,14 @@ void updateAverage(int refl) {
 	// throw out spurious values
 	if((refl < REFL_MIN) || (refl > REFL_MAX)) return;
 	// average it out
-	int meanprod = ringBuf[currentRefl].avgRefl * ringBuf[currentRefl].reflSamples;
+	long int meanprod = ringBuf[currentRefl].avgRefl * ringBuf[currentRefl].reflSamples;
 	meanprod += refl;
 	ringBuf[currentRefl].reflSamples++;
 	ringBuf[currentRefl].avgRefl = meanprod / ringBuf[currentRefl].reflSamples;
+	return;
 }
 
 ISR(ADC_vect) {
-	updateAverage(ADCH);
+	updateAverage((ADCL << 8) + ADCH);
 	ADCSRA |= _BV(ADSC);
 }

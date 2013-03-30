@@ -72,19 +72,22 @@ void vectorInterrupts() {
 void makeDecision(int index) {
 	if(ringBuf[index].reflSamples < REFL_MIN_SAMPLES) return; // TODO: goes to error
 	char refl = ringBuf[index].avgRefl;
-	if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
-		ringBuf[index].type = STEEL;
-	}
-	if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
-		ringBuf[index].type = ALUMINUM;
-	}
-	if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
-		ringBuf[index].type = BLACK;
-	}
-	if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
-		ringBuf[index].type = WHITE;
-	}
-	// TODO: jumps to error if gets here
+	if(ringBuf[index].metal == 1) {
+		if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
+			ringBuf[index].type = STEEL;
+		}
+		if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
+			ringBuf[index].type = ALUMINUM;
+		}
+	} else {	
+		if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
+			ringBuf[index].type = BLACK;
+		}
+		if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
+			ringBuf[index].type = WHITE;
+		}
+	}		
+	// TODO: jumps to error if gets here and type is still UNDEF
 }
 
 /* void firstLaserHandler()
@@ -124,7 +127,7 @@ void exitHandler() {
 	// is there an item on the queue?
 	if(bufLength==0) return; // Throw an error here
 	// are we in position?
-	switch(ringBuf[bufLength].type) {
+	switch(ringBuf[ringTop].type) {
 		case BLACK:
 			if(steps==BLACK_POSITION) {
 				popBuf();
