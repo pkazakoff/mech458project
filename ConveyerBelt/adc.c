@@ -47,6 +47,6 @@ void updateAverage(int refl) {
 }
 
 ISR(ADC_vect) {
-	updateAverage((ADCL << 8) + ADCH);
+	updateAverage(ADC);
 	ADCSRA |= _BV(ADSC);
 }

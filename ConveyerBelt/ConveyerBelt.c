@@ -13,6 +13,7 @@
 #include "ringbuffer.h"
 #include "adc.h"
 #include "stepper.h"
+#include "dcmotor.h"
 
 int main(void)
 {
@@ -24,37 +25,58 @@ int main(void)
 	// Initialize hardware timer
 	initializeTimer();
 	
+	delaynms(1000);
+	
+	writeHexInt(0x50);
+	
 	// Initialize ring buffer
 	initRingBuf();
+	
+	writeHexInt(0x51);
 	
 	// enable output for stepper and display.
 	DDRA = 0xFF;
 
 	// vector interrupts
 	vectorInterrupts();
+	
+	writeHexInt(0x52);
 
 	// init stepper
 	initalizeStepper();
+	
+	writeHexInt(0x53);
 
 	// zero stepper
-	while(hallLow == 0){
-		stepTime(25,0);
+	while(steps != 0){
+		stepTime(20,0);
+		writeHexInt(steps);
 	}
 	// set steps from zero to 0 and respective position
 	steps = BLACK_POSITION;
 	// reset hall effect check
 	hallLow = 0;
+	
 
 	setupADC();
-	startADC();
 
 	// wait one second
 	delaynms(1000);
 	
 	// start the motor
 	setupMotor();
+	writeHexInt(0x54);
 	setMotorFwd();
 	
+	/*stepperMoveTo(STEEL_POSITION);
+	delaynms(4000);
+	stepperMoveTo(BLACK_POSITION);
+	delaynms(4000);
+	stepperMoveTo(ALUMINUM_POSIITION);
+	delaynms(4000);
+	stepperMoveTo(STEEL_POSITION);
+	setMotorBrake();
+	while(1);*/
 
 	while(1) {
 		// check the next item off the conveyer belt, rotate to the correct position
@@ -81,4 +103,5 @@ int main(void)
 			}
 		}
 	}
+	
 }

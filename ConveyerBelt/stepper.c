@@ -10,6 +10,7 @@
 #include "dcmotor.h"
 #include "interrupts.h"
 #include <avr/io.h>
+#include "SevenSegmentDisplay.h"
 
 
 // possible states
@@ -27,8 +28,9 @@ void initalizeStepper() {
 	// enable output
 	DDRA |= 0b00111111;
 	currentState = 0;
-	PORTA = PORTA & (0b11000000|states[currentState]);
+	PORTA = (PORTA & 0b11000000) | states[currentState];
 	hallLow = 0;
+	steps = 1;
 }
 
 
@@ -37,9 +39,9 @@ void stepTime(int stepTime, char direction) {
 	if(direction == 0) { //forward direction
 		currentState++;
 		if (currentState==4) currentState = 0;
-		PORTA = PORTA & (0b11000000 | states[currentState]);
+		PORTA = (PORTA & 0b11000000) | states[currentState];
 		steps++;
-		if(hallLow = 1) {
+		if(hallLow == 1) {
 			steps = 0;
 			hallLow = 0;
 		}
@@ -47,9 +49,9 @@ void stepTime(int stepTime, char direction) {
 	else { //reverse direction
 		currentState--;
 		if (currentState==-1) currentState = 3;
-		PORTA = PORTA & (0b11000000 | states[currentState]);
+		PORTA = (PORTA & 0b11000000) | states[currentState];
 		steps--;
-		if(hallLow = 1) {
+		if(hallLow == 1) {
 			steps = 0;
 			hallLow = 0;
 		}				
@@ -58,16 +60,18 @@ void stepTime(int stepTime, char direction) {
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
-	if(forwardSteps(nextPosition, steps) < reverseSteps(nextPosition, steps)) {
-		int j = forwardSteps(nextPosition, steps);
-		for(int i = 0;i < j;j++) {
+	if(forwardSteps(steps, nextPosition) < reverseSteps(steps, nextPosition)) {
+		int j = forwardSteps(steps, nextPosition);
+		writeDecInt(j);
+		for(int i = 0;i < j;i++) {
 			stepTime(15,0);
 		}
 	}
 	
 	else {
-		int j = reverseSteps(nextPosition, steps);
-		for(int i = 0;i < j;j++) {
+		int j = reverseSteps(steps, nextPosition);
+		writeDecInt(j);
+		for(int i = 0;i < j;i++) {
 			stepTime(15,1);
 		}
 	}

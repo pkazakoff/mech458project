@@ -5,15 +5,15 @@
  *  Author: Peter
  */ 
 
-#define STEEL_MAX 255
-#define STEEL_MIN 0
-#define ALUMINUM_MAX 255
-#define ALUMINUM_MIN 0
-#define BLACK_MAX 255
-#define BLACK_MIN 0
-#define WHITE_MAX 255
-#define WHITE_MIN 0
-#define REFL_MIN_SAMPLES 0
+#define STEEL_MAX 0x250
+#define STEEL_MIN 0x1CC
+#define ALUMINUM_MAX 0x050
+#define ALUMINUM_MIN 0x03F
+#define BLACK_MAX 0x2F7
+#define BLACK_MIN 0x2EA
+#define WHITE_MAX 0x2E9
+#define WHITE_MIN 0x2CF
+#define REFL_MIN_SAMPLES 5
 
 void vectorInterrupts();
 void makeDecision(int index);

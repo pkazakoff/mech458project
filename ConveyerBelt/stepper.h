@@ -17,3 +17,5 @@ extern int steps;
 void initalizeStepper();
 void stepTime(int n, char d);
 void stepperMoveTo(int p);
+int forwardSteps(int current, int target);
+int reverseSteps(int current, int target);

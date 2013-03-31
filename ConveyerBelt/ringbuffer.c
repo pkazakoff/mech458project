@@ -35,6 +35,7 @@ int newRingBufItem() {
 	ringBuf[ringBottom].reflSamples = 0;
 	ringBuf[ringBottom].metal = 0;
 	ringBuf[ringBottom].type = UNDEF;
+	writeDecInt(bufLength);
 	return ringBottom;
 }
 

@@ -124,6 +124,7 @@ void secondLaserHandler() {
    Purpose: handles the exit sensor
    */
 void exitHandler() {
+	writeDecInt(bufLength);
 	// is there an item on the queue?
 	if(bufLength==0) return; // Throw an error here
 	// are we in position?
@@ -167,7 +168,6 @@ void exitHandler() {
    for FIRST LASER
    */
 ISR(INT0_vect){
-	writeDecInt(0);
 	firstLaserHandler();
 }
 
@@ -176,7 +176,6 @@ ISR(INT0_vect){
    for INDUCTIVE SENSOR
    */
 ISR(INT1_vect){
-	writeDecInt(1);
 	metalHandler();
 }
 
@@ -186,7 +185,6 @@ ISR(INT1_vect){
    */
 ISR(INT2_vect){
 	secondLaserHandler();
-	writeDecInt(2);
 }
 
 /* ISR(INT3_vect)
@@ -195,7 +193,6 @@ ISR(INT2_vect){
    */
 ISR(INT3_vect) {
 	exitHandler();
-	writeDecInt(3);
 }
 
 /* ISR(INT4_vect)
@@ -204,7 +201,6 @@ ISR(INT3_vect) {
    */
 ISR(INT4_vect) {
 	hallLow = 1;
-	writeDecInt(4);
 }
 
 /* ISR(INT5_vect)

@@ -11,12 +11,13 @@ int motorWaitForStepper;
 
 void setupMotor() {
 	// enable port for output
-	DDRC |= MOTOR_BITMASK;
+	DDRC |= ~(MOTOR_BITMASK);
 	
 	// put the brakes on
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_BRAKE_PATTERN;
 	
 	// start the PWM output
+	DDRB = 0xFF;
 	
 	// enable PWM fast mode
 	TCCR0A = _BV(WGM00) | _BV(WGM01) | _BV(COM0A1) | _BV(COM0B1);
@@ -46,5 +47,5 @@ void setMotorBrake() {
 }
 
 void setMotorCoast() {
-	PORTC = PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_COAST_PATTERN;
+	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_COAST_PATTERN;
 }
