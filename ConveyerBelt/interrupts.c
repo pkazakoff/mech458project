@@ -13,6 +13,7 @@
 #include "adc.h"
 #include "stepper.h"
 #include "dcmotor.h"
+#include "timer.h"
 
 /* void vectorInterrupts()
    Purpose: sets the interrupt registers to enable
@@ -110,11 +111,16 @@ void metalHandler() {
    on FE completes the reflective stage */
 void secondLaserHandler() {
 	if(ADC_is_running == 1) {
+		// debounce
+		delaynms(DEBOUNCE_DELAY);
+		if((PIND & 0b00000100) == 0) return;
 		// stop ADC
 		stopADC();
 		makeDecision(currentRefl);
 		// TODO
 	} else {
+		delaynms(DEBOUNCE_DELAY);
+		if((PIND & 0b00000100) == 0b100) return;
 		currentRefl = currentMetal;
 		startADC();
 	}
@@ -168,7 +174,8 @@ void exitHandler() {
    for FIRST LASER
    */
 ISR(INT0_vect){
-	firstLaserHandler();
+	delaynms(DEBOUNCE_DELAY);
+	if((PIND & 0b1) == 0) firstLaserHandler();
 }
 
 /* ISR(INT1_vect)
@@ -176,7 +183,8 @@ ISR(INT0_vect){
    for INDUCTIVE SENSOR
    */
 ISR(INT1_vect){
-	metalHandler();
+	delaynms(DEBOUNCE_DELAY);
+	if((PIND & (1 << 1)) == 0) metalHandler();
 }
 
 /* ISR(INT2_vect)
@@ -184,6 +192,7 @@ ISR(INT1_vect){
    vector for SECOND LASER
    */
 ISR(INT2_vect){
+	// debounce is handled by function call
 	secondLaserHandler();
 }
 
@@ -192,7 +201,8 @@ ISR(INT2_vect){
    for EXIT SENSOR
    */
 ISR(INT3_vect) {
-	exitHandler();
+	delaynms(DEBOUNCE_DELAY);
+	if((PIND & (1 << 3)) == 0) exitHandler();
 }
 
 /* ISR(INT4_vect)
@@ -200,7 +210,8 @@ ISR(INT3_vect) {
    for HALL EFFECT SENSOR
    */
 ISR(INT4_vect) {
-	hallLow = 1;
+	delaynms(DEBOUNCE_DELAY);
+	if((PINE & (1 << 4)) == 0) hallLow = 1;
 }
 
 /* ISR(INT5_vect)
@@ -208,7 +219,8 @@ ISR(INT4_vect) {
    for BUTTON 2
    */
 ISR(INT5_vect) {
-	writeDecInt(5);
+	delaynms(BUTTON_DEBOUNCE_DELAY);
+	if((PINE & (1 << 5)) == 0) writeDecInt(5);
 }
 
 /* ISR(INT6_vect)
@@ -216,5 +228,6 @@ ISR(INT5_vect) {
    for BUTTON 1
    */
 ISR(INT6_vect){
-	writeDecInt(6);
+	delaynms(BUTTON_DEBOUNCE_DELAY);
+	if((PINE & (1 << 6)) == 0) writeDecInt(6);
 }

@@ -68,7 +68,7 @@ int main(void)
 	writeHexInt(0x54);
 	setMotorFwd();
 	
-	/*stepperMoveTo(STEEL_POSITION);
+	stepperMoveTo(STEEL_POSITION);
 	delaynms(4000);
 	stepperMoveTo(BLACK_POSITION);
 	delaynms(4000);
@@ -76,8 +76,9 @@ int main(void)
 	delaynms(4000);
 	stepperMoveTo(STEEL_POSITION);
 	setMotorBrake();
-	while(1);*/
+	while(1);
 
+	/*
 	while(1) {
 		// check the next item off the conveyer belt, rotate to the correct position
 		if(bufLength > 0) {
@@ -103,5 +104,5 @@ int main(void)
 			}
 		}
 	}
-	
+	*/
 }

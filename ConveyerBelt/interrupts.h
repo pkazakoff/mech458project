@@ -14,6 +14,8 @@
 #define WHITE_MAX 0x2E9
 #define WHITE_MIN 0x2CF
 #define REFL_MIN_SAMPLES 5
+#define DEBOUNCE_DELAY 1
+#define BUTTON_DEBOUNCE_DELAY 20
 
 void vectorInterrupts();
 void makeDecision(int index);
