@@ -71,23 +71,30 @@ void vectorInterrupts() {
 }
 
 void makeDecision(int index) {
-	if(ringBuf[index].reflSamples < REFL_MIN_SAMPLES) return; // TODO: goes to error
-	char refl = ringBuf[index].avgRefl;
+	//if(ringBuf[index].reflSamples < REFL_MIN_SAMPLES) return; // TODO: goes to error
+	//writeHexInt(ringBuf[index].avgRefl);
+	int refl = ringBuf[index].minRefl;
 	if(ringBuf[index].metal == 1) {
 		if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
 			ringBuf[index].type = STEEL;
+			return;
 		}
 		if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
 			ringBuf[index].type = ALUMINUM;
+			return;
 		}
 	} else {	
 		if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
 			ringBuf[index].type = BLACK;
+			return;
 		}
 		if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
 			ringBuf[index].type = WHITE;
+			return;
 		}
-	}		
+	}
+	writeHexInt(0xEF);	
+	return;
 	// TODO: jumps to error if gets here and type is still UNDEF
 }
 
@@ -112,15 +119,17 @@ void metalHandler() {
 void secondLaserHandler() {
 	if(ADC_is_running == 1) {
 		// debounce
+		Ignore_ADC_samples = 1;
 		delaynms(DEBOUNCE_DELAY);
-		if((PIND & 0b00000100) == 0) return;
+		Ignore_ADC_samples = 0;
+		if((PIND & 0b00000100) == 0b100) return;
 		// stop ADC
 		stopADC();
 		makeDecision(currentRefl);
 		// TODO
 	} else {
 		delaynms(DEBOUNCE_DELAY);
-		if((PIND & 0b00000100) == 0b100) return;
+		if((PIND & 0b00000100) == 0) return;
 		currentRefl = currentMetal;
 		startADC();
 	}
@@ -136,24 +145,28 @@ void exitHandler() {
 	// are we in position?
 	switch(ringBuf[ringTop].type) {
 		case BLACK:
+			writeHexInt(0xEB);
 			if(steps==BLACK_POSITION) {
 				popBuf();
 				return;
 			}
 			break;
 		case STEEL:
+			writeHexInt(0xE5);
 			if(steps==STEEL_POSITION) {
 				popBuf();
 				return;
 			}
 			break;
 		case ALUMINUM:
+			writeHexInt(0xEA);
 			if(steps==ALUMINUM_POSIITION) {
 				popBuf();
 				return;
 			}
 			break;
 		case WHITE:
+			writeHexInt(0xE0);
 			if(steps==WHITE_POSITION) {
 				popBuf();
 				return;
@@ -167,6 +180,14 @@ void exitHandler() {
 	setMotorBrake();
 	// set a flag to let the stepper know we're waiting
 	motorWaitForStepper = 1;
+}
+
+void shutdownHandler() {
+	if(bufLength == 0) {
+		delaynms(500);
+		setMotorBrake();
+		while(1);
+	}
 }
 
 /* ISR(INT0_vect)
@@ -220,7 +241,10 @@ ISR(INT4_vect) {
    */
 ISR(INT5_vect) {
 	delaynms(BUTTON_DEBOUNCE_DELAY);
-	if((PINE & (1 << 5)) == 0) writeDecInt(5);
+	if((PINE & (1 << 5)) == 0) {
+		shutdown = 1;
+		shutdownHandler();
+	}
 }
 
 /* ISR(INT6_vect)
@@ -229,5 +253,7 @@ ISR(INT5_vect) {
    */
 ISR(INT6_vect){
 	delaynms(BUTTON_DEBOUNCE_DELAY);
-	if((PINE & (1 << 6)) == 0) writeDecInt(6);
+	if((PINE & (1 << 6)) == 0) {
+		
+	}
 }

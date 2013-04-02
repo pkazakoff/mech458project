@@ -13,6 +13,8 @@ int currentMetal;
 int currentRefl;
 item ringBuf[RING_BUF_SIZE];
 int bufLength;
+char inPause;
+char shutdown;
 
 /* void initRingBuf()
    Purpose: initializes the ring buffer
@@ -23,19 +25,23 @@ void initRingBuf() {
 	currentMetal = 0;
 	currentRefl = 0;
 	bufLength = 0;
+	inPause = 0;
+	shutdown = 0;
 }
 
 /* int newRingBufItem()
    Purpose: adds an item to the ring buffer and returns its index
    */
 int newRingBufItem() {
-	ringBottom = getBufOffset(ringBottom, 1);
+	// if bottom is lagging behind top, reset bottom
+	if(bufLength==0) ringBottom = ringTop;
+	// this next line is for cases when queue is not empty
+	if(bufLength > 0) ringBottom = getBufOffset(ringBottom, 1);
 	bufLength++;
-	ringBuf[ringBottom].avgRefl = 0;
+	ringBuf[ringBottom].minRefl = 1024;
 	ringBuf[ringBottom].reflSamples = 0;
 	ringBuf[ringBottom].metal = 0;
 	ringBuf[ringBottom].type = UNDEF;
-	writeDecInt(bufLength);
 	return ringBottom;
 }
 
@@ -47,6 +53,9 @@ void popBuf() {
 	if (bufLength == 0) return;
 	ringTop = getBufOffset(ringTop, 1);
 	bufLength--;
+	if((bufLength == 0) && (shutdown == 1)) {
+		shutdownHandler();
+	}
 }
 
 /* int getBufOffset(int index, int offset)

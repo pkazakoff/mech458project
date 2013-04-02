@@ -68,41 +68,27 @@ int main(void)
 	writeHexInt(0x54);
 	setMotorFwd();
 	
-	stepperMoveTo(STEEL_POSITION);
-	delaynms(4000);
-	stepperMoveTo(BLACK_POSITION);
-	delaynms(4000);
-	stepperMoveTo(ALUMINUM_POSIITION);
-	delaynms(4000);
-	stepperMoveTo(STEEL_POSITION);
-	setMotorBrake();
-	while(1);
-
-	/*
 	while(1) {
 		// check the next item off the conveyer belt, rotate to the correct position
-		if(bufLength > 0) {
+		delaynms(100);
+		if(bufLength != 0) {
 			switch(ringBuf[ringTop].type) {
 				case BLACK:
 					stepperMoveTo(BLACK_POSITION);
-					delaynms(500);
 					break;
 				case WHITE:
 					stepperMoveTo(WHITE_POSITION);
-					delaynms(500);
 					break;
 				case STEEL:
 					stepperMoveTo(STEEL_POSITION);
-					delaynms(500);
 					break;
 				case ALUMINUM:
 					stepperMoveTo(ALUMINUM_POSIITION);
-					delaynms(500);
 					break;
 				default:
 					break;
 			}
 		}
 	}
-	*/
+	
 }

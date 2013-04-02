@@ -12,7 +12,7 @@
 #define MOTOR_BRAKE_PATTERN 0b00000000
 #define MOTOR_COAST_PATTERN 0b00000110
 
-extern int motorWaitForStepper;
+extern char motorWaitForStepper;
 
 void setupMotor();
 void setMotorSpeed(char speed);

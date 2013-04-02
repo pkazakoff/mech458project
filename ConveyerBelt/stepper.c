@@ -51,6 +51,7 @@ void stepTime(int stepTime, char direction) {
 		if (currentState==-1) currentState = 3;
 		PORTA = (PORTA & 0b11000000) | states[currentState];
 		steps--;
+		if(steps < 0) steps = 199;
 		if(hallLow == 1) {
 			steps = 0;
 			hallLow = 0;
@@ -60,21 +61,18 @@ void stepTime(int stepTime, char direction) {
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
+	if (steps == nextPosition) return;
 	if(forwardSteps(steps, nextPosition) < reverseSteps(steps, nextPosition)) {
-		int j = forwardSteps(steps, nextPosition);
-		writeDecInt(j);
-		for(int i = 0;i < j;i++) {
+		while(steps != nextPosition) {
 			stepTime(15,0);
 		}
 	}
 	
 	else {
-		int j = reverseSteps(steps, nextPosition);
-		writeDecInt(j);
-		for(int i = 0;i < j;i++) {
-			stepTime(15,1);
+			while(steps != nextPosition) {
+				stepTime(15,1);
+			}			
 		}
-	}
 	
 	if(motorWaitForStepper == 1) {
 		// start the motor back up

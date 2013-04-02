@@ -7,7 +7,7 @@
 #include "dcmotor.h"
 #include <avr/io.h>
 
-int motorWaitForStepper;
+char motorWaitForStepper;
 
 void setupMotor() {
 	// enable port for output

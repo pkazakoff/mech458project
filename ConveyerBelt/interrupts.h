@@ -5,21 +5,22 @@
  *  Author: Peter
  */ 
 
-#define STEEL_MAX 0x250
-#define STEEL_MIN 0x1CC
-#define ALUMINUM_MAX 0x050
-#define ALUMINUM_MIN 0x03F
-#define BLACK_MAX 0x2F7
-#define BLACK_MIN 0x2EA
-#define WHITE_MAX 0x2E9
-#define WHITE_MIN 0x2CF
-#define REFL_MIN_SAMPLES 5
+#define STEEL_MAX 471
+#define STEEL_MIN 228
+#define ALUMINUM_MAX 219
+#define ALUMINUM_MIN 0
+#define BLACK_MAX 584
+#define BLACK_MIN 562
+#define WHITE_MAX 558
+#define WHITE_MIN 541
+#define REFL_MIN_SAMPLES 1
 #define DEBOUNCE_DELAY 1
 #define BUTTON_DEBOUNCE_DELAY 20
 
 void vectorInterrupts();
 void makeDecision(int index);
 void exitHandler();
+void shutdownHandler();
 
 /*ISR(INT0_vect);
 ISR(INT1_vect);

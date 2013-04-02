@@ -21,7 +21,7 @@ typedef enum itemType {
 typedef struct {
 	itemType type;
 	char metal;
-	int avgRefl;
+	int minRefl;
 	int reflSamples;
 } item;
 
@@ -31,8 +31,10 @@ extern int ringTop;
 extern int ringBottom;
 extern int currentMetal;
 extern int currentRefl;
-extern item ringBuf[RING_BUF_SIZE];
+extern item ringBuf[];
 extern int bufLength;
+extern char inPause;
+extern char shutdown;
 
 // function prototypes
 void initRingBuf();
