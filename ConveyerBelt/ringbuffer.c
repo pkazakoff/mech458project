@@ -6,6 +6,7 @@
  */ 
 
 #include "ringbuffer.h"
+#include "interrupts.h"
 
 int ringTop;
 int ringBottom;
@@ -22,7 +23,7 @@ char shutdown;
 void initRingBuf() {
 	ringTop = 0;
 	ringBottom = 0;
-	currentMetal = 0;
+	currentMetal = -1;
 	currentRefl = 0;
 	bufLength = 0;
 	inPause = 0;

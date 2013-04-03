@@ -14,6 +14,7 @@
 #include "adc.h"
 #include "stepper.h"
 #include "dcmotor.h"
+#include "metalqueue.h"
 
 int main(void)
 {
@@ -31,6 +32,9 @@ int main(void)
 	
 	// Initialize ring buffer
 	initRingBuf();
+	
+	// Initialize metal queue
+	initMetalQueue();
 	
 	writeHexInt(0x51);
 	

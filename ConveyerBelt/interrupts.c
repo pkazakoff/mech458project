@@ -14,6 +14,7 @@
 #include "stepper.h"
 #include "dcmotor.h"
 #include "timer.h"
+#include "metalqueue.h"
 
 /* void vectorInterrupts()
    Purpose: sets the interrupt registers to enable
@@ -102,14 +103,25 @@ void makeDecision(int index) {
    Purpose: handler for the first laser
    */
 void firstLaserHandler() {
-	currentMetal = newRingBufItem();
+	// no pending item
+	if(currentMetal == -1) {
+		currentMetal = newRingBufItem();
+	} else {
+		//item in conversion
+		
+		// place the currently converting item on the queue
+		newMetal(currentMetal);
+		
+		// make the new item and start conversion
+		currentMetal = newRingBufItem();
+	}
 }
 
 /* void metalHandler()
    Purpose: handler for the inductive sensor
    */
 void metalHandler() {
-	ringBuf[currentMetal].metal = 1;
+	if(currentMetal != -1) ringBuf[currentMetal].metal = 1;
 }
 
 /* void secondLaserHandler()
@@ -130,7 +142,12 @@ void secondLaserHandler() {
 	} else {
 		delaynms(DEBOUNCE_DELAY);
 		if((PIND & 0b00000100) == 0) return;
-		currentRefl = currentMetal;
+		if(metalCount == 0) {
+			currentRefl = currentMetal;
+			currentMetal = -1;
+		} else {
+			currentRefl = popMetal();
+		}			
 		startADC();
 	}
 }
@@ -178,6 +195,7 @@ void exitHandler() {
 	// we got here, so we're not at the correct position yet.
 	// stop the motor
 	setMotorBrake();
+	writeDecInt(ringBuf[ringTop].minRefl);
 	// set a flag to let the stepper know we're waiting
 	motorWaitForStepper = 1;
 }

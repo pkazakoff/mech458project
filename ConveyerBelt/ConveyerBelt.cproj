@@ -88,6 +88,12 @@
     <Compile Include="interrupts.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="metalqueue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="metalqueue.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ringbuffer.c">
       <SubType>compile</SubType>
     </Compile>

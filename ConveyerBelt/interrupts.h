@@ -5,16 +5,16 @@
  *  Author: Peter
  */ 
 
-#define STEEL_MAX 471
-#define STEEL_MIN 228
-#define ALUMINUM_MAX 219
-#define ALUMINUM_MIN 0
-#define BLACK_MAX 584
-#define BLACK_MIN 562
-#define WHITE_MAX 558
-#define WHITE_MIN 541
+#define STEEL_MAX 550
+#define STEEL_MIN 340
+#define ALUMINUM_MAX 300
+#define ALUMINUM_MIN 5
+#define BLACK_MAX 680
+#define BLACK_MIN 640
+#define WHITE_MAX 638
+#define WHITE_MIN 600
 #define REFL_MIN_SAMPLES 1
-#define DEBOUNCE_DELAY 1
+#define DEBOUNCE_DELAY 3
 #define BUTTON_DEBOUNCE_DELAY 20
 
 void vectorInterrupts();

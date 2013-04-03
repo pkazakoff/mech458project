@@ -39,6 +39,7 @@ C_SRCS +=  \
 ../dcmotor.c \
 ../interrupts.c \
 ../ConveyerBelt.c \
+../metalqueue.c \
 ../ringbuffer.c \
 ../SevenSegmentDisplay.c \
 ../stepper.c \
@@ -56,6 +57,7 @@ adc.o \
 dcmotor.o \
 interrupts.o \
 ConveyerBelt.o \
+metalqueue.o \
 ringbuffer.o \
 SevenSegmentDisplay.o \
 stepper.o \
@@ -67,6 +69,7 @@ adc.o \
 dcmotor.o \
 interrupts.o \
 ConveyerBelt.o \
+metalqueue.o \
 ringbuffer.o \
 SevenSegmentDisplay.o \
 stepper.o \
@@ -78,6 +81,7 @@ adc.d \
 dcmotor.d \
 interrupts.d \
 ConveyerBelt.d \
+metalqueue.d \
 ringbuffer.d \
 SevenSegmentDisplay.d \
 stepper.d \
@@ -89,6 +93,7 @@ adc.d \
 dcmotor.d \
 interrupts.d \
 ConveyerBelt.d \
+metalqueue.d \
 ringbuffer.d \
 SevenSegmentDisplay.d \
 stepper.d \
@@ -104,6 +109,8 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
 
 
 

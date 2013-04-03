@@ -10,6 +10,8 @@ interrupts.c
 
 ConveyerBelt.c
 
+metalqueue.c
+
 ringbuffer.c
 
 SevenSegmentDisplay.c
