@@ -8,6 +8,9 @@
 #include <avr/io.h>
 
 char motorWaitForStepper;
+char pausedForUndef;
+motorStates motorState;
+motorStates pausedMotorState;
 
 void setupMotor() {
 	// enable port for output
@@ -28,6 +31,9 @@ void setupMotor() {
 	// set duty cycle
 	OCR0A = MOTOR_DEF_SPEED;
 	motorWaitForStepper = 0;
+	pausedForUndef = 0;
+	motorState = BRAKE;
+	pausedMotorState = BRAKE;
 }
 
 void setMotorSpeed(char speed) {
@@ -36,16 +42,20 @@ void setMotorSpeed(char speed) {
 
 void setMotorFwd() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_FWD_PATTERN;
+	motorState = FORWARD;
 }
 
 void setMotorRev() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_REV_PATTERN;
+	motorState = REVERSE;
 }
 
 void setMotorBrake() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_BRAKE_PATTERN;
+	motorState = BRAKE;
 }
 
 void setMotorCoast() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_COAST_PATTERN;
+	motorState = COAST;
 }

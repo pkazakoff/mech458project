@@ -3,115 +3,115 @@ ConveyerBelt.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000004  00800100  00000f16  00000faa  2**0
+  0 .data         00000004  00800100  0000128e  00001322  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000f16  00000000  00000000  00000094  2**1
+  1 .text         0000128e  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          000000a6  00800104  00800104  00000fae  2**0
+  2 .bss          000000b3  00800104  00800104  00001326  2**0
                   ALLOC
-  3 .stab         000006cc  00000000  00000000  00000fb0  2**2
+  3 .stab         000006cc  00000000  00000000  00001328  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      00000085  00000000  00000000  0000167c  2**0
+  4 .stabstr      00000085  00000000  00000000  000019f4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 000001c0  00000000  00000000  00001708  2**3
+  5 .debug_aranges 000001c0  00000000  00000000  00001a80  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   000014eb  00000000  00000000  000018c8  2**0
+  6 .debug_info   00001914  00000000  00000000  00001c40  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000007cd  00000000  00000000  00002db3  2**0
+  7 .debug_abbrev 000007da  00000000  00000000  00003554  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000c3d  00000000  00000000  00003580  2**0
+  8 .debug_line   00000ca0  00000000  00000000  00003d2e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000066c  00000000  00000000  000041c0  2**2
+  9 .debug_frame  0000074c  00000000  00000000  000049d0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000511  00000000  00000000  0000482c  2**0
+ 10 .debug_str    00000601  00000000  00000000  0000511c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000d5f  00000000  00000000  00004d3d  2**0
+ 11 .debug_loc    000010a3  00000000  00000000  0000571d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-   0:	0c 94 4c 00 	jmp	0x98	; 0x98 <__ctors_end>
-   4:	0c 94 c4 02 	jmp	0x588	; 0x588 <__vector_1>
-   8:	0c 94 f2 02 	jmp	0x5e4	; 0x5e4 <__vector_2>
-   c:	0c 94 20 03 	jmp	0x640	; 0x640 <__vector_3>
-  10:	0c 94 48 03 	jmp	0x690	; 0x690 <__vector_4>
-  14:	0c 94 76 03 	jmp	0x6ec	; 0x6ec <__vector_5>
-  18:	0c 94 a5 03 	jmp	0x74a	; 0x74a <__vector_6>
-  1c:	0c 94 d6 03 	jmp	0x7ac	; 0x7ac <__vector_7>
-  20:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  24:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  28:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  2c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  30:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  34:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  38:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  3c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  40:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  44:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  48:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  4c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  50:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  54:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  58:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  5c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  60:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  64:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  68:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  6c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  70:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  74:	0c 94 df 00 	jmp	0x1be	; 0x1be <__vector_29>
-  78:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  7c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  80:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  84:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  88:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  8c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  90:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
-  94:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+       0:	0c 94 4c 00 	jmp	0x98	; 0x98 <__ctors_end>
+       4:	0c 94 42 03 	jmp	0x684	; 0x684 <__vector_1>
+       8:	0c 94 70 03 	jmp	0x6e0	; 0x6e0 <__vector_2>
+       c:	0c 94 9e 03 	jmp	0x73c	; 0x73c <__vector_3>
+      10:	0c 94 c6 03 	jmp	0x78c	; 0x78c <__vector_4>
+      14:	0c 94 f4 03 	jmp	0x7e8	; 0x7e8 <__vector_5>
+      18:	0c 94 23 04 	jmp	0x846	; 0x846 <__vector_6>
+      1c:	0c 94 54 04 	jmp	0x8a8	; 0x8a8 <__vector_7>
+      20:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      24:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      28:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      2c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      30:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      34:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      38:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      3c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      40:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      44:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      48:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      4c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      50:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      54:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      58:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      5c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      60:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      64:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      68:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      6c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      70:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      74:	0c 94 df 00 	jmp	0x1be	; 0x1be <__vector_29>
+      78:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      7c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      80:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      84:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      88:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      8c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      90:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+      94:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
 
 00000098 <__ctors_end>:
-  98:	11 24       	eor	r1, r1
-  9a:	1f be       	out	0x3f, r1	; 63
-  9c:	cf ef       	ldi	r28, 0xFF	; 255
-  9e:	d0 e2       	ldi	r29, 0x20	; 32
-  a0:	de bf       	out	0x3e, r29	; 62
-  a2:	cd bf       	out	0x3d, r28	; 61
+      98:	11 24       	eor	r1, r1
+      9a:	1f be       	out	0x3f, r1	; 63
+      9c:	cf ef       	ldi	r28, 0xFF	; 255
+      9e:	d0 e2       	ldi	r29, 0x20	; 32
+      a0:	de bf       	out	0x3e, r29	; 62
+      a2:	cd bf       	out	0x3d, r28	; 61
 
 000000a4 <__do_copy_data>:
-  a4:	11 e0       	ldi	r17, 0x01	; 1
-  a6:	a0 e0       	ldi	r26, 0x00	; 0
-  a8:	b1 e0       	ldi	r27, 0x01	; 1
-  aa:	e6 e1       	ldi	r30, 0x16	; 22
-  ac:	ff e0       	ldi	r31, 0x0F	; 15
-  ae:	00 e0       	ldi	r16, 0x00	; 0
-  b0:	0b bf       	out	0x3b, r16	; 59
-  b2:	02 c0       	rjmp	.+4      	; 0xb8 <__do_copy_data+0x14>
-  b4:	07 90       	elpm	r0, Z+
-  b6:	0d 92       	st	X+, r0
-  b8:	a4 30       	cpi	r26, 0x04	; 4
-  ba:	b1 07       	cpc	r27, r17
-  bc:	d9 f7       	brne	.-10     	; 0xb4 <__do_copy_data+0x10>
-  be:	1b be       	out	0x3b, r1	; 59
+      a4:	11 e0       	ldi	r17, 0x01	; 1
+      a6:	a0 e0       	ldi	r26, 0x00	; 0
+      a8:	b1 e0       	ldi	r27, 0x01	; 1
+      aa:	ee e8       	ldi	r30, 0x8E	; 142
+      ac:	f2 e1       	ldi	r31, 0x12	; 18
+      ae:	00 e0       	ldi	r16, 0x00	; 0
+      b0:	0b bf       	out	0x3b, r16	; 59
+      b2:	02 c0       	rjmp	.+4      	; 0xb8 <__do_copy_data+0x14>
+      b4:	07 90       	elpm	r0, Z+
+      b6:	0d 92       	st	X+, r0
+      b8:	a4 30       	cpi	r26, 0x04	; 4
+      ba:	b1 07       	cpc	r27, r17
+      bc:	d9 f7       	brne	.-10     	; 0xb4 <__do_copy_data+0x10>
+      be:	1b be       	out	0x3b, r1	; 59
 
 000000c0 <__do_clear_bss>:
-  c0:	11 e0       	ldi	r17, 0x01	; 1
-  c2:	a4 e0       	ldi	r26, 0x04	; 4
-  c4:	b1 e0       	ldi	r27, 0x01	; 1
-  c6:	01 c0       	rjmp	.+2      	; 0xca <.do_clear_bss_start>
+      c0:	11 e0       	ldi	r17, 0x01	; 1
+      c2:	a4 e0       	ldi	r26, 0x04	; 4
+      c4:	b1 e0       	ldi	r27, 0x01	; 1
+      c6:	01 c0       	rjmp	.+2      	; 0xca <.do_clear_bss_start>
 
 000000c8 <.do_clear_bss_loop>:
-  c8:	1d 92       	st	X+, r1
+      c8:	1d 92       	st	X+, r1
 
 000000ca <.do_clear_bss_start>:
-  ca:	aa 3a       	cpi	r26, 0xAA	; 170
-  cc:	b1 07       	cpc	r27, r17
-  ce:	e1 f7       	brne	.-8      	; 0xc8 <.do_clear_bss_loop>
-  d0:	0e 94 01 04 	call	0x802	; 0x802 <main>
-  d4:	0c 94 89 07 	jmp	0xf12	; 0xf12 <_exit>
+      ca:	a7 3b       	cpi	r26, 0xB7	; 183
+      cc:	b1 07       	cpc	r27, r17
+      ce:	e1 f7       	brne	.-8      	; 0xc8 <.do_clear_bss_loop>
+      d0:	0e 94 82 04 	call	0x904	; 0x904 <main>
+      d4:	0c 94 45 09 	jmp	0x128a	; 0x128a <_exit>
 
 000000d8 <__bad_interrupt>:
-  d8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+      d8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000dc <setupADC>:
 
@@ -120,2500 +120,3019 @@ char Ignore_ADC_samples;
 
 void setupADC() {
 	DDRF = 0x00;
-  dc:	10 ba       	out	0x10, r1	; 16
+      dc:	10 ba       	out	0x10, r1	; 16
 	// ADC setup
 	ADCSRA |= _BV(ADEN);
-  de:	ea e7       	ldi	r30, 0x7A	; 122
-  e0:	f0 e0       	ldi	r31, 0x00	; 0
-  e2:	80 81       	ld	r24, Z
-  e4:	80 68       	ori	r24, 0x80	; 128
-  e6:	80 83       	st	Z, r24
+      de:	ea e7       	ldi	r30, 0x7A	; 122
+      e0:	f0 e0       	ldi	r31, 0x00	; 0
+      e2:	80 81       	ld	r24, Z
+      e4:	80 68       	ori	r24, 0x80	; 128
+      e6:	80 83       	st	Z, r24
 	ADCSRA |= _BV(ADIE);
-  e8:	80 81       	ld	r24, Z
-  ea:	88 60       	ori	r24, 0x08	; 8
-  ec:	80 83       	st	Z, r24
+      e8:	80 81       	ld	r24, Z
+      ea:	88 60       	ori	r24, 0x08	; 8
+      ec:	80 83       	st	Z, r24
 	ADCSRA |= _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2);
-  ee:	80 81       	ld	r24, Z
-  f0:	87 60       	ori	r24, 0x07	; 7
-  f2:	80 83       	st	Z, r24
+      ee:	80 81       	ld	r24, Z
+      f0:	87 60       	ori	r24, 0x07	; 7
+      f2:	80 83       	st	Z, r24
 	ADMUX |= _BV(REFS0) | 0b01;
-  f4:	ec e7       	ldi	r30, 0x7C	; 124
-  f6:	f0 e0       	ldi	r31, 0x00	; 0
-  f8:	80 81       	ld	r24, Z
-  fa:	81 64       	ori	r24, 0x41	; 65
-  fc:	80 83       	st	Z, r24
+      f4:	ec e7       	ldi	r30, 0x7C	; 124
+      f6:	f0 e0       	ldi	r31, 0x00	; 0
+      f8:	80 81       	ld	r24, Z
+      fa:	81 64       	ori	r24, 0x41	; 65
+      fc:	80 83       	st	Z, r24
 	ADC_is_running = 0;
-  fe:	10 92 05 01 	sts	0x0105, r1
+      fe:	10 92 05 01 	sts	0x0105, r1
 	Ignore_ADC_samples = 0;
- 102:	10 92 04 01 	sts	0x0104, r1
+     102:	10 92 04 01 	sts	0x0104, r1
 	sei();
- 106:	78 94       	sei
+     106:	78 94       	sei
 }
- 108:	08 95       	ret
+     108:	08 95       	ret
 
 0000010a <startADC>:
 
 void startADC() {
 	ADC_is_running = 1;
- 10a:	81 e0       	ldi	r24, 0x01	; 1
- 10c:	80 93 05 01 	sts	0x0105, r24
+     10a:	81 e0       	ldi	r24, 0x01	; 1
+     10c:	80 93 05 01 	sts	0x0105, r24
 	ADCSRA |= _BV(ADSC);
- 110:	ea e7       	ldi	r30, 0x7A	; 122
- 112:	f0 e0       	ldi	r31, 0x00	; 0
- 114:	80 81       	ld	r24, Z
- 116:	80 64       	ori	r24, 0x40	; 64
- 118:	80 83       	st	Z, r24
+     110:	ea e7       	ldi	r30, 0x7A	; 122
+     112:	f0 e0       	ldi	r31, 0x00	; 0
+     114:	80 81       	ld	r24, Z
+     116:	80 64       	ori	r24, 0x40	; 64
+     118:	80 83       	st	Z, r24
 	sei();
- 11a:	78 94       	sei
+     11a:	78 94       	sei
 }
- 11c:	08 95       	ret
+     11c:	08 95       	ret
 
 0000011e <stopADC>:
 
 void stopADC() {
 	ADC_is_running = 0;
- 11e:	10 92 05 01 	sts	0x0105, r1
+     11e:	10 92 05 01 	sts	0x0105, r1
 	ADCSRA &= ~_BV(ADSC);
- 122:	ea e7       	ldi	r30, 0x7A	; 122
- 124:	f0 e0       	ldi	r31, 0x00	; 0
- 126:	80 81       	ld	r24, Z
- 128:	8f 7b       	andi	r24, 0xBF	; 191
- 12a:	80 83       	st	Z, r24
+     122:	ea e7       	ldi	r30, 0x7A	; 122
+     124:	f0 e0       	ldi	r31, 0x00	; 0
+     126:	80 81       	ld	r24, Z
+     128:	8f 7b       	andi	r24, 0xBF	; 191
+     12a:	80 83       	st	Z, r24
 }
- 12c:	08 95       	ret
+     12c:	08 95       	ret
 
 0000012e <updateMinimum>:
 
 void updateMinimum(int refl) {
- 12e:	9c 01       	movw	r18, r24
+     12e:	9c 01       	movw	r18, r24
 	// are we to ignore samples?
 	if(Ignore_ADC_samples == 1) return;
- 130:	80 91 04 01 	lds	r24, 0x0104
- 134:	81 30       	cpi	r24, 0x01	; 1
- 136:	09 f4       	brne	.+2      	; 0x13a <updateMinimum+0xc>
- 138:	41 c0       	rjmp	.+130    	; 0x1bc <updateMinimum+0x8e>
+     130:	80 91 04 01 	lds	r24, 0x0104
+     134:	81 30       	cpi	r24, 0x01	; 1
+     136:	09 f4       	brne	.+2      	; 0x13a <updateMinimum+0xc>
+     138:	41 c0       	rjmp	.+130    	; 0x1bc <updateMinimum+0x8e>
 	// if we have too many samples, toss 'em
 	if(ringBuf[currentRefl].reflSamples >= REFL_MAX_SAMPLES) return;
- 13a:	80 91 60 01 	lds	r24, 0x0160
- 13e:	90 91 61 01 	lds	r25, 0x0161
- 142:	fc 01       	movw	r30, r24
- 144:	ee 0f       	add	r30, r30
- 146:	ff 1f       	adc	r31, r31
- 148:	e8 0f       	add	r30, r24
- 14a:	f9 1f       	adc	r31, r25
- 14c:	ee 0f       	add	r30, r30
- 14e:	ff 1f       	adc	r31, r31
- 150:	ec 59       	subi	r30, 0x9C	; 156
- 152:	fe 4f       	sbci	r31, 0xFE	; 254
- 154:	44 81       	ldd	r20, Z+4	; 0x04
- 156:	55 81       	ldd	r21, Z+5	; 0x05
- 158:	48 3c       	cpi	r20, 0xC8	; 200
- 15a:	51 05       	cpc	r21, r1
- 15c:	7c f5       	brge	.+94     	; 0x1bc <updateMinimum+0x8e>
+     13a:	80 91 63 01 	lds	r24, 0x0163
+     13e:	90 91 64 01 	lds	r25, 0x0164
+     142:	fc 01       	movw	r30, r24
+     144:	ee 0f       	add	r30, r30
+     146:	ff 1f       	adc	r31, r31
+     148:	e8 0f       	add	r30, r24
+     14a:	f9 1f       	adc	r31, r25
+     14c:	ee 0f       	add	r30, r30
+     14e:	ff 1f       	adc	r31, r31
+     150:	e9 59       	subi	r30, 0x99	; 153
+     152:	fe 4f       	sbci	r31, 0xFE	; 254
+     154:	44 81       	ldd	r20, Z+4	; 0x04
+     156:	55 81       	ldd	r21, Z+5	; 0x05
+     158:	48 3c       	cpi	r20, 0xC8	; 200
+     15a:	51 05       	cpc	r21, r1
+     15c:	7c f5       	brge	.+94     	; 0x1bc <updateMinimum+0x8e>
 	// throw out spurious values
 	if((refl < REFL_MIN) || (refl > REFL_MAX)) return;
- 15e:	a9 01       	movw	r20, r18
- 160:	42 53       	subi	r20, 0x32	; 50
- 162:	50 40       	sbci	r21, 0x00	; 0
- 164:	63 e0       	ldi	r22, 0x03	; 3
- 166:	4f 3c       	cpi	r20, 0xCF	; 207
- 168:	56 07       	cpc	r21, r22
- 16a:	40 f5       	brcc	.+80     	; 0x1bc <updateMinimum+0x8e>
+     15e:	a9 01       	movw	r20, r18
+     160:	42 53       	subi	r20, 0x32	; 50
+     162:	50 40       	sbci	r21, 0x00	; 0
+     164:	63 e0       	ldi	r22, 0x03	; 3
+     166:	4f 3c       	cpi	r20, 0xCF	; 207
+     168:	56 07       	cpc	r21, r22
+     16a:	40 f5       	brcc	.+80     	; 0x1bc <updateMinimum+0x8e>
 	/*long int meanprod = (long)ringBuf[currentRefl].avgRefl * (long)ringBuf[currentRefl].reflSamples;
 	meanprod += refl;
 	ringBuf[currentRefl].reflSamples++;
 	ringBuf[currentRefl].avgRefl = meanprod / ringBuf[currentRefl].reflSamples;
 	delaynms(1);*/
 	if(ringBuf[currentRefl].minRefl > refl) ringBuf[currentRefl].minRefl = refl;
- 16c:	fc 01       	movw	r30, r24
- 16e:	ee 0f       	add	r30, r30
- 170:	ff 1f       	adc	r31, r31
- 172:	e8 0f       	add	r30, r24
- 174:	f9 1f       	adc	r31, r25
- 176:	ee 0f       	add	r30, r30
- 178:	ff 1f       	adc	r31, r31
- 17a:	ec 59       	subi	r30, 0x9C	; 156
- 17c:	fe 4f       	sbci	r31, 0xFE	; 254
- 17e:	42 81       	ldd	r20, Z+2	; 0x02
- 180:	53 81       	ldd	r21, Z+3	; 0x03
- 182:	24 17       	cp	r18, r20
- 184:	35 07       	cpc	r19, r21
- 186:	5c f4       	brge	.+22     	; 0x19e <updateMinimum+0x70>
- 188:	fc 01       	movw	r30, r24
- 18a:	ee 0f       	add	r30, r30
- 18c:	ff 1f       	adc	r31, r31
- 18e:	e8 0f       	add	r30, r24
- 190:	f9 1f       	adc	r31, r25
- 192:	ee 0f       	add	r30, r30
- 194:	ff 1f       	adc	r31, r31
- 196:	ec 59       	subi	r30, 0x9C	; 156
- 198:	fe 4f       	sbci	r31, 0xFE	; 254
- 19a:	33 83       	std	Z+3, r19	; 0x03
- 19c:	22 83       	std	Z+2, r18	; 0x02
+     16c:	fc 01       	movw	r30, r24
+     16e:	ee 0f       	add	r30, r30
+     170:	ff 1f       	adc	r31, r31
+     172:	e8 0f       	add	r30, r24
+     174:	f9 1f       	adc	r31, r25
+     176:	ee 0f       	add	r30, r30
+     178:	ff 1f       	adc	r31, r31
+     17a:	e9 59       	subi	r30, 0x99	; 153
+     17c:	fe 4f       	sbci	r31, 0xFE	; 254
+     17e:	42 81       	ldd	r20, Z+2	; 0x02
+     180:	53 81       	ldd	r21, Z+3	; 0x03
+     182:	24 17       	cp	r18, r20
+     184:	35 07       	cpc	r19, r21
+     186:	5c f4       	brge	.+22     	; 0x19e <updateMinimum+0x70>
+     188:	fc 01       	movw	r30, r24
+     18a:	ee 0f       	add	r30, r30
+     18c:	ff 1f       	adc	r31, r31
+     18e:	e8 0f       	add	r30, r24
+     190:	f9 1f       	adc	r31, r25
+     192:	ee 0f       	add	r30, r30
+     194:	ff 1f       	adc	r31, r31
+     196:	e9 59       	subi	r30, 0x99	; 153
+     198:	fe 4f       	sbci	r31, 0xFE	; 254
+     19a:	33 83       	std	Z+3, r19	; 0x03
+     19c:	22 83       	std	Z+2, r18	; 0x02
 	ringBuf[currentRefl].reflSamples++;
- 19e:	fc 01       	movw	r30, r24
- 1a0:	ee 0f       	add	r30, r30
- 1a2:	ff 1f       	adc	r31, r31
- 1a4:	8e 0f       	add	r24, r30
- 1a6:	9f 1f       	adc	r25, r31
- 1a8:	fc 01       	movw	r30, r24
- 1aa:	ee 0f       	add	r30, r30
- 1ac:	ff 1f       	adc	r31, r31
- 1ae:	ec 59       	subi	r30, 0x9C	; 156
- 1b0:	fe 4f       	sbci	r31, 0xFE	; 254
- 1b2:	84 81       	ldd	r24, Z+4	; 0x04
- 1b4:	95 81       	ldd	r25, Z+5	; 0x05
- 1b6:	01 96       	adiw	r24, 0x01	; 1
- 1b8:	95 83       	std	Z+5, r25	; 0x05
- 1ba:	84 83       	std	Z+4, r24	; 0x04
- 1bc:	08 95       	ret
+     19e:	fc 01       	movw	r30, r24
+     1a0:	ee 0f       	add	r30, r30
+     1a2:	ff 1f       	adc	r31, r31
+     1a4:	8e 0f       	add	r24, r30
+     1a6:	9f 1f       	adc	r25, r31
+     1a8:	fc 01       	movw	r30, r24
+     1aa:	ee 0f       	add	r30, r30
+     1ac:	ff 1f       	adc	r31, r31
+     1ae:	e9 59       	subi	r30, 0x99	; 153
+     1b0:	fe 4f       	sbci	r31, 0xFE	; 254
+     1b2:	84 81       	ldd	r24, Z+4	; 0x04
+     1b4:	95 81       	ldd	r25, Z+5	; 0x05
+     1b6:	01 96       	adiw	r24, 0x01	; 1
+     1b8:	95 83       	std	Z+5, r25	; 0x05
+     1ba:	84 83       	std	Z+4, r24	; 0x04
+     1bc:	08 95       	ret
 
 000001be <__vector_29>:
 	return;
 }
 
 ISR(ADC_vect) {
- 1be:	1f 92       	push	r1
- 1c0:	0f 92       	push	r0
- 1c2:	0f b6       	in	r0, 0x3f	; 63
- 1c4:	0f 92       	push	r0
- 1c6:	0b b6       	in	r0, 0x3b	; 59
- 1c8:	0f 92       	push	r0
- 1ca:	11 24       	eor	r1, r1
- 1cc:	2f 93       	push	r18
- 1ce:	3f 93       	push	r19
- 1d0:	4f 93       	push	r20
- 1d2:	5f 93       	push	r21
- 1d4:	6f 93       	push	r22
- 1d6:	7f 93       	push	r23
- 1d8:	8f 93       	push	r24
- 1da:	9f 93       	push	r25
- 1dc:	af 93       	push	r26
- 1de:	bf 93       	push	r27
- 1e0:	ef 93       	push	r30
- 1e2:	ff 93       	push	r31
+     1be:	1f 92       	push	r1
+     1c0:	0f 92       	push	r0
+     1c2:	0f b6       	in	r0, 0x3f	; 63
+     1c4:	0f 92       	push	r0
+     1c6:	0b b6       	in	r0, 0x3b	; 59
+     1c8:	0f 92       	push	r0
+     1ca:	11 24       	eor	r1, r1
+     1cc:	2f 93       	push	r18
+     1ce:	3f 93       	push	r19
+     1d0:	4f 93       	push	r20
+     1d2:	5f 93       	push	r21
+     1d4:	6f 93       	push	r22
+     1d6:	7f 93       	push	r23
+     1d8:	8f 93       	push	r24
+     1da:	9f 93       	push	r25
+     1dc:	af 93       	push	r26
+     1de:	bf 93       	push	r27
+     1e0:	ef 93       	push	r30
+     1e2:	ff 93       	push	r31
 	updateMinimum(ADC);
- 1e4:	80 91 78 00 	lds	r24, 0x0078
- 1e8:	90 91 79 00 	lds	r25, 0x0079
- 1ec:	0e 94 97 00 	call	0x12e	; 0x12e <updateMinimum>
+     1e4:	80 91 78 00 	lds	r24, 0x0078
+     1e8:	90 91 79 00 	lds	r25, 0x0079
+     1ec:	0e 94 97 00 	call	0x12e	; 0x12e <updateMinimum>
 	ADCSRA |= _BV(ADSC);
- 1f0:	ea e7       	ldi	r30, 0x7A	; 122
- 1f2:	f0 e0       	ldi	r31, 0x00	; 0
- 1f4:	80 81       	ld	r24, Z
- 1f6:	80 64       	ori	r24, 0x40	; 64
- 1f8:	80 83       	st	Z, r24
- 1fa:	ff 91       	pop	r31
- 1fc:	ef 91       	pop	r30
- 1fe:	bf 91       	pop	r27
- 200:	af 91       	pop	r26
- 202:	9f 91       	pop	r25
- 204:	8f 91       	pop	r24
- 206:	7f 91       	pop	r23
- 208:	6f 91       	pop	r22
- 20a:	5f 91       	pop	r21
- 20c:	4f 91       	pop	r20
- 20e:	3f 91       	pop	r19
- 210:	2f 91       	pop	r18
- 212:	0f 90       	pop	r0
- 214:	0b be       	out	0x3b, r0	; 59
- 216:	0f 90       	pop	r0
- 218:	0f be       	out	0x3f, r0	; 63
- 21a:	0f 90       	pop	r0
- 21c:	1f 90       	pop	r1
- 21e:	18 95       	reti
+     1f0:	ea e7       	ldi	r30, 0x7A	; 122
+     1f2:	f0 e0       	ldi	r31, 0x00	; 0
+     1f4:	80 81       	ld	r24, Z
+     1f6:	80 64       	ori	r24, 0x40	; 64
+     1f8:	80 83       	st	Z, r24
+     1fa:	ff 91       	pop	r31
+     1fc:	ef 91       	pop	r30
+     1fe:	bf 91       	pop	r27
+     200:	af 91       	pop	r26
+     202:	9f 91       	pop	r25
+     204:	8f 91       	pop	r24
+     206:	7f 91       	pop	r23
+     208:	6f 91       	pop	r22
+     20a:	5f 91       	pop	r21
+     20c:	4f 91       	pop	r20
+     20e:	3f 91       	pop	r19
+     210:	2f 91       	pop	r18
+     212:	0f 90       	pop	r0
+     214:	0b be       	out	0x3b, r0	; 59
+     216:	0f 90       	pop	r0
+     218:	0f be       	out	0x3f, r0	; 63
+     21a:	0f 90       	pop	r0
+     21c:	1f 90       	pop	r1
+     21e:	18 95       	reti
 
 00000220 <setupMotor>:
-
-char motorWaitForStepper;
+motorStates motorState;
+motorStates pausedMotorState;
 
 void setupMotor() {
 	// enable port for output
 	DDRC |= ~(MOTOR_BITMASK);
- 220:	87 b1       	in	r24, 0x07	; 7
- 222:	8f 60       	ori	r24, 0x0F	; 15
- 224:	87 b9       	out	0x07, r24	; 7
+     220:	87 b1       	in	r24, 0x07	; 7
+     222:	8f 60       	ori	r24, 0x0F	; 15
+     224:	87 b9       	out	0x07, r24	; 7
 	
 	// put the brakes on
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_BRAKE_PATTERN;
- 226:	88 b1       	in	r24, 0x08	; 8
- 228:	80 7f       	andi	r24, 0xF0	; 240
- 22a:	88 b9       	out	0x08, r24	; 8
+     226:	88 b1       	in	r24, 0x08	; 8
+     228:	80 7f       	andi	r24, 0xF0	; 240
+     22a:	88 b9       	out	0x08, r24	; 8
 	
 	// start the PWM output
 	DDRB = 0xFF;
- 22c:	8f ef       	ldi	r24, 0xFF	; 255
- 22e:	84 b9       	out	0x04, r24	; 4
+     22c:	8f ef       	ldi	r24, 0xFF	; 255
+     22e:	84 b9       	out	0x04, r24	; 4
 	
 	// enable PWM fast mode
 	TCCR0A = _BV(WGM00) | _BV(WGM01) | _BV(COM0A1) | _BV(COM0B1);
- 230:	83 ea       	ldi	r24, 0xA3	; 163
- 232:	84 bd       	out	0x24, r24	; 36
+     230:	83 ea       	ldi	r24, 0xA3	; 163
+     232:	84 bd       	out	0x24, r24	; 36
 	
 	// disable prescaler
 	TCCR0B = _BV(CS00);
- 234:	81 e0       	ldi	r24, 0x01	; 1
- 236:	85 bd       	out	0x25, r24	; 37
+     234:	81 e0       	ldi	r24, 0x01	; 1
+     236:	85 bd       	out	0x25, r24	; 37
 	
 	// set duty cycle
 	OCR0A = MOTOR_DEF_SPEED;
- 238:	8f e9       	ldi	r24, 0x9F	; 159
- 23a:	87 bd       	out	0x27, r24	; 39
+     238:	8f eb       	ldi	r24, 0xBF	; 191
+     23a:	87 bd       	out	0x27, r24	; 39
 	motorWaitForStepper = 0;
- 23c:	10 92 06 01 	sts	0x0106, r1
+     23c:	10 92 07 01 	sts	0x0107, r1
+	pausedForUndef = 0;
+     240:	10 92 08 01 	sts	0x0108, r1
+	motorState = BRAKE;
+     244:	10 92 09 01 	sts	0x0109, r1
+	pausedMotorState = BRAKE;
+     248:	10 92 06 01 	sts	0x0106, r1
 }
- 240:	08 95       	ret
+     24c:	08 95       	ret
 
-00000242 <setMotorSpeed>:
+0000024e <setMotorSpeed>:
 
 void setMotorSpeed(char speed) {
 	OCR0A = speed;
- 242:	87 bd       	out	0x27, r24	; 39
+     24e:	87 bd       	out	0x27, r24	; 39
 }
- 244:	08 95       	ret
+     250:	08 95       	ret
 
-00000246 <setMotorFwd>:
+00000252 <setMotorFwd>:
 
 void setMotorFwd() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_FWD_PATTERN;
- 246:	88 b1       	in	r24, 0x08	; 8
- 248:	80 7f       	andi	r24, 0xF0	; 240
- 24a:	88 60       	ori	r24, 0x08	; 8
- 24c:	88 b9       	out	0x08, r24	; 8
+     252:	88 b1       	in	r24, 0x08	; 8
+     254:	80 7f       	andi	r24, 0xF0	; 240
+     256:	88 60       	ori	r24, 0x08	; 8
+     258:	88 b9       	out	0x08, r24	; 8
+	motorState = FORWARD;
+     25a:	81 e0       	ldi	r24, 0x01	; 1
+     25c:	80 93 09 01 	sts	0x0109, r24
 }
- 24e:	08 95       	ret
+     260:	08 95       	ret
 
-00000250 <setMotorRev>:
+00000262 <setMotorRev>:
 
 void setMotorRev() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_REV_PATTERN;
- 250:	88 b1       	in	r24, 0x08	; 8
- 252:	80 7f       	andi	r24, 0xF0	; 240
- 254:	81 60       	ori	r24, 0x01	; 1
- 256:	88 b9       	out	0x08, r24	; 8
+     262:	88 b1       	in	r24, 0x08	; 8
+     264:	80 7f       	andi	r24, 0xF0	; 240
+     266:	81 60       	ori	r24, 0x01	; 1
+     268:	88 b9       	out	0x08, r24	; 8
+	motorState = REVERSE;
+     26a:	82 e0       	ldi	r24, 0x02	; 2
+     26c:	80 93 09 01 	sts	0x0109, r24
 }
- 258:	08 95       	ret
+     270:	08 95       	ret
 
-0000025a <setMotorBrake>:
+00000272 <setMotorBrake>:
 
 void setMotorBrake() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_BRAKE_PATTERN;
- 25a:	88 b1       	in	r24, 0x08	; 8
- 25c:	80 7f       	andi	r24, 0xF0	; 240
- 25e:	88 b9       	out	0x08, r24	; 8
+     272:	88 b1       	in	r24, 0x08	; 8
+     274:	80 7f       	andi	r24, 0xF0	; 240
+     276:	88 b9       	out	0x08, r24	; 8
+	motorState = BRAKE;
+     278:	10 92 09 01 	sts	0x0109, r1
 }
- 260:	08 95       	ret
+     27c:	08 95       	ret
 
-00000262 <setMotorCoast>:
+0000027e <setMotorCoast>:
 
 void setMotorCoast() {
 	PORTC = (PORTC & MOTOR_BITMASK) | MOTOR_COAST_PATTERN;
- 262:	88 b1       	in	r24, 0x08	; 8
- 264:	80 7f       	andi	r24, 0xF0	; 240
- 266:	86 60       	ori	r24, 0x06	; 6
- 268:	88 b9       	out	0x08, r24	; 8
- 26a:	08 95       	ret
+     27e:	88 b1       	in	r24, 0x08	; 8
+     280:	80 7f       	andi	r24, 0xF0	; 240
+     282:	86 60       	ori	r24, 0x06	; 6
+     284:	88 b9       	out	0x08, r24	; 8
+	motorState = COAST;
+     286:	83 e0       	ldi	r24, 0x03	; 3
+     288:	80 93 09 01 	sts	0x0109, r24
+     28c:	08 95       	ret
 
-0000026c <vectorInterrupts>:
+0000028e <pausedHandler>:
+		while(1);
+	}
+}
+
+void pausedHandler() {
+	if(inPause == 1) {
+     28e:	80 91 60 01 	lds	r24, 0x0160
+     292:	81 30       	cpi	r24, 0x01	; 1
+     294:	f9 f4       	brne	.+62     	; 0x2d4 <pausedHandler+0x46>
+		inPause = 0;
+     296:	10 92 60 01 	sts	0x0160, r1
+		// restore the motor state
+		switch (pausedMotorState) {
+     29a:	80 91 06 01 	lds	r24, 0x0106
+     29e:	81 30       	cpi	r24, 0x01	; 1
+     2a0:	39 f0       	breq	.+14     	; 0x2b0 <pausedHandler+0x22>
+     2a2:	81 30       	cpi	r24, 0x01	; 1
+     2a4:	58 f0       	brcs	.+22     	; 0x2bc <pausedHandler+0x2e>
+     2a6:	82 30       	cpi	r24, 0x02	; 2
+     2a8:	31 f0       	breq	.+12     	; 0x2b6 <pausedHandler+0x28>
+     2aa:	83 30       	cpi	r24, 0x03	; 3
+     2ac:	61 f4       	brne	.+24     	; 0x2c6 <pausedHandler+0x38>
+     2ae:	09 c0       	rjmp	.+18     	; 0x2c2 <pausedHandler+0x34>
+			case FORWARD:
+				setMotorFwd();
+     2b0:	0e 94 29 01 	call	0x252	; 0x252 <setMotorFwd>
+				break;
+     2b4:	08 c0       	rjmp	.+16     	; 0x2c6 <pausedHandler+0x38>
+			case REVERSE:
+				setMotorRev();
+     2b6:	0e 94 31 01 	call	0x262	; 0x262 <setMotorRev>
+				break;
+     2ba:	05 c0       	rjmp	.+10     	; 0x2c6 <pausedHandler+0x38>
+			case BRAKE:
+				setMotorBrake();
+     2bc:	0e 94 39 01 	call	0x272	; 0x272 <setMotorBrake>
+				break;
+     2c0:	02 c0       	rjmp	.+4      	; 0x2c6 <pausedHandler+0x38>
+			case COAST:
+				setMotorCoast();
+     2c2:	0e 94 3f 01 	call	0x27e	; 0x27e <setMotorCoast>
+				break;
+			default:
+				break;
+		}
+		// see if the last item was undefined
+		if(pausedForUndef) {
+     2c6:	80 91 08 01 	lds	r24, 0x0108
+     2ca:	88 23       	and	r24, r24
+     2cc:	61 f0       	breq	.+24     	; 0x2e6 <pausedHandler+0x58>
+			popBuf();
+     2ce:	0e 94 0f 06 	call	0xc1e	; 0xc1e <popBuf>
+     2d2:	08 95       	ret
+		}
+	} else {
+		// store the motor state
+		pausedMotorState = motorState;
+     2d4:	80 91 09 01 	lds	r24, 0x0109
+     2d8:	80 93 06 01 	sts	0x0106, r24
+		setMotorBrake();
+     2dc:	0e 94 39 01 	call	0x272	; 0x272 <setMotorBrake>
+		inPause = 1;
+     2e0:	81 e0       	ldi	r24, 0x01	; 1
+     2e2:	80 93 60 01 	sts	0x0160, r24
+     2e6:	08 95       	ret
+
+000002e8 <vectorInterrupts>:
    external interrupts on the desired pins
    */
 void vectorInterrupts() {
 	
 	// disable external interrupts temporarily
 	EIMSK &= 0b10000000;
- 26c:	8d b3       	in	r24, 0x1d	; 29
- 26e:	80 78       	andi	r24, 0x80	; 128
- 270:	8d bb       	out	0x1d, r24	; 29
+     2e8:	8d b3       	in	r24, 0x1d	; 29
+     2ea:	80 78       	andi	r24, 0x80	; 128
+     2ec:	8d bb       	out	0x1d, r24	; 29
 	
 	// Set all interrupt pins to input
 	DDRD = DDRD & 0xF0;
- 272:	8a b1       	in	r24, 0x0a	; 10
- 274:	80 7f       	andi	r24, 0xF0	; 240
- 276:	8a b9       	out	0x0a, r24	; 10
+     2ee:	8a b1       	in	r24, 0x0a	; 10
+     2f0:	80 7f       	andi	r24, 0xF0	; 240
+     2f2:	8a b9       	out	0x0a, r24	; 10
 	DDRE = DDRE & 0x0F;
- 278:	8d b1       	in	r24, 0x0d	; 13
- 27a:	8f 70       	andi	r24, 0x0F	; 15
- 27c:	8d b9       	out	0x0d, r24	; 13
+     2f4:	8d b1       	in	r24, 0x0d	; 13
+     2f6:	8f 70       	andi	r24, 0x0F	; 15
+     2f8:	8d b9       	out	0x0d, r24	; 13
 	
 	// INT0 - First Laser
 	// Falling-edge interrupt
 	EICRA |= _BV(ISC01);
- 27e:	e9 e6       	ldi	r30, 0x69	; 105
- 280:	f0 e0       	ldi	r31, 0x00	; 0
- 282:	80 81       	ld	r24, Z
- 284:	82 60       	ori	r24, 0x02	; 2
- 286:	80 83       	st	Z, r24
+     2fa:	e9 e6       	ldi	r30, 0x69	; 105
+     2fc:	f0 e0       	ldi	r31, 0x00	; 0
+     2fe:	80 81       	ld	r24, Z
+     300:	82 60       	ori	r24, 0x02	; 2
+     302:	80 83       	st	Z, r24
 	EICRA &= ~(_BV(ISC00));
- 288:	80 81       	ld	r24, Z
- 28a:	8e 7f       	andi	r24, 0xFE	; 254
- 28c:	80 83       	st	Z, r24
+     304:	80 81       	ld	r24, Z
+     306:	8e 7f       	andi	r24, 0xFE	; 254
+     308:	80 83       	st	Z, r24
 	
 	// INT1 - Metal Detector
 	// Falling-edge interrupt
 	EICRA |= _BV(ISC11);
- 28e:	80 81       	ld	r24, Z
- 290:	88 60       	ori	r24, 0x08	; 8
- 292:	80 83       	st	Z, r24
+     30a:	80 81       	ld	r24, Z
+     30c:	88 60       	ori	r24, 0x08	; 8
+     30e:	80 83       	st	Z, r24
 	EICRA &= ~(_BV(ISC10));
- 294:	80 81       	ld	r24, Z
- 296:	8b 7f       	andi	r24, 0xFB	; 251
- 298:	80 83       	st	Z, r24
+     310:	80 81       	ld	r24, Z
+     312:	8b 7f       	andi	r24, 0xFB	; 251
+     314:	80 83       	st	Z, r24
 	
 	// INT2 - Second Laser
 	// Rising and falling edge interrupt
 	EICRA &= ~(_BV(ISC21));
- 29a:	80 81       	ld	r24, Z
- 29c:	8f 7d       	andi	r24, 0xDF	; 223
- 29e:	80 83       	st	Z, r24
+     316:	80 81       	ld	r24, Z
+     318:	8f 7d       	andi	r24, 0xDF	; 223
+     31a:	80 83       	st	Z, r24
 	EICRA |= _BV(ISC20);
- 2a0:	80 81       	ld	r24, Z
- 2a2:	80 61       	ori	r24, 0x10	; 16
- 2a4:	80 83       	st	Z, r24
+     31c:	80 81       	ld	r24, Z
+     31e:	80 61       	ori	r24, 0x10	; 16
+     320:	80 83       	st	Z, r24
 	
 	// INT3 - Exit Sensor
 	// Falling-edge interrupt
 	EICRA |= _BV(ISC31);
- 2a6:	80 81       	ld	r24, Z
- 2a8:	80 68       	ori	r24, 0x80	; 128
- 2aa:	80 83       	st	Z, r24
+     322:	80 81       	ld	r24, Z
+     324:	80 68       	ori	r24, 0x80	; 128
+     326:	80 83       	st	Z, r24
 	EICRA &= ~(_BV(ISC30));	
- 2ac:	80 81       	ld	r24, Z
- 2ae:	8f 7b       	andi	r24, 0xBF	; 191
- 2b0:	80 83       	st	Z, r24
+     328:	80 81       	ld	r24, Z
+     32a:	8f 7b       	andi	r24, 0xBF	; 191
+     32c:	80 83       	st	Z, r24
 	
 	// INT4 - Hall-effect sensor
 	// Falling-edge interrupt
 	EICRB |= _BV(ISC41);
- 2b2:	ea e6       	ldi	r30, 0x6A	; 106
- 2b4:	f0 e0       	ldi	r31, 0x00	; 0
- 2b6:	80 81       	ld	r24, Z
- 2b8:	82 60       	ori	r24, 0x02	; 2
- 2ba:	80 83       	st	Z, r24
+     32e:	ea e6       	ldi	r30, 0x6A	; 106
+     330:	f0 e0       	ldi	r31, 0x00	; 0
+     332:	80 81       	ld	r24, Z
+     334:	82 60       	ori	r24, 0x02	; 2
+     336:	80 83       	st	Z, r24
 	EICRB &= ~(_BV(ISC40));
- 2bc:	80 81       	ld	r24, Z
- 2be:	8e 7f       	andi	r24, 0xFE	; 254
- 2c0:	80 83       	st	Z, r24
+     338:	80 81       	ld	r24, Z
+     33a:	8e 7f       	andi	r24, 0xFE	; 254
+     33c:	80 83       	st	Z, r24
 	
 	// INT5 - Button2
 	// Falling-edge interrupt
 	EICRB |= _BV(ISC51);
- 2c2:	80 81       	ld	r24, Z
- 2c4:	88 60       	ori	r24, 0x08	; 8
- 2c6:	80 83       	st	Z, r24
+     33e:	80 81       	ld	r24, Z
+     340:	88 60       	ori	r24, 0x08	; 8
+     342:	80 83       	st	Z, r24
 	EICRB &= ~(_BV(ISC50));
- 2c8:	80 81       	ld	r24, Z
- 2ca:	8b 7f       	andi	r24, 0xFB	; 251
- 2cc:	80 83       	st	Z, r24
+     344:	80 81       	ld	r24, Z
+     346:	8b 7f       	andi	r24, 0xFB	; 251
+     348:	80 83       	st	Z, r24
 	
 	// INT6 - Button1
 	// Falling-edge interrupt
 	EICRB |= _BV(ISC61);
- 2ce:	80 81       	ld	r24, Z
- 2d0:	80 62       	ori	r24, 0x20	; 32
- 2d2:	80 83       	st	Z, r24
+     34a:	80 81       	ld	r24, Z
+     34c:	80 62       	ori	r24, 0x20	; 32
+     34e:	80 83       	st	Z, r24
 	EICRB &= ~(_BV(ISC60));
- 2d4:	80 81       	ld	r24, Z
- 2d6:	8f 7e       	andi	r24, 0xEF	; 239
- 2d8:	80 83       	st	Z, r24
+     350:	80 81       	ld	r24, Z
+     352:	8f 7e       	andi	r24, 0xEF	; 239
+     354:	80 83       	st	Z, r24
 	
 	
 	// Enable interrupts
 	EIMSK |= 0b01111111;
- 2da:	8d b3       	in	r24, 0x1d	; 29
- 2dc:	8f 67       	ori	r24, 0x7F	; 127
- 2de:	8d bb       	out	0x1d, r24	; 29
+     356:	8d b3       	in	r24, 0x1d	; 29
+     358:	8f 67       	ori	r24, 0x7F	; 127
+     35a:	8d bb       	out	0x1d, r24	; 29
 	EIFR |= 0b01111111;
- 2e0:	8c b3       	in	r24, 0x1c	; 28
- 2e2:	8f 67       	ori	r24, 0x7F	; 127
- 2e4:	8c bb       	out	0x1c, r24	; 28
+     35c:	8c b3       	in	r24, 0x1c	; 28
+     35e:	8f 67       	ori	r24, 0x7F	; 127
+     360:	8c bb       	out	0x1c, r24	; 28
 	sei();
- 2e6:	78 94       	sei
+     362:	78 94       	sei
 }
- 2e8:	08 95       	ret
+     364:	08 95       	ret
 
-000002ea <makeDecision>:
+00000366 <makeDecision>:
 
 void makeDecision(int index) {
 	//if(ringBuf[index].reflSamples < REFL_MIN_SAMPLES) return; // TODO: goes to error
 	//writeHexInt(ringBuf[index].avgRefl);
 	int refl = ringBuf[index].minRefl;
- 2ea:	fc 01       	movw	r30, r24
- 2ec:	ee 0f       	add	r30, r30
- 2ee:	ff 1f       	adc	r31, r31
- 2f0:	e8 0f       	add	r30, r24
- 2f2:	f9 1f       	adc	r31, r25
- 2f4:	ee 0f       	add	r30, r30
- 2f6:	ff 1f       	adc	r31, r31
- 2f8:	ec 59       	subi	r30, 0x9C	; 156
- 2fa:	fe 4f       	sbci	r31, 0xFE	; 254
- 2fc:	52 81       	ldd	r21, Z+2	; 0x02
- 2fe:	43 81       	ldd	r20, Z+3	; 0x03
+     366:	fc 01       	movw	r30, r24
+     368:	ee 0f       	add	r30, r30
+     36a:	ff 1f       	adc	r31, r31
+     36c:	e8 0f       	add	r30, r24
+     36e:	f9 1f       	adc	r31, r25
+     370:	ee 0f       	add	r30, r30
+     372:	ff 1f       	adc	r31, r31
+     374:	e9 59       	subi	r30, 0x99	; 153
+     376:	fe 4f       	sbci	r31, 0xFE	; 254
+     378:	52 81       	ldd	r21, Z+2	; 0x02
+     37a:	43 81       	ldd	r20, Z+3	; 0x03
 	if(ringBuf[index].metal == 1) {
- 300:	21 81       	ldd	r18, Z+1	; 0x01
- 302:	21 30       	cpi	r18, 0x01	; 1
- 304:	41 f5       	brne	.+80     	; 0x356 <makeDecision+0x6c>
+     37c:	21 81       	ldd	r18, Z+1	; 0x01
+     37e:	21 30       	cpi	r18, 0x01	; 1
+     380:	39 f5       	brne	.+78     	; 0x3d0 <makeDecision+0x6a>
 		if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
- 306:	25 2f       	mov	r18, r21
- 308:	34 2f       	mov	r19, r20
- 30a:	a9 01       	movw	r20, r18
- 30c:	45 55       	subi	r20, 0x55	; 85
- 30e:	51 40       	sbci	r21, 0x01	; 1
- 310:	41 3d       	cpi	r20, 0xD1	; 209
- 312:	51 05       	cpc	r21, r1
- 314:	68 f4       	brcc	.+26     	; 0x330 <makeDecision+0x46>
+     382:	25 2f       	mov	r18, r21
+     384:	34 2f       	mov	r19, r20
+     386:	a9 01       	movw	r20, r18
+     388:	49 53       	subi	r20, 0x39	; 57
+     38a:	50 40       	sbci	r21, 0x00	; 0
+     38c:	41 3c       	cpi	r20, 0xC1	; 193
+     38e:	51 05       	cpc	r21, r1
+     390:	68 f4       	brcc	.+26     	; 0x3ac <makeDecision+0x46>
 			ringBuf[index].type = STEEL;
- 316:	fc 01       	movw	r30, r24
- 318:	ee 0f       	add	r30, r30
- 31a:	ff 1f       	adc	r31, r31
- 31c:	8e 0f       	add	r24, r30
- 31e:	9f 1f       	adc	r25, r31
- 320:	fc 01       	movw	r30, r24
- 322:	ee 0f       	add	r30, r30
- 324:	ff 1f       	adc	r31, r31
- 326:	ec 59       	subi	r30, 0x9C	; 156
- 328:	fe 4f       	sbci	r31, 0xFE	; 254
- 32a:	83 e0       	ldi	r24, 0x03	; 3
- 32c:	80 83       	st	Z, r24
+     392:	fc 01       	movw	r30, r24
+     394:	ee 0f       	add	r30, r30
+     396:	ff 1f       	adc	r31, r31
+     398:	8e 0f       	add	r24, r30
+     39a:	9f 1f       	adc	r25, r31
+     39c:	fc 01       	movw	r30, r24
+     39e:	ee 0f       	add	r30, r30
+     3a0:	ff 1f       	adc	r31, r31
+     3a2:	e9 59       	subi	r30, 0x99	; 153
+     3a4:	fe 4f       	sbci	r31, 0xFE	; 254
+     3a6:	83 e0       	ldi	r24, 0x03	; 3
+     3a8:	80 83       	st	Z, r24
 			return;
- 32e:	08 95       	ret
+     3aa:	08 95       	ret
 		}
 		if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
- 330:	26 50       	subi	r18, 0x06	; 6
- 332:	30 40       	sbci	r19, 0x00	; 0
- 334:	41 e0       	ldi	r20, 0x01	; 1
- 336:	26 32       	cpi	r18, 0x26	; 38
- 338:	34 07       	cpc	r19, r20
- 33a:	a0 f5       	brcc	.+104    	; 0x3a4 <makeDecision+0xba>
+     3ac:	2f 51       	subi	r18, 0x1F	; 31
+     3ae:	30 40       	sbci	r19, 0x00	; 0
+     3b0:	27 31       	cpi	r18, 0x17	; 23
+     3b2:	31 05       	cpc	r19, r1
+     3b4:	a0 f5       	brcc	.+104    	; 0x41e <makeDecision+0xb8>
 			ringBuf[index].type = ALUMINUM;
- 33c:	fc 01       	movw	r30, r24
- 33e:	ee 0f       	add	r30, r30
- 340:	ff 1f       	adc	r31, r31
- 342:	8e 0f       	add	r24, r30
- 344:	9f 1f       	adc	r25, r31
- 346:	fc 01       	movw	r30, r24
- 348:	ee 0f       	add	r30, r30
- 34a:	ff 1f       	adc	r31, r31
- 34c:	ec 59       	subi	r30, 0x9C	; 156
- 34e:	fe 4f       	sbci	r31, 0xFE	; 254
- 350:	84 e0       	ldi	r24, 0x04	; 4
- 352:	80 83       	st	Z, r24
+     3b6:	fc 01       	movw	r30, r24
+     3b8:	ee 0f       	add	r30, r30
+     3ba:	ff 1f       	adc	r31, r31
+     3bc:	8e 0f       	add	r24, r30
+     3be:	9f 1f       	adc	r25, r31
+     3c0:	fc 01       	movw	r30, r24
+     3c2:	ee 0f       	add	r30, r30
+     3c4:	ff 1f       	adc	r31, r31
+     3c6:	e9 59       	subi	r30, 0x99	; 153
+     3c8:	fe 4f       	sbci	r31, 0xFE	; 254
+     3ca:	84 e0       	ldi	r24, 0x04	; 4
+     3cc:	80 83       	st	Z, r24
 			return;
- 354:	08 95       	ret
+     3ce:	08 95       	ret
 		}
 	} else {	
 		if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
- 356:	25 2f       	mov	r18, r21
- 358:	34 2f       	mov	r19, r20
- 35a:	a9 01       	movw	r20, r18
- 35c:	41 58       	subi	r20, 0x81	; 129
- 35e:	52 40       	sbci	r21, 0x02	; 2
- 360:	47 32       	cpi	r20, 0x27	; 39
- 362:	51 05       	cpc	r21, r1
- 364:	68 f4       	brcc	.+26     	; 0x380 <makeDecision+0x96>
+     3d0:	25 2f       	mov	r18, r21
+     3d2:	34 2f       	mov	r19, r20
+     3d4:	a9 01       	movw	r20, r18
+     3d6:	44 5f       	subi	r20, 0xF4	; 244
+     3d8:	51 40       	sbci	r21, 0x01	; 1
+     3da:	44 31       	cpi	r20, 0x14	; 20
+     3dc:	51 05       	cpc	r21, r1
+     3de:	68 f4       	brcc	.+26     	; 0x3fa <makeDecision+0x94>
 			ringBuf[index].type = BLACK;
- 366:	fc 01       	movw	r30, r24
- 368:	ee 0f       	add	r30, r30
- 36a:	ff 1f       	adc	r31, r31
- 36c:	8e 0f       	add	r24, r30
- 36e:	9f 1f       	adc	r25, r31
- 370:	fc 01       	movw	r30, r24
- 372:	ee 0f       	add	r30, r30
- 374:	ff 1f       	adc	r31, r31
- 376:	ec 59       	subi	r30, 0x9C	; 156
- 378:	fe 4f       	sbci	r31, 0xFE	; 254
- 37a:	81 e0       	ldi	r24, 0x01	; 1
- 37c:	80 83       	st	Z, r24
+     3e0:	fc 01       	movw	r30, r24
+     3e2:	ee 0f       	add	r30, r30
+     3e4:	ff 1f       	adc	r31, r31
+     3e6:	8e 0f       	add	r24, r30
+     3e8:	9f 1f       	adc	r25, r31
+     3ea:	fc 01       	movw	r30, r24
+     3ec:	ee 0f       	add	r30, r30
+     3ee:	ff 1f       	adc	r31, r31
+     3f0:	e9 59       	subi	r30, 0x99	; 153
+     3f2:	fe 4f       	sbci	r31, 0xFE	; 254
+     3f4:	81 e0       	ldi	r24, 0x01	; 1
+     3f6:	80 83       	st	Z, r24
 			return;
- 37e:	08 95       	ret
+     3f8:	08 95       	ret
 		}
 		if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
- 380:	29 55       	subi	r18, 0x59	; 89
- 382:	32 40       	sbci	r19, 0x02	; 2
- 384:	25 32       	cpi	r18, 0x25	; 37
- 386:	31 05       	cpc	r19, r1
- 388:	68 f4       	brcc	.+26     	; 0x3a4 <makeDecision+0xba>
+     3fa:	29 5b       	subi	r18, 0xB9	; 185
+     3fc:	31 40       	sbci	r19, 0x01	; 1
+     3fe:	21 33       	cpi	r18, 0x31	; 49
+     400:	31 05       	cpc	r19, r1
+     402:	68 f4       	brcc	.+26     	; 0x41e <makeDecision+0xb8>
 			ringBuf[index].type = WHITE;
- 38a:	fc 01       	movw	r30, r24
- 38c:	ee 0f       	add	r30, r30
- 38e:	ff 1f       	adc	r31, r31
- 390:	8e 0f       	add	r24, r30
- 392:	9f 1f       	adc	r25, r31
- 394:	fc 01       	movw	r30, r24
- 396:	ee 0f       	add	r30, r30
- 398:	ff 1f       	adc	r31, r31
- 39a:	ec 59       	subi	r30, 0x9C	; 156
- 39c:	fe 4f       	sbci	r31, 0xFE	; 254
- 39e:	82 e0       	ldi	r24, 0x02	; 2
- 3a0:	80 83       	st	Z, r24
+     404:	fc 01       	movw	r30, r24
+     406:	ee 0f       	add	r30, r30
+     408:	ff 1f       	adc	r31, r31
+     40a:	8e 0f       	add	r24, r30
+     40c:	9f 1f       	adc	r25, r31
+     40e:	fc 01       	movw	r30, r24
+     410:	ee 0f       	add	r30, r30
+     412:	ff 1f       	adc	r31, r31
+     414:	e9 59       	subi	r30, 0x99	; 153
+     416:	fe 4f       	sbci	r31, 0xFE	; 254
+     418:	82 e0       	ldi	r24, 0x02	; 2
+     41a:	80 83       	st	Z, r24
 			return;
- 3a2:	08 95       	ret
+     41c:	08 95       	ret
 		}
 	}
 	writeHexInt(0xEF);	
- 3a4:	8f ee       	ldi	r24, 0xEF	; 239
- 3a6:	90 e0       	ldi	r25, 0x00	; 0
- 3a8:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
- 3ac:	08 95       	ret
+     41e:	8f ee       	ldi	r24, 0xEF	; 239
+     420:	90 e0       	ldi	r25, 0x00	; 0
+     422:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
+     426:	08 95       	ret
 
-000003ae <firstLaserHandler>:
+00000428 <firstLaserHandler>:
 /* void firstLaserHandler()
    Purpose: handler for the first laser
    */
 void firstLaserHandler() {
 	// no pending item
 	if(currentMetal == -1) {
- 3ae:	80 91 a3 01 	lds	r24, 0x01A3
- 3b2:	90 91 a4 01 	lds	r25, 0x01A4
- 3b6:	2f ef       	ldi	r18, 0xFF	; 255
- 3b8:	8f 3f       	cpi	r24, 0xFF	; 255
- 3ba:	92 07       	cpc	r25, r18
- 3bc:	39 f4       	brne	.+14     	; 0x3cc <firstLaserHandler+0x1e>
+     428:	80 91 b0 01 	lds	r24, 0x01B0
+     42c:	90 91 b1 01 	lds	r25, 0x01B1
+     430:	2f ef       	ldi	r18, 0xFF	; 255
+     432:	8f 3f       	cpi	r24, 0xFF	; 255
+     434:	92 07       	cpc	r25, r18
+     436:	39 f4       	brne	.+14     	; 0x446 <firstLaserHandler+0x1e>
 		currentMetal = newRingBufItem();
- 3be:	0e 94 56 05 	call	0xaac	; 0xaac <newRingBufItem>
- 3c2:	90 93 a4 01 	sts	0x01A4, r25
- 3c6:	80 93 a3 01 	sts	0x01A3, r24
- 3ca:	08 95       	ret
+     438:	0e 94 33 06 	call	0xc66	; 0xc66 <newRingBufItem>
+     43c:	90 93 b1 01 	sts	0x01B1, r25
+     440:	80 93 b0 01 	sts	0x01B0, r24
+     444:	08 95       	ret
 	} else {
 		//item in conversion
 		
 		// place the currently converting item on the queue
 		newMetal(currentMetal);
- 3cc:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <newMetal>
+     446:	0e 94 9d 05 	call	0xb3a	; 0xb3a <newMetal>
 		
 		// make the new item and start conversion
 		currentMetal = newRingBufItem();
- 3d0:	0e 94 56 05 	call	0xaac	; 0xaac <newRingBufItem>
- 3d4:	90 93 a4 01 	sts	0x01A4, r25
- 3d8:	80 93 a3 01 	sts	0x01A3, r24
- 3dc:	08 95       	ret
+     44a:	0e 94 33 06 	call	0xc66	; 0xc66 <newRingBufItem>
+     44e:	90 93 b1 01 	sts	0x01B1, r25
+     452:	80 93 b0 01 	sts	0x01B0, r24
+     456:	08 95       	ret
 
-000003de <metalHandler>:
+00000458 <metalHandler>:
 
 /* void metalHandler()
    Purpose: handler for the inductive sensor
    */
 void metalHandler() {
 	if(currentMetal != -1) ringBuf[currentMetal].metal = 1;
- 3de:	80 91 a3 01 	lds	r24, 0x01A3
- 3e2:	90 91 a4 01 	lds	r25, 0x01A4
- 3e6:	2f ef       	ldi	r18, 0xFF	; 255
- 3e8:	8f 3f       	cpi	r24, 0xFF	; 255
- 3ea:	92 07       	cpc	r25, r18
- 3ec:	61 f0       	breq	.+24     	; 0x406 <metalHandler+0x28>
- 3ee:	fc 01       	movw	r30, r24
- 3f0:	ee 0f       	add	r30, r30
- 3f2:	ff 1f       	adc	r31, r31
- 3f4:	8e 0f       	add	r24, r30
- 3f6:	9f 1f       	adc	r25, r31
- 3f8:	fc 01       	movw	r30, r24
- 3fa:	ee 0f       	add	r30, r30
- 3fc:	ff 1f       	adc	r31, r31
- 3fe:	ec 59       	subi	r30, 0x9C	; 156
- 400:	fe 4f       	sbci	r31, 0xFE	; 254
- 402:	81 e0       	ldi	r24, 0x01	; 1
- 404:	81 83       	std	Z+1, r24	; 0x01
- 406:	08 95       	ret
+     458:	80 91 b0 01 	lds	r24, 0x01B0
+     45c:	90 91 b1 01 	lds	r25, 0x01B1
+     460:	2f ef       	ldi	r18, 0xFF	; 255
+     462:	8f 3f       	cpi	r24, 0xFF	; 255
+     464:	92 07       	cpc	r25, r18
+     466:	61 f0       	breq	.+24     	; 0x480 <metalHandler+0x28>
+     468:	fc 01       	movw	r30, r24
+     46a:	ee 0f       	add	r30, r30
+     46c:	ff 1f       	adc	r31, r31
+     46e:	8e 0f       	add	r24, r30
+     470:	9f 1f       	adc	r25, r31
+     472:	fc 01       	movw	r30, r24
+     474:	ee 0f       	add	r30, r30
+     476:	ff 1f       	adc	r31, r31
+     478:	e9 59       	subi	r30, 0x99	; 153
+     47a:	fe 4f       	sbci	r31, 0xFE	; 254
+     47c:	81 e0       	ldi	r24, 0x01	; 1
+     47e:	81 83       	std	Z+1, r24	; 0x01
+     480:	08 95       	ret
 
-00000408 <secondLaserHandler>:
+00000482 <secondLaserHandler>:
 /* void secondLaserHandler()
    Purpose: on RE completes the inductive stage and starts
    the reflectivity stage.
    on FE completes the reflective stage */
 void secondLaserHandler() {
 	if(ADC_is_running == 1) {
- 408:	80 91 05 01 	lds	r24, 0x0105
- 40c:	81 30       	cpi	r24, 0x01	; 1
- 40e:	99 f4       	brne	.+38     	; 0x436 <secondLaserHandler+0x2e>
+     482:	80 91 05 01 	lds	r24, 0x0105
+     486:	81 30       	cpi	r24, 0x01	; 1
+     488:	99 f4       	brne	.+38     	; 0x4b0 <secondLaserHandler+0x2e>
 		// debounce
 		Ignore_ADC_samples = 1;
- 410:	80 93 04 01 	sts	0x0104, r24
+     48a:	80 93 04 01 	sts	0x0104, r24
 		delaynms(DEBOUNCE_DELAY);
- 414:	83 e0       	ldi	r24, 0x03	; 3
- 416:	90 e0       	ldi	r25, 0x00	; 0
- 418:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     48e:	83 e0       	ldi	r24, 0x03	; 3
+     490:	90 e0       	ldi	r25, 0x00	; 0
+     492:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 		Ignore_ADC_samples = 0;
- 41c:	10 92 04 01 	sts	0x0104, r1
+     496:	10 92 04 01 	sts	0x0104, r1
 		if((PIND & 0b00000100) == 0b100) return;
- 420:	4a 99       	sbic	0x09, 2	; 9
- 422:	2c c0       	rjmp	.+88     	; 0x47c <secondLaserHandler+0x74>
+     49a:	4a 99       	sbic	0x09, 2	; 9
+     49c:	2c c0       	rjmp	.+88     	; 0x4f6 <secondLaserHandler+0x74>
 		// stop ADC
 		stopADC();
- 424:	0e 94 8f 00 	call	0x11e	; 0x11e <stopADC>
+     49e:	0e 94 8f 00 	call	0x11e	; 0x11e <stopADC>
 		makeDecision(currentRefl);
- 428:	80 91 60 01 	lds	r24, 0x0160
- 42c:	90 91 61 01 	lds	r25, 0x0161
- 430:	0e 94 75 01 	call	0x2ea	; 0x2ea <makeDecision>
- 434:	08 95       	ret
+     4a2:	80 91 63 01 	lds	r24, 0x0163
+     4a6:	90 91 64 01 	lds	r25, 0x0164
+     4aa:	0e 94 b3 01 	call	0x366	; 0x366 <makeDecision>
+     4ae:	08 95       	ret
 		// TODO
 	} else {
 		delaynms(DEBOUNCE_DELAY);
- 436:	83 e0       	ldi	r24, 0x03	; 3
- 438:	90 e0       	ldi	r25, 0x00	; 0
- 43a:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     4b0:	83 e0       	ldi	r24, 0x03	; 3
+     4b2:	90 e0       	ldi	r25, 0x00	; 0
+     4b4:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 		if((PIND & 0b00000100) == 0) return;
- 43e:	4a 9b       	sbis	0x09, 2	; 9
- 440:	1d c0       	rjmp	.+58     	; 0x47c <secondLaserHandler+0x74>
+     4b8:	4a 9b       	sbis	0x09, 2	; 9
+     4ba:	1d c0       	rjmp	.+58     	; 0x4f6 <secondLaserHandler+0x74>
 		if(metalCount == 0) {
- 442:	80 91 0b 01 	lds	r24, 0x010B
- 446:	90 91 0c 01 	lds	r25, 0x010C
- 44a:	00 97       	sbiw	r24, 0x00	; 0
- 44c:	79 f4       	brne	.+30     	; 0x46c <secondLaserHandler+0x64>
+     4bc:	80 91 0e 01 	lds	r24, 0x010E
+     4c0:	90 91 0f 01 	lds	r25, 0x010F
+     4c4:	00 97       	sbiw	r24, 0x00	; 0
+     4c6:	79 f4       	brne	.+30     	; 0x4e6 <secondLaserHandler+0x64>
 			currentRefl = currentMetal;
- 44e:	80 91 a3 01 	lds	r24, 0x01A3
- 452:	90 91 a4 01 	lds	r25, 0x01A4
- 456:	90 93 61 01 	sts	0x0161, r25
- 45a:	80 93 60 01 	sts	0x0160, r24
+     4c8:	80 91 b0 01 	lds	r24, 0x01B0
+     4cc:	90 91 b1 01 	lds	r25, 0x01B1
+     4d0:	90 93 64 01 	sts	0x0164, r25
+     4d4:	80 93 63 01 	sts	0x0163, r24
 			currentMetal = -1;
- 45e:	8f ef       	ldi	r24, 0xFF	; 255
- 460:	9f ef       	ldi	r25, 0xFF	; 255
- 462:	90 93 a4 01 	sts	0x01A4, r25
- 466:	80 93 a3 01 	sts	0x01A3, r24
- 46a:	06 c0       	rjmp	.+12     	; 0x478 <secondLaserHandler+0x70>
+     4d8:	8f ef       	ldi	r24, 0xFF	; 255
+     4da:	9f ef       	ldi	r25, 0xFF	; 255
+     4dc:	90 93 b1 01 	sts	0x01B1, r25
+     4e0:	80 93 b0 01 	sts	0x01B0, r24
+     4e4:	06 c0       	rjmp	.+12     	; 0x4f2 <secondLaserHandler+0x70>
 		} else {
 			currentRefl = popMetal();
- 46c:	0e 94 a8 04 	call	0x950	; 0x950 <popMetal>
- 470:	90 93 61 01 	sts	0x0161, r25
- 474:	80 93 60 01 	sts	0x0160, r24
+     4e6:	0e 94 71 05 	call	0xae2	; 0xae2 <popMetal>
+     4ea:	90 93 64 01 	sts	0x0164, r25
+     4ee:	80 93 63 01 	sts	0x0163, r24
 		}			
 		startADC();
- 478:	0e 94 85 00 	call	0x10a	; 0x10a <startADC>
- 47c:	08 95       	ret
+     4f2:	0e 94 85 00 	call	0x10a	; 0x10a <startADC>
+     4f6:	08 95       	ret
 
-0000047e <exitHandler>:
-
+000004f8 <exitHandler>:
 /* void exitHandler()
    Purpose: handles the exit sensor
    */
 void exitHandler() {
-	writeDecInt(bufLength);
- 47e:	80 91 a1 01 	lds	r24, 0x01A1
- 482:	90 91 a2 01 	lds	r25, 0x01A2
- 486:	0e 94 f5 05 	call	0xbea	; 0xbea <writeDecInt>
 	// is there an item on the queue?
-	if(bufLength==0) return; // Throw an error here
- 48a:	80 91 a1 01 	lds	r24, 0x01A1
- 48e:	90 91 a2 01 	lds	r25, 0x01A2
- 492:	00 97       	sbiw	r24, 0x00	; 0
- 494:	09 f4       	brne	.+2      	; 0x498 <exitHandler+0x1a>
- 496:	69 c0       	rjmp	.+210    	; 0x56a <exitHandler+0xec>
+	if(bufLength==0) return;
+     4f8:	80 91 ac 01 	lds	r24, 0x01AC
+     4fc:	90 91 ad 01 	lds	r25, 0x01AD
+     500:	00 97       	sbiw	r24, 0x00	; 0
+     502:	09 f4       	brne	.+2      	; 0x506 <exitHandler+0xe>
+     504:	b0 c0       	rjmp	.+352    	; 0x666 <exitHandler+0x16e>
+	// if we're in pause, ignore it as it's probably
+	// the operator pulling the piece off
+	if(inPause==1) return;
+     506:	80 91 60 01 	lds	r24, 0x0160
+     50a:	81 30       	cpi	r24, 0x01	; 1
+     50c:	09 f4       	brne	.+2      	; 0x510 <exitHandler+0x18>
+     50e:	ab c0       	rjmp	.+342    	; 0x666 <exitHandler+0x16e>
 	// are we in position?
 	switch(ringBuf[ringTop].type) {
- 498:	80 91 62 01 	lds	r24, 0x0162
- 49c:	90 91 63 01 	lds	r25, 0x0163
- 4a0:	fc 01       	movw	r30, r24
- 4a2:	ee 0f       	add	r30, r30
- 4a4:	ff 1f       	adc	r31, r31
- 4a6:	8e 0f       	add	r24, r30
- 4a8:	9f 1f       	adc	r25, r31
- 4aa:	fc 01       	movw	r30, r24
- 4ac:	ee 0f       	add	r30, r30
- 4ae:	ff 1f       	adc	r31, r31
- 4b0:	ec 59       	subi	r30, 0x9C	; 156
- 4b2:	fe 4f       	sbci	r31, 0xFE	; 254
- 4b4:	80 81       	ld	r24, Z
- 4b6:	82 30       	cpi	r24, 0x02	; 2
- 4b8:	99 f1       	breq	.+102    	; 0x520 <exitHandler+0xa2>
- 4ba:	83 30       	cpi	r24, 0x03	; 3
- 4bc:	18 f4       	brcc	.+6      	; 0x4c4 <exitHandler+0x46>
- 4be:	81 30       	cpi	r24, 0x01	; 1
- 4c0:	e9 f5       	brne	.+122    	; 0x53c <exitHandler+0xbe>
- 4c2:	05 c0       	rjmp	.+10     	; 0x4ce <exitHandler+0x50>
- 4c4:	83 30       	cpi	r24, 0x03	; 3
- 4c6:	81 f0       	breq	.+32     	; 0x4e8 <exitHandler+0x6a>
- 4c8:	84 30       	cpi	r24, 0x04	; 4
- 4ca:	c1 f5       	brne	.+112    	; 0x53c <exitHandler+0xbe>
- 4cc:	1b c0       	rjmp	.+54     	; 0x504 <exitHandler+0x86>
+     510:	80 91 65 01 	lds	r24, 0x0165
+     514:	90 91 66 01 	lds	r25, 0x0166
+     518:	fc 01       	movw	r30, r24
+     51a:	ee 0f       	add	r30, r30
+     51c:	ff 1f       	adc	r31, r31
+     51e:	8e 0f       	add	r24, r30
+     520:	9f 1f       	adc	r25, r31
+     522:	fc 01       	movw	r30, r24
+     524:	ee 0f       	add	r30, r30
+     526:	ff 1f       	adc	r31, r31
+     528:	e9 59       	subi	r30, 0x99	; 153
+     52a:	fe 4f       	sbci	r31, 0xFE	; 254
+     52c:	80 81       	ld	r24, Z
+     52e:	82 30       	cpi	r24, 0x02	; 2
+     530:	09 f4       	brne	.+2      	; 0x534 <exitHandler+0x3c>
+     532:	6b c0       	rjmp	.+214    	; 0x60a <exitHandler+0x112>
+     534:	83 30       	cpi	r24, 0x03	; 3
+     536:	20 f4       	brcc	.+8      	; 0x540 <exitHandler+0x48>
+     538:	81 30       	cpi	r24, 0x01	; 1
+     53a:	09 f0       	breq	.+2      	; 0x53e <exitHandler+0x46>
+     53c:	85 c0       	rjmp	.+266    	; 0x648 <exitHandler+0x150>
+     53e:	06 c0       	rjmp	.+12     	; 0x54c <exitHandler+0x54>
+     540:	83 30       	cpi	r24, 0x03	; 3
+     542:	19 f1       	breq	.+70     	; 0x58a <exitHandler+0x92>
+     544:	84 30       	cpi	r24, 0x04	; 4
+     546:	09 f0       	breq	.+2      	; 0x54a <exitHandler+0x52>
+     548:	7f c0       	rjmp	.+254    	; 0x648 <exitHandler+0x150>
+     54a:	3f c0       	rjmp	.+126    	; 0x5ca <exitHandler+0xd2>
 		case BLACK:
-			writeHexInt(0xEB);
- 4ce:	8b ee       	ldi	r24, 0xEB	; 235
- 4d0:	90 e0       	ldi	r25, 0x00	; 0
- 4d2:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
 			if(steps==BLACK_POSITION) {
- 4d6:	80 91 a7 01 	lds	r24, 0x01A7
- 4da:	90 91 a8 01 	lds	r25, 0x01A8
- 4de:	00 97       	sbiw	r24, 0x00	; 0
- 4e0:	69 f5       	brne	.+90     	; 0x53c <exitHandler+0xbe>
+     54c:	80 91 b4 01 	lds	r24, 0x01B4
+     550:	90 91 b5 01 	lds	r25, 0x01B5
+     554:	00 97       	sbiw	r24, 0x00	; 0
+     556:	09 f0       	breq	.+2      	; 0x55a <exitHandler+0x62>
+     558:	81 c0       	rjmp	.+258    	; 0x65c <exitHandler+0x164>
+				blackSorted++;
+     55a:	80 91 a8 01 	lds	r24, 0x01A8
+     55e:	90 91 a9 01 	lds	r25, 0x01A9
+     562:	01 96       	adiw	r24, 0x01	; 1
+     564:	90 93 a9 01 	sts	0x01A9, r25
+     568:	80 93 a8 01 	sts	0x01A8, r24
+				totalSorted++;
+     56c:	20 91 ae 01 	lds	r18, 0x01AE
+     570:	30 91 af 01 	lds	r19, 0x01AF
+     574:	2f 5f       	subi	r18, 0xFF	; 255
+     576:	3f 4f       	sbci	r19, 0xFF	; 255
+     578:	30 93 af 01 	sts	0x01AF, r19
+     57c:	20 93 ae 01 	sts	0x01AE, r18
+				writeBlack(blackSorted);
+     580:	0e 94 69 07 	call	0xed2	; 0xed2 <writeBlack>
 				popBuf();
- 4e2:	0e 94 32 05 	call	0xa64	; 0xa64 <popBuf>
+     584:	0e 94 0f 06 	call	0xc1e	; 0xc1e <popBuf>
 				return;
- 4e6:	08 95       	ret
+     588:	08 95       	ret
 			}
 			break;
 		case STEEL:
-			writeHexInt(0xE5);
- 4e8:	85 ee       	ldi	r24, 0xE5	; 229
- 4ea:	90 e0       	ldi	r25, 0x00	; 0
- 4ec:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
 			if(steps==STEEL_POSITION) {
- 4f0:	80 91 a7 01 	lds	r24, 0x01A7
- 4f4:	90 91 a8 01 	lds	r25, 0x01A8
- 4f8:	86 39       	cpi	r24, 0x96	; 150
- 4fa:	91 05       	cpc	r25, r1
- 4fc:	f9 f4       	brne	.+62     	; 0x53c <exitHandler+0xbe>
+     58a:	80 91 b4 01 	lds	r24, 0x01B4
+     58e:	90 91 b5 01 	lds	r25, 0x01B5
+     592:	86 39       	cpi	r24, 0x96	; 150
+     594:	91 05       	cpc	r25, r1
+     596:	09 f0       	breq	.+2      	; 0x59a <exitHandler+0xa2>
+     598:	61 c0       	rjmp	.+194    	; 0x65c <exitHandler+0x164>
+				steelSorted++;
+     59a:	80 91 a3 01 	lds	r24, 0x01A3
+     59e:	90 91 a4 01 	lds	r25, 0x01A4
+     5a2:	01 96       	adiw	r24, 0x01	; 1
+     5a4:	90 93 a4 01 	sts	0x01A4, r25
+     5a8:	80 93 a3 01 	sts	0x01A3, r24
+				totalSorted++;
+     5ac:	20 91 ae 01 	lds	r18, 0x01AE
+     5b0:	30 91 af 01 	lds	r19, 0x01AF
+     5b4:	2f 5f       	subi	r18, 0xFF	; 255
+     5b6:	3f 4f       	sbci	r19, 0xFF	; 255
+     5b8:	30 93 af 01 	sts	0x01AF, r19
+     5bc:	20 93 ae 01 	sts	0x01AE, r18
+				writeSteel(steelSorted);
+     5c0:	0e 94 45 07 	call	0xe8a	; 0xe8a <writeSteel>
 				popBuf();
- 4fe:	0e 94 32 05 	call	0xa64	; 0xa64 <popBuf>
+     5c4:	0e 94 0f 06 	call	0xc1e	; 0xc1e <popBuf>
 				return;
- 502:	08 95       	ret
+     5c8:	08 95       	ret
 			}
 			break;
 		case ALUMINUM:
-			writeHexInt(0xEA);
- 504:	8a ee       	ldi	r24, 0xEA	; 234
- 506:	90 e0       	ldi	r25, 0x00	; 0
- 508:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
 			if(steps==ALUMINUM_POSIITION) {
- 50c:	80 91 a7 01 	lds	r24, 0x01A7
- 510:	90 91 a8 01 	lds	r25, 0x01A8
- 514:	82 33       	cpi	r24, 0x32	; 50
- 516:	91 05       	cpc	r25, r1
- 518:	89 f4       	brne	.+34     	; 0x53c <exitHandler+0xbe>
+     5ca:	80 91 b4 01 	lds	r24, 0x01B4
+     5ce:	90 91 b5 01 	lds	r25, 0x01B5
+     5d2:	82 33       	cpi	r24, 0x32	; 50
+     5d4:	91 05       	cpc	r25, r1
+     5d6:	09 f0       	breq	.+2      	; 0x5da <exitHandler+0xe2>
+     5d8:	41 c0       	rjmp	.+130    	; 0x65c <exitHandler+0x164>
+				aluminumSorted++;
+     5da:	80 91 a5 01 	lds	r24, 0x01A5
+     5de:	90 91 a6 01 	lds	r25, 0x01A6
+     5e2:	01 96       	adiw	r24, 0x01	; 1
+     5e4:	90 93 a6 01 	sts	0x01A6, r25
+     5e8:	80 93 a5 01 	sts	0x01A5, r24
+				totalSorted++;
+     5ec:	20 91 ae 01 	lds	r18, 0x01AE
+     5f0:	30 91 af 01 	lds	r19, 0x01AF
+     5f4:	2f 5f       	subi	r18, 0xFF	; 255
+     5f6:	3f 4f       	sbci	r19, 0xFF	; 255
+     5f8:	30 93 af 01 	sts	0x01AF, r19
+     5fc:	20 93 ae 01 	sts	0x01AE, r18
+				writeAluminum(aluminumSorted);
+     600:	0e 94 21 07 	call	0xe42	; 0xe42 <writeAluminum>
 				popBuf();
- 51a:	0e 94 32 05 	call	0xa64	; 0xa64 <popBuf>
+     604:	0e 94 0f 06 	call	0xc1e	; 0xc1e <popBuf>
 				return;
- 51e:	08 95       	ret
+     608:	08 95       	ret
 			}
 			break;
 		case WHITE:
-			writeHexInt(0xE0);
- 520:	80 ee       	ldi	r24, 0xE0	; 224
- 522:	90 e0       	ldi	r25, 0x00	; 0
- 524:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
 			if(steps==WHITE_POSITION) {
- 528:	80 91 a7 01 	lds	r24, 0x01A7
- 52c:	90 91 a8 01 	lds	r25, 0x01A8
- 530:	84 36       	cpi	r24, 0x64	; 100
- 532:	91 05       	cpc	r25, r1
- 534:	19 f4       	brne	.+6      	; 0x53c <exitHandler+0xbe>
+     60a:	80 91 b4 01 	lds	r24, 0x01B4
+     60e:	90 91 b5 01 	lds	r25, 0x01B5
+     612:	84 36       	cpi	r24, 0x64	; 100
+     614:	91 05       	cpc	r25, r1
+     616:	11 f5       	brne	.+68     	; 0x65c <exitHandler+0x164>
+				whiteSorted++;
+     618:	80 91 aa 01 	lds	r24, 0x01AA
+     61c:	90 91 ab 01 	lds	r25, 0x01AB
+     620:	01 96       	adiw	r24, 0x01	; 1
+     622:	90 93 ab 01 	sts	0x01AB, r25
+     626:	80 93 aa 01 	sts	0x01AA, r24
+				totalSorted++;
+     62a:	20 91 ae 01 	lds	r18, 0x01AE
+     62e:	30 91 af 01 	lds	r19, 0x01AF
+     632:	2f 5f       	subi	r18, 0xFF	; 255
+     634:	3f 4f       	sbci	r19, 0xFF	; 255
+     636:	30 93 af 01 	sts	0x01AF, r19
+     63a:	20 93 ae 01 	sts	0x01AE, r18
+				writeWhite(whiteSorted);
+     63e:	0e 94 8d 07 	call	0xf1a	; 0xf1a <writeWhite>
 				popBuf();
- 536:	0e 94 32 05 	call	0xa64	; 0xa64 <popBuf>
+     642:	0e 94 0f 06 	call	0xc1e	; 0xc1e <popBuf>
 				return;
- 53a:	08 95       	ret
+     646:	08 95       	ret
+			}
+			break;
 		default:
+			//undefined item
+			writeError(0xF0);
+     648:	80 ef       	ldi	r24, 0xF0	; 240
+     64a:	90 e0       	ldi	r25, 0x00	; 0
+     64c:	0e 94 d2 06 	call	0xda4	; 0xda4 <writeError>
+			pausedForUndef = 1;
+     650:	81 e0       	ldi	r24, 0x01	; 1
+     652:	80 93 08 01 	sts	0x0108, r24
+			pausedHandler();
+     656:	0e 94 47 01 	call	0x28e	; 0x28e <pausedHandler>
+			return;
+     65a:	08 95       	ret
 			break;
 	}			
 	// we got here, so we're not at the correct position yet.
 	// stop the motor
 	setMotorBrake();
- 53c:	0e 94 2d 01 	call	0x25a	; 0x25a <setMotorBrake>
-	writeDecInt(ringBuf[ringTop].minRefl);
- 540:	80 91 62 01 	lds	r24, 0x0162
- 544:	90 91 63 01 	lds	r25, 0x0163
- 548:	fc 01       	movw	r30, r24
- 54a:	ee 0f       	add	r30, r30
- 54c:	ff 1f       	adc	r31, r31
- 54e:	8e 0f       	add	r24, r30
- 550:	9f 1f       	adc	r25, r31
- 552:	fc 01       	movw	r30, r24
- 554:	ee 0f       	add	r30, r30
- 556:	ff 1f       	adc	r31, r31
- 558:	ec 59       	subi	r30, 0x9C	; 156
- 55a:	fe 4f       	sbci	r31, 0xFE	; 254
- 55c:	82 81       	ldd	r24, Z+2	; 0x02
- 55e:	93 81       	ldd	r25, Z+3	; 0x03
- 560:	0e 94 f5 05 	call	0xbea	; 0xbea <writeDecInt>
+     65c:	0e 94 39 01 	call	0x272	; 0x272 <setMotorBrake>
 	// set a flag to let the stepper know we're waiting
 	motorWaitForStepper = 1;
- 564:	81 e0       	ldi	r24, 0x01	; 1
- 566:	80 93 06 01 	sts	0x0106, r24
- 56a:	08 95       	ret
+     660:	81 e0       	ldi	r24, 0x01	; 1
+     662:	80 93 07 01 	sts	0x0107, r24
+     666:	08 95       	ret
 
-0000056c <shutdownHandler>:
+00000668 <shutdownHandler>:
 }
 
 void shutdownHandler() {
 	if(bufLength == 0) {
- 56c:	80 91 a1 01 	lds	r24, 0x01A1
- 570:	90 91 a2 01 	lds	r25, 0x01A2
- 574:	00 97       	sbiw	r24, 0x00	; 0
- 576:	39 f4       	brne	.+14     	; 0x586 <shutdownHandler+0x1a>
+     668:	80 91 ac 01 	lds	r24, 0x01AC
+     66c:	90 91 ad 01 	lds	r25, 0x01AD
+     670:	00 97       	sbiw	r24, 0x00	; 0
+     672:	39 f4       	brne	.+14     	; 0x682 <shutdownHandler+0x1a>
 		delaynms(500);
- 578:	84 ef       	ldi	r24, 0xF4	; 244
- 57a:	91 e0       	ldi	r25, 0x01	; 1
- 57c:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     674:	84 ef       	ldi	r24, 0xF4	; 244
+     676:	91 e0       	ldi	r25, 0x01	; 1
+     678:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 		setMotorBrake();
- 580:	0e 94 2d 01 	call	0x25a	; 0x25a <setMotorBrake>
- 584:	ff cf       	rjmp	.-2      	; 0x584 <shutdownHandler+0x18>
- 586:	08 95       	ret
+     67c:	0e 94 39 01 	call	0x272	; 0x272 <setMotorBrake>
+     680:	ff cf       	rjmp	.-2      	; 0x680 <shutdownHandler+0x18>
+     682:	08 95       	ret
 
-00000588 <__vector_1>:
+00000684 <__vector_1>:
 
 /* ISR(INT0_vect)
    Purpose: Falling-edge interrupt vector
    for FIRST LASER
    */
 ISR(INT0_vect){
- 588:	1f 92       	push	r1
- 58a:	0f 92       	push	r0
- 58c:	0f b6       	in	r0, 0x3f	; 63
- 58e:	0f 92       	push	r0
- 590:	0b b6       	in	r0, 0x3b	; 59
- 592:	0f 92       	push	r0
- 594:	11 24       	eor	r1, r1
- 596:	2f 93       	push	r18
- 598:	3f 93       	push	r19
- 59a:	4f 93       	push	r20
- 59c:	5f 93       	push	r21
- 59e:	6f 93       	push	r22
- 5a0:	7f 93       	push	r23
- 5a2:	8f 93       	push	r24
- 5a4:	9f 93       	push	r25
- 5a6:	af 93       	push	r26
- 5a8:	bf 93       	push	r27
- 5aa:	ef 93       	push	r30
- 5ac:	ff 93       	push	r31
+     684:	1f 92       	push	r1
+     686:	0f 92       	push	r0
+     688:	0f b6       	in	r0, 0x3f	; 63
+     68a:	0f 92       	push	r0
+     68c:	0b b6       	in	r0, 0x3b	; 59
+     68e:	0f 92       	push	r0
+     690:	11 24       	eor	r1, r1
+     692:	2f 93       	push	r18
+     694:	3f 93       	push	r19
+     696:	4f 93       	push	r20
+     698:	5f 93       	push	r21
+     69a:	6f 93       	push	r22
+     69c:	7f 93       	push	r23
+     69e:	8f 93       	push	r24
+     6a0:	9f 93       	push	r25
+     6a2:	af 93       	push	r26
+     6a4:	bf 93       	push	r27
+     6a6:	ef 93       	push	r30
+     6a8:	ff 93       	push	r31
 	delaynms(DEBOUNCE_DELAY);
- 5ae:	83 e0       	ldi	r24, 0x03	; 3
- 5b0:	90 e0       	ldi	r25, 0x00	; 0
- 5b2:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     6aa:	83 e0       	ldi	r24, 0x03	; 3
+     6ac:	90 e0       	ldi	r25, 0x00	; 0
+     6ae:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PIND & 0b1) == 0) firstLaserHandler();
- 5b6:	48 99       	sbic	0x09, 0	; 9
- 5b8:	02 c0       	rjmp	.+4      	; 0x5be <__vector_1+0x36>
- 5ba:	0e 94 d7 01 	call	0x3ae	; 0x3ae <firstLaserHandler>
+     6b2:	48 99       	sbic	0x09, 0	; 9
+     6b4:	02 c0       	rjmp	.+4      	; 0x6ba <__vector_1+0x36>
+     6b6:	0e 94 14 02 	call	0x428	; 0x428 <firstLaserHandler>
 }
- 5be:	ff 91       	pop	r31
- 5c0:	ef 91       	pop	r30
- 5c2:	bf 91       	pop	r27
- 5c4:	af 91       	pop	r26
- 5c6:	9f 91       	pop	r25
- 5c8:	8f 91       	pop	r24
- 5ca:	7f 91       	pop	r23
- 5cc:	6f 91       	pop	r22
- 5ce:	5f 91       	pop	r21
- 5d0:	4f 91       	pop	r20
- 5d2:	3f 91       	pop	r19
- 5d4:	2f 91       	pop	r18
- 5d6:	0f 90       	pop	r0
- 5d8:	0b be       	out	0x3b, r0	; 59
- 5da:	0f 90       	pop	r0
- 5dc:	0f be       	out	0x3f, r0	; 63
- 5de:	0f 90       	pop	r0
- 5e0:	1f 90       	pop	r1
- 5e2:	18 95       	reti
+     6ba:	ff 91       	pop	r31
+     6bc:	ef 91       	pop	r30
+     6be:	bf 91       	pop	r27
+     6c0:	af 91       	pop	r26
+     6c2:	9f 91       	pop	r25
+     6c4:	8f 91       	pop	r24
+     6c6:	7f 91       	pop	r23
+     6c8:	6f 91       	pop	r22
+     6ca:	5f 91       	pop	r21
+     6cc:	4f 91       	pop	r20
+     6ce:	3f 91       	pop	r19
+     6d0:	2f 91       	pop	r18
+     6d2:	0f 90       	pop	r0
+     6d4:	0b be       	out	0x3b, r0	; 59
+     6d6:	0f 90       	pop	r0
+     6d8:	0f be       	out	0x3f, r0	; 63
+     6da:	0f 90       	pop	r0
+     6dc:	1f 90       	pop	r1
+     6de:	18 95       	reti
 
-000005e4 <__vector_2>:
+000006e0 <__vector_2>:
 
 /* ISR(INT1_vect)
    Purpose: Falling-edge interrupt vector
    for INDUCTIVE SENSOR
    */
 ISR(INT1_vect){
- 5e4:	1f 92       	push	r1
- 5e6:	0f 92       	push	r0
- 5e8:	0f b6       	in	r0, 0x3f	; 63
- 5ea:	0f 92       	push	r0
- 5ec:	0b b6       	in	r0, 0x3b	; 59
- 5ee:	0f 92       	push	r0
- 5f0:	11 24       	eor	r1, r1
- 5f2:	2f 93       	push	r18
- 5f4:	3f 93       	push	r19
- 5f6:	4f 93       	push	r20
- 5f8:	5f 93       	push	r21
- 5fa:	6f 93       	push	r22
- 5fc:	7f 93       	push	r23
- 5fe:	8f 93       	push	r24
- 600:	9f 93       	push	r25
- 602:	af 93       	push	r26
- 604:	bf 93       	push	r27
- 606:	ef 93       	push	r30
- 608:	ff 93       	push	r31
+     6e0:	1f 92       	push	r1
+     6e2:	0f 92       	push	r0
+     6e4:	0f b6       	in	r0, 0x3f	; 63
+     6e6:	0f 92       	push	r0
+     6e8:	0b b6       	in	r0, 0x3b	; 59
+     6ea:	0f 92       	push	r0
+     6ec:	11 24       	eor	r1, r1
+     6ee:	2f 93       	push	r18
+     6f0:	3f 93       	push	r19
+     6f2:	4f 93       	push	r20
+     6f4:	5f 93       	push	r21
+     6f6:	6f 93       	push	r22
+     6f8:	7f 93       	push	r23
+     6fa:	8f 93       	push	r24
+     6fc:	9f 93       	push	r25
+     6fe:	af 93       	push	r26
+     700:	bf 93       	push	r27
+     702:	ef 93       	push	r30
+     704:	ff 93       	push	r31
 	delaynms(DEBOUNCE_DELAY);
- 60a:	83 e0       	ldi	r24, 0x03	; 3
- 60c:	90 e0       	ldi	r25, 0x00	; 0
- 60e:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     706:	83 e0       	ldi	r24, 0x03	; 3
+     708:	90 e0       	ldi	r25, 0x00	; 0
+     70a:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PIND & (1 << 1)) == 0) metalHandler();
- 612:	49 99       	sbic	0x09, 1	; 9
- 614:	02 c0       	rjmp	.+4      	; 0x61a <__vector_2+0x36>
- 616:	0e 94 ef 01 	call	0x3de	; 0x3de <metalHandler>
+     70e:	49 99       	sbic	0x09, 1	; 9
+     710:	02 c0       	rjmp	.+4      	; 0x716 <__vector_2+0x36>
+     712:	0e 94 2c 02 	call	0x458	; 0x458 <metalHandler>
 }
- 61a:	ff 91       	pop	r31
- 61c:	ef 91       	pop	r30
- 61e:	bf 91       	pop	r27
- 620:	af 91       	pop	r26
- 622:	9f 91       	pop	r25
- 624:	8f 91       	pop	r24
- 626:	7f 91       	pop	r23
- 628:	6f 91       	pop	r22
- 62a:	5f 91       	pop	r21
- 62c:	4f 91       	pop	r20
- 62e:	3f 91       	pop	r19
- 630:	2f 91       	pop	r18
- 632:	0f 90       	pop	r0
- 634:	0b be       	out	0x3b, r0	; 59
- 636:	0f 90       	pop	r0
- 638:	0f be       	out	0x3f, r0	; 63
- 63a:	0f 90       	pop	r0
- 63c:	1f 90       	pop	r1
- 63e:	18 95       	reti
+     716:	ff 91       	pop	r31
+     718:	ef 91       	pop	r30
+     71a:	bf 91       	pop	r27
+     71c:	af 91       	pop	r26
+     71e:	9f 91       	pop	r25
+     720:	8f 91       	pop	r24
+     722:	7f 91       	pop	r23
+     724:	6f 91       	pop	r22
+     726:	5f 91       	pop	r21
+     728:	4f 91       	pop	r20
+     72a:	3f 91       	pop	r19
+     72c:	2f 91       	pop	r18
+     72e:	0f 90       	pop	r0
+     730:	0b be       	out	0x3b, r0	; 59
+     732:	0f 90       	pop	r0
+     734:	0f be       	out	0x3f, r0	; 63
+     736:	0f 90       	pop	r0
+     738:	1f 90       	pop	r1
+     73a:	18 95       	reti
 
-00000640 <__vector_3>:
+0000073c <__vector_3>:
 
 /* ISR(INT2_vect)
    Purpose: Rising and falling-edge interrupt
    vector for SECOND LASER
    */
 ISR(INT2_vect){
- 640:	1f 92       	push	r1
- 642:	0f 92       	push	r0
- 644:	0f b6       	in	r0, 0x3f	; 63
- 646:	0f 92       	push	r0
- 648:	0b b6       	in	r0, 0x3b	; 59
- 64a:	0f 92       	push	r0
- 64c:	11 24       	eor	r1, r1
- 64e:	2f 93       	push	r18
- 650:	3f 93       	push	r19
- 652:	4f 93       	push	r20
- 654:	5f 93       	push	r21
- 656:	6f 93       	push	r22
- 658:	7f 93       	push	r23
- 65a:	8f 93       	push	r24
- 65c:	9f 93       	push	r25
- 65e:	af 93       	push	r26
- 660:	bf 93       	push	r27
- 662:	ef 93       	push	r30
- 664:	ff 93       	push	r31
+     73c:	1f 92       	push	r1
+     73e:	0f 92       	push	r0
+     740:	0f b6       	in	r0, 0x3f	; 63
+     742:	0f 92       	push	r0
+     744:	0b b6       	in	r0, 0x3b	; 59
+     746:	0f 92       	push	r0
+     748:	11 24       	eor	r1, r1
+     74a:	2f 93       	push	r18
+     74c:	3f 93       	push	r19
+     74e:	4f 93       	push	r20
+     750:	5f 93       	push	r21
+     752:	6f 93       	push	r22
+     754:	7f 93       	push	r23
+     756:	8f 93       	push	r24
+     758:	9f 93       	push	r25
+     75a:	af 93       	push	r26
+     75c:	bf 93       	push	r27
+     75e:	ef 93       	push	r30
+     760:	ff 93       	push	r31
 	// debounce is handled by function call
 	secondLaserHandler();
- 666:	0e 94 04 02 	call	0x408	; 0x408 <secondLaserHandler>
+     762:	0e 94 41 02 	call	0x482	; 0x482 <secondLaserHandler>
 }
- 66a:	ff 91       	pop	r31
- 66c:	ef 91       	pop	r30
- 66e:	bf 91       	pop	r27
- 670:	af 91       	pop	r26
- 672:	9f 91       	pop	r25
- 674:	8f 91       	pop	r24
- 676:	7f 91       	pop	r23
- 678:	6f 91       	pop	r22
- 67a:	5f 91       	pop	r21
- 67c:	4f 91       	pop	r20
- 67e:	3f 91       	pop	r19
- 680:	2f 91       	pop	r18
- 682:	0f 90       	pop	r0
- 684:	0b be       	out	0x3b, r0	; 59
- 686:	0f 90       	pop	r0
- 688:	0f be       	out	0x3f, r0	; 63
- 68a:	0f 90       	pop	r0
- 68c:	1f 90       	pop	r1
- 68e:	18 95       	reti
+     766:	ff 91       	pop	r31
+     768:	ef 91       	pop	r30
+     76a:	bf 91       	pop	r27
+     76c:	af 91       	pop	r26
+     76e:	9f 91       	pop	r25
+     770:	8f 91       	pop	r24
+     772:	7f 91       	pop	r23
+     774:	6f 91       	pop	r22
+     776:	5f 91       	pop	r21
+     778:	4f 91       	pop	r20
+     77a:	3f 91       	pop	r19
+     77c:	2f 91       	pop	r18
+     77e:	0f 90       	pop	r0
+     780:	0b be       	out	0x3b, r0	; 59
+     782:	0f 90       	pop	r0
+     784:	0f be       	out	0x3f, r0	; 63
+     786:	0f 90       	pop	r0
+     788:	1f 90       	pop	r1
+     78a:	18 95       	reti
 
-00000690 <__vector_4>:
+0000078c <__vector_4>:
 
 /* ISR(INT3_vect)
    Purpose: Falling-edge interrupt vector
    for EXIT SENSOR
    */
 ISR(INT3_vect) {
- 690:	1f 92       	push	r1
- 692:	0f 92       	push	r0
- 694:	0f b6       	in	r0, 0x3f	; 63
- 696:	0f 92       	push	r0
- 698:	0b b6       	in	r0, 0x3b	; 59
- 69a:	0f 92       	push	r0
- 69c:	11 24       	eor	r1, r1
- 69e:	2f 93       	push	r18
- 6a0:	3f 93       	push	r19
- 6a2:	4f 93       	push	r20
- 6a4:	5f 93       	push	r21
- 6a6:	6f 93       	push	r22
- 6a8:	7f 93       	push	r23
- 6aa:	8f 93       	push	r24
- 6ac:	9f 93       	push	r25
- 6ae:	af 93       	push	r26
- 6b0:	bf 93       	push	r27
- 6b2:	ef 93       	push	r30
- 6b4:	ff 93       	push	r31
+     78c:	1f 92       	push	r1
+     78e:	0f 92       	push	r0
+     790:	0f b6       	in	r0, 0x3f	; 63
+     792:	0f 92       	push	r0
+     794:	0b b6       	in	r0, 0x3b	; 59
+     796:	0f 92       	push	r0
+     798:	11 24       	eor	r1, r1
+     79a:	2f 93       	push	r18
+     79c:	3f 93       	push	r19
+     79e:	4f 93       	push	r20
+     7a0:	5f 93       	push	r21
+     7a2:	6f 93       	push	r22
+     7a4:	7f 93       	push	r23
+     7a6:	8f 93       	push	r24
+     7a8:	9f 93       	push	r25
+     7aa:	af 93       	push	r26
+     7ac:	bf 93       	push	r27
+     7ae:	ef 93       	push	r30
+     7b0:	ff 93       	push	r31
 	delaynms(DEBOUNCE_DELAY);
- 6b6:	83 e0       	ldi	r24, 0x03	; 3
- 6b8:	90 e0       	ldi	r25, 0x00	; 0
- 6ba:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     7b2:	83 e0       	ldi	r24, 0x03	; 3
+     7b4:	90 e0       	ldi	r25, 0x00	; 0
+     7b6:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PIND & (1 << 3)) == 0) exitHandler();
- 6be:	4b 99       	sbic	0x09, 3	; 9
- 6c0:	02 c0       	rjmp	.+4      	; 0x6c6 <__vector_4+0x36>
- 6c2:	0e 94 3f 02 	call	0x47e	; 0x47e <exitHandler>
+     7ba:	4b 99       	sbic	0x09, 3	; 9
+     7bc:	02 c0       	rjmp	.+4      	; 0x7c2 <__vector_4+0x36>
+     7be:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <exitHandler>
 }
- 6c6:	ff 91       	pop	r31
- 6c8:	ef 91       	pop	r30
- 6ca:	bf 91       	pop	r27
- 6cc:	af 91       	pop	r26
- 6ce:	9f 91       	pop	r25
- 6d0:	8f 91       	pop	r24
- 6d2:	7f 91       	pop	r23
- 6d4:	6f 91       	pop	r22
- 6d6:	5f 91       	pop	r21
- 6d8:	4f 91       	pop	r20
- 6da:	3f 91       	pop	r19
- 6dc:	2f 91       	pop	r18
- 6de:	0f 90       	pop	r0
- 6e0:	0b be       	out	0x3b, r0	; 59
- 6e2:	0f 90       	pop	r0
- 6e4:	0f be       	out	0x3f, r0	; 63
- 6e6:	0f 90       	pop	r0
- 6e8:	1f 90       	pop	r1
- 6ea:	18 95       	reti
+     7c2:	ff 91       	pop	r31
+     7c4:	ef 91       	pop	r30
+     7c6:	bf 91       	pop	r27
+     7c8:	af 91       	pop	r26
+     7ca:	9f 91       	pop	r25
+     7cc:	8f 91       	pop	r24
+     7ce:	7f 91       	pop	r23
+     7d0:	6f 91       	pop	r22
+     7d2:	5f 91       	pop	r21
+     7d4:	4f 91       	pop	r20
+     7d6:	3f 91       	pop	r19
+     7d8:	2f 91       	pop	r18
+     7da:	0f 90       	pop	r0
+     7dc:	0b be       	out	0x3b, r0	; 59
+     7de:	0f 90       	pop	r0
+     7e0:	0f be       	out	0x3f, r0	; 63
+     7e2:	0f 90       	pop	r0
+     7e4:	1f 90       	pop	r1
+     7e6:	18 95       	reti
 
-000006ec <__vector_5>:
+000007e8 <__vector_5>:
 
 /* ISR(INT4_vect)
    Purpose: Falling-edge interrupt vector
    for HALL EFFECT SENSOR
    */
 ISR(INT4_vect) {
- 6ec:	1f 92       	push	r1
- 6ee:	0f 92       	push	r0
- 6f0:	0f b6       	in	r0, 0x3f	; 63
- 6f2:	0f 92       	push	r0
- 6f4:	0b b6       	in	r0, 0x3b	; 59
- 6f6:	0f 92       	push	r0
- 6f8:	11 24       	eor	r1, r1
- 6fa:	2f 93       	push	r18
- 6fc:	3f 93       	push	r19
- 6fe:	4f 93       	push	r20
- 700:	5f 93       	push	r21
- 702:	6f 93       	push	r22
- 704:	7f 93       	push	r23
- 706:	8f 93       	push	r24
- 708:	9f 93       	push	r25
- 70a:	af 93       	push	r26
- 70c:	bf 93       	push	r27
- 70e:	ef 93       	push	r30
- 710:	ff 93       	push	r31
+     7e8:	1f 92       	push	r1
+     7ea:	0f 92       	push	r0
+     7ec:	0f b6       	in	r0, 0x3f	; 63
+     7ee:	0f 92       	push	r0
+     7f0:	0b b6       	in	r0, 0x3b	; 59
+     7f2:	0f 92       	push	r0
+     7f4:	11 24       	eor	r1, r1
+     7f6:	2f 93       	push	r18
+     7f8:	3f 93       	push	r19
+     7fa:	4f 93       	push	r20
+     7fc:	5f 93       	push	r21
+     7fe:	6f 93       	push	r22
+     800:	7f 93       	push	r23
+     802:	8f 93       	push	r24
+     804:	9f 93       	push	r25
+     806:	af 93       	push	r26
+     808:	bf 93       	push	r27
+     80a:	ef 93       	push	r30
+     80c:	ff 93       	push	r31
 	delaynms(DEBOUNCE_DELAY);
- 712:	83 e0       	ldi	r24, 0x03	; 3
- 714:	90 e0       	ldi	r25, 0x00	; 0
- 716:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     80e:	83 e0       	ldi	r24, 0x03	; 3
+     810:	90 e0       	ldi	r25, 0x00	; 0
+     812:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PINE & (1 << 4)) == 0) hallLow = 1;
- 71a:	64 99       	sbic	0x0c, 4	; 12
- 71c:	03 c0       	rjmp	.+6      	; 0x724 <__vector_5+0x38>
- 71e:	81 e0       	ldi	r24, 0x01	; 1
- 720:	80 93 a9 01 	sts	0x01A9, r24
+     816:	64 99       	sbic	0x0c, 4	; 12
+     818:	03 c0       	rjmp	.+6      	; 0x820 <__vector_5+0x38>
+     81a:	81 e0       	ldi	r24, 0x01	; 1
+     81c:	80 93 b6 01 	sts	0x01B6, r24
 }
- 724:	ff 91       	pop	r31
- 726:	ef 91       	pop	r30
- 728:	bf 91       	pop	r27
- 72a:	af 91       	pop	r26
- 72c:	9f 91       	pop	r25
- 72e:	8f 91       	pop	r24
- 730:	7f 91       	pop	r23
- 732:	6f 91       	pop	r22
- 734:	5f 91       	pop	r21
- 736:	4f 91       	pop	r20
- 738:	3f 91       	pop	r19
- 73a:	2f 91       	pop	r18
- 73c:	0f 90       	pop	r0
- 73e:	0b be       	out	0x3b, r0	; 59
- 740:	0f 90       	pop	r0
- 742:	0f be       	out	0x3f, r0	; 63
- 744:	0f 90       	pop	r0
- 746:	1f 90       	pop	r1
- 748:	18 95       	reti
+     820:	ff 91       	pop	r31
+     822:	ef 91       	pop	r30
+     824:	bf 91       	pop	r27
+     826:	af 91       	pop	r26
+     828:	9f 91       	pop	r25
+     82a:	8f 91       	pop	r24
+     82c:	7f 91       	pop	r23
+     82e:	6f 91       	pop	r22
+     830:	5f 91       	pop	r21
+     832:	4f 91       	pop	r20
+     834:	3f 91       	pop	r19
+     836:	2f 91       	pop	r18
+     838:	0f 90       	pop	r0
+     83a:	0b be       	out	0x3b, r0	; 59
+     83c:	0f 90       	pop	r0
+     83e:	0f be       	out	0x3f, r0	; 63
+     840:	0f 90       	pop	r0
+     842:	1f 90       	pop	r1
+     844:	18 95       	reti
 
-0000074a <__vector_6>:
+00000846 <__vector_6>:
 
 /* ISR(INT5_vect)
    Purpose: Falling-edge interrupt vector
    for BUTTON 2
    */
 ISR(INT5_vect) {
- 74a:	1f 92       	push	r1
- 74c:	0f 92       	push	r0
- 74e:	0f b6       	in	r0, 0x3f	; 63
- 750:	0f 92       	push	r0
- 752:	0b b6       	in	r0, 0x3b	; 59
- 754:	0f 92       	push	r0
- 756:	11 24       	eor	r1, r1
- 758:	2f 93       	push	r18
- 75a:	3f 93       	push	r19
- 75c:	4f 93       	push	r20
- 75e:	5f 93       	push	r21
- 760:	6f 93       	push	r22
- 762:	7f 93       	push	r23
- 764:	8f 93       	push	r24
- 766:	9f 93       	push	r25
- 768:	af 93       	push	r26
- 76a:	bf 93       	push	r27
- 76c:	ef 93       	push	r30
- 76e:	ff 93       	push	r31
+     846:	1f 92       	push	r1
+     848:	0f 92       	push	r0
+     84a:	0f b6       	in	r0, 0x3f	; 63
+     84c:	0f 92       	push	r0
+     84e:	0b b6       	in	r0, 0x3b	; 59
+     850:	0f 92       	push	r0
+     852:	11 24       	eor	r1, r1
+     854:	2f 93       	push	r18
+     856:	3f 93       	push	r19
+     858:	4f 93       	push	r20
+     85a:	5f 93       	push	r21
+     85c:	6f 93       	push	r22
+     85e:	7f 93       	push	r23
+     860:	8f 93       	push	r24
+     862:	9f 93       	push	r25
+     864:	af 93       	push	r26
+     866:	bf 93       	push	r27
+     868:	ef 93       	push	r30
+     86a:	ff 93       	push	r31
 	delaynms(BUTTON_DEBOUNCE_DELAY);
- 770:	84 e1       	ldi	r24, 0x14	; 20
- 772:	90 e0       	ldi	r25, 0x00	; 0
- 774:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     86c:	84 e1       	ldi	r24, 0x14	; 20
+     86e:	90 e0       	ldi	r25, 0x00	; 0
+     870:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PINE & (1 << 5)) == 0) {
- 778:	65 99       	sbic	0x0c, 5	; 12
- 77a:	05 c0       	rjmp	.+10     	; 0x786 <__vector_6+0x3c>
+     874:	65 99       	sbic	0x0c, 5	; 12
+     876:	05 c0       	rjmp	.+10     	; 0x882 <__vector_6+0x3c>
 		shutdown = 1;
- 77c:	81 e0       	ldi	r24, 0x01	; 1
- 77e:	80 93 a0 01 	sts	0x01A0, r24
+     878:	81 e0       	ldi	r24, 0x01	; 1
+     87a:	80 93 a7 01 	sts	0x01A7, r24
 		shutdownHandler();
- 782:	0e 94 b6 02 	call	0x56c	; 0x56c <shutdownHandler>
+     87e:	0e 94 34 03 	call	0x668	; 0x668 <shutdownHandler>
 	}
 }
- 786:	ff 91       	pop	r31
- 788:	ef 91       	pop	r30
- 78a:	bf 91       	pop	r27
- 78c:	af 91       	pop	r26
- 78e:	9f 91       	pop	r25
- 790:	8f 91       	pop	r24
- 792:	7f 91       	pop	r23
- 794:	6f 91       	pop	r22
- 796:	5f 91       	pop	r21
- 798:	4f 91       	pop	r20
- 79a:	3f 91       	pop	r19
- 79c:	2f 91       	pop	r18
- 79e:	0f 90       	pop	r0
- 7a0:	0b be       	out	0x3b, r0	; 59
- 7a2:	0f 90       	pop	r0
- 7a4:	0f be       	out	0x3f, r0	; 63
- 7a6:	0f 90       	pop	r0
- 7a8:	1f 90       	pop	r1
- 7aa:	18 95       	reti
+     882:	ff 91       	pop	r31
+     884:	ef 91       	pop	r30
+     886:	bf 91       	pop	r27
+     888:	af 91       	pop	r26
+     88a:	9f 91       	pop	r25
+     88c:	8f 91       	pop	r24
+     88e:	7f 91       	pop	r23
+     890:	6f 91       	pop	r22
+     892:	5f 91       	pop	r21
+     894:	4f 91       	pop	r20
+     896:	3f 91       	pop	r19
+     898:	2f 91       	pop	r18
+     89a:	0f 90       	pop	r0
+     89c:	0b be       	out	0x3b, r0	; 59
+     89e:	0f 90       	pop	r0
+     8a0:	0f be       	out	0x3f, r0	; 63
+     8a2:	0f 90       	pop	r0
+     8a4:	1f 90       	pop	r1
+     8a6:	18 95       	reti
 
-000007ac <__vector_7>:
+000008a8 <__vector_7>:
 
 /* ISR(INT6_vect)
    Purpose: Falling-edge interrupt vector
    for BUTTON 1
    */
 ISR(INT6_vect){
- 7ac:	1f 92       	push	r1
- 7ae:	0f 92       	push	r0
- 7b0:	0f b6       	in	r0, 0x3f	; 63
- 7b2:	0f 92       	push	r0
- 7b4:	0b b6       	in	r0, 0x3b	; 59
- 7b6:	0f 92       	push	r0
- 7b8:	11 24       	eor	r1, r1
- 7ba:	2f 93       	push	r18
- 7bc:	3f 93       	push	r19
- 7be:	4f 93       	push	r20
- 7c0:	5f 93       	push	r21
- 7c2:	6f 93       	push	r22
- 7c4:	7f 93       	push	r23
- 7c6:	8f 93       	push	r24
- 7c8:	9f 93       	push	r25
- 7ca:	af 93       	push	r26
- 7cc:	bf 93       	push	r27
- 7ce:	ef 93       	push	r30
- 7d0:	ff 93       	push	r31
+     8a8:	1f 92       	push	r1
+     8aa:	0f 92       	push	r0
+     8ac:	0f b6       	in	r0, 0x3f	; 63
+     8ae:	0f 92       	push	r0
+     8b0:	0b b6       	in	r0, 0x3b	; 59
+     8b2:	0f 92       	push	r0
+     8b4:	11 24       	eor	r1, r1
+     8b6:	2f 93       	push	r18
+     8b8:	3f 93       	push	r19
+     8ba:	4f 93       	push	r20
+     8bc:	5f 93       	push	r21
+     8be:	6f 93       	push	r22
+     8c0:	7f 93       	push	r23
+     8c2:	8f 93       	push	r24
+     8c4:	9f 93       	push	r25
+     8c6:	af 93       	push	r26
+     8c8:	bf 93       	push	r27
+     8ca:	ef 93       	push	r30
+     8cc:	ff 93       	push	r31
 	delaynms(BUTTON_DEBOUNCE_DELAY);
- 7d2:	84 e1       	ldi	r24, 0x14	; 20
- 7d4:	90 e0       	ldi	r25, 0x00	; 0
- 7d6:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     8ce:	84 e1       	ldi	r24, 0x14	; 20
+     8d0:	90 e0       	ldi	r25, 0x00	; 0
+     8d2:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if((PINE & (1 << 6)) == 0) {
- 7da:	8c b1       	in	r24, 0x0c	; 12
-		
+     8d6:	66 99       	sbic	0x0c, 6	; 12
+     8d8:	02 c0       	rjmp	.+4      	; 0x8de <__vector_7+0x36>
+		pausedHandler();
+     8da:	0e 94 47 01 	call	0x28e	; 0x28e <pausedHandler>
 	}
- 7dc:	ff 91       	pop	r31
- 7de:	ef 91       	pop	r30
- 7e0:	bf 91       	pop	r27
- 7e2:	af 91       	pop	r26
- 7e4:	9f 91       	pop	r25
- 7e6:	8f 91       	pop	r24
- 7e8:	7f 91       	pop	r23
- 7ea:	6f 91       	pop	r22
- 7ec:	5f 91       	pop	r21
- 7ee:	4f 91       	pop	r20
- 7f0:	3f 91       	pop	r19
- 7f2:	2f 91       	pop	r18
- 7f4:	0f 90       	pop	r0
- 7f6:	0b be       	out	0x3b, r0	; 59
- 7f8:	0f 90       	pop	r0
- 7fa:	0f be       	out	0x3f, r0	; 63
- 7fc:	0f 90       	pop	r0
- 7fe:	1f 90       	pop	r1
- 800:	18 95       	reti
+     8de:	ff 91       	pop	r31
+     8e0:	ef 91       	pop	r30
+     8e2:	bf 91       	pop	r27
+     8e4:	af 91       	pop	r26
+     8e6:	9f 91       	pop	r25
+     8e8:	8f 91       	pop	r24
+     8ea:	7f 91       	pop	r23
+     8ec:	6f 91       	pop	r22
+     8ee:	5f 91       	pop	r21
+     8f0:	4f 91       	pop	r20
+     8f2:	3f 91       	pop	r19
+     8f4:	2f 91       	pop	r18
+     8f6:	0f 90       	pop	r0
+     8f8:	0b be       	out	0x3b, r0	; 59
+     8fa:	0f 90       	pop	r0
+     8fc:	0f be       	out	0x3f, r0	; 63
+     8fe:	0f 90       	pop	r0
+     900:	1f 90       	pop	r1
+     902:	18 95       	reti
 
-00000802 <main>:
+00000904 <main>:
 
 int main(void)
 {
 	// Set the dev board's clock speed to the external oscillator with
 	// no prescaler (8MHz)
 	CLKPR = (1<<CLKPCE);
- 802:	e1 e6       	ldi	r30, 0x61	; 97
- 804:	f0 e0       	ldi	r31, 0x00	; 0
- 806:	80 e8       	ldi	r24, 0x80	; 128
- 808:	80 83       	st	Z, r24
+     904:	e1 e6       	ldi	r30, 0x61	; 97
+     906:	f0 e0       	ldi	r31, 0x00	; 0
+     908:	80 e8       	ldi	r24, 0x80	; 128
+     90a:	80 83       	st	Z, r24
 	CLKPR = 0;
- 80a:	10 82       	st	Z, r1
+     90c:	10 82       	st	Z, r1
 	
 	// Initialize hardware timer
 	initializeTimer();
- 80c:	0e 94 3b 07 	call	0xe76	; 0xe76 <initializeTimer>
+     90e:	0e 94 f7 08 	call	0x11ee	; 0x11ee <initializeTimer>
 	
 	delaynms(1000);
- 810:	88 ee       	ldi	r24, 0xE8	; 232
- 812:	93 e0       	ldi	r25, 0x03	; 3
- 814:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     912:	88 ee       	ldi	r24, 0xE8	; 232
+     914:	93 e0       	ldi	r25, 0x03	; 3
+     916:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	
 	writeHexInt(0x50);
- 818:	80 e5       	ldi	r24, 0x50	; 80
- 81a:	90 e0       	ldi	r25, 0x00	; 0
- 81c:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     91a:	80 e5       	ldi	r24, 0x50	; 80
+     91c:	90 e0       	ldi	r25, 0x00	; 0
+     91e:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 	
 	// Initialize ring buffer
 	initRingBuf();
- 820:	0e 94 0c 05 	call	0xa18	; 0xa18 <initRingBuf>
+     922:	0e 94 d5 05 	call	0xbaa	; 0xbaa <initRingBuf>
 	
 	// Initialize metal queue
 	initMetalQueue();
- 824:	0e 94 8c 04 	call	0x918	; 0x918 <initMetalQueue>
+     926:	0e 94 55 05 	call	0xaaa	; 0xaaa <initMetalQueue>
 	
 	writeHexInt(0x51);
- 828:	81 e5       	ldi	r24, 0x51	; 81
- 82a:	90 e0       	ldi	r25, 0x00	; 0
- 82c:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     92a:	81 e5       	ldi	r24, 0x51	; 81
+     92c:	90 e0       	ldi	r25, 0x00	; 0
+     92e:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 	
 	// enable output for stepper and display.
 	DDRA = 0xFF;
- 830:	8f ef       	ldi	r24, 0xFF	; 255
- 832:	81 b9       	out	0x01, r24	; 1
+     932:	8f ef       	ldi	r24, 0xFF	; 255
+     934:	81 b9       	out	0x01, r24	; 1
 
 	// vector interrupts
 	vectorInterrupts();
- 834:	0e 94 36 01 	call	0x26c	; 0x26c <vectorInterrupts>
+     936:	0e 94 74 01 	call	0x2e8	; 0x2e8 <vectorInterrupts>
 	
 	writeHexInt(0x52);
- 838:	82 e5       	ldi	r24, 0x52	; 82
- 83a:	90 e0       	ldi	r25, 0x00	; 0
- 83c:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     93a:	82 e5       	ldi	r24, 0x52	; 82
+     93c:	90 e0       	ldi	r25, 0x00	; 0
+     93e:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 
 	// init stepper
 	initalizeStepper();
- 840:	0e 94 42 06 	call	0xc84	; 0xc84 <initalizeStepper>
+     942:	0e 94 fe 07 	call	0xffc	; 0xffc <initalizeStepper>
 	
 	writeHexInt(0x53);
- 844:	83 e5       	ldi	r24, 0x53	; 83
- 846:	90 e0       	ldi	r25, 0x00	; 0
- 848:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     946:	83 e5       	ldi	r24, 0x53	; 83
+     948:	90 e0       	ldi	r25, 0x00	; 0
+     94a:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 
 	// zero stepper
 	while(steps != 0){
- 84c:	80 91 a7 01 	lds	r24, 0x01A7
- 850:	90 91 a8 01 	lds	r25, 0x01A8
- 854:	00 97       	sbiw	r24, 0x00	; 0
- 856:	89 f0       	breq	.+34     	; 0x87a <main+0x78>
+     94e:	80 91 b4 01 	lds	r24, 0x01B4
+     952:	90 91 b5 01 	lds	r25, 0x01B5
+     956:	00 97       	sbiw	r24, 0x00	; 0
+     958:	89 f0       	breq	.+34     	; 0x97c <main+0x78>
 		stepTime(20,0);
- 858:	84 e1       	ldi	r24, 0x14	; 20
- 85a:	90 e0       	ldi	r25, 0x00	; 0
- 85c:	60 e0       	ldi	r22, 0x00	; 0
- 85e:	0e 94 56 06 	call	0xcac	; 0xcac <stepTime>
+     95a:	84 e1       	ldi	r24, 0x14	; 20
+     95c:	90 e0       	ldi	r25, 0x00	; 0
+     95e:	60 e0       	ldi	r22, 0x00	; 0
+     960:	0e 94 12 08 	call	0x1024	; 0x1024 <stepTime>
 		writeHexInt(steps);
- 862:	80 91 a7 01 	lds	r24, 0x01A7
- 866:	90 91 a8 01 	lds	r25, 0x01A8
- 86a:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     964:	80 91 b4 01 	lds	r24, 0x01B4
+     968:	90 91 b5 01 	lds	r25, 0x01B5
+     96c:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 	initalizeStepper();
 	
 	writeHexInt(0x53);
 
 	// zero stepper
 	while(steps != 0){
- 86e:	80 91 a7 01 	lds	r24, 0x01A7
- 872:	90 91 a8 01 	lds	r25, 0x01A8
- 876:	00 97       	sbiw	r24, 0x00	; 0
- 878:	79 f7       	brne	.-34     	; 0x858 <main+0x56>
+     970:	80 91 b4 01 	lds	r24, 0x01B4
+     974:	90 91 b5 01 	lds	r25, 0x01B5
+     978:	00 97       	sbiw	r24, 0x00	; 0
+     97a:	79 f7       	brne	.-34     	; 0x95a <main+0x56>
 		stepTime(20,0);
 		writeHexInt(steps);
 	}
 	// set steps from zero to 0 and respective position
 	steps = BLACK_POSITION;
- 87a:	10 92 a8 01 	sts	0x01A8, r1
- 87e:	10 92 a7 01 	sts	0x01A7, r1
+     97c:	10 92 b5 01 	sts	0x01B5, r1
+     980:	10 92 b4 01 	sts	0x01B4, r1
 	// reset hall effect check
 	hallLow = 0;
- 882:	10 92 a9 01 	sts	0x01A9, r1
+     984:	10 92 b6 01 	sts	0x01B6, r1
 	
 
 	setupADC();
- 886:	0e 94 6e 00 	call	0xdc	; 0xdc <setupADC>
+     988:	0e 94 6e 00 	call	0xdc	; 0xdc <setupADC>
 
 	// wait one second
 	delaynms(1000);
- 88a:	88 ee       	ldi	r24, 0xE8	; 232
- 88c:	93 e0       	ldi	r25, 0x03	; 3
- 88e:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     98c:	88 ee       	ldi	r24, 0xE8	; 232
+     98e:	93 e0       	ldi	r25, 0x03	; 3
+     990:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	
 	// start the motor
 	setupMotor();
- 892:	0e 94 10 01 	call	0x220	; 0x220 <setupMotor>
+     994:	0e 94 10 01 	call	0x220	; 0x220 <setupMotor>
 	writeHexInt(0x54);
- 896:	84 e5       	ldi	r24, 0x54	; 84
- 898:	90 e0       	ldi	r25, 0x00	; 0
- 89a:	0e 94 16 06 	call	0xc2c	; 0xc2c <writeHexInt>
+     998:	84 e5       	ldi	r24, 0x54	; 84
+     99a:	90 e0       	ldi	r25, 0x00	; 0
+     99c:	0e 94 d2 07 	call	0xfa4	; 0xfa4 <writeHexInt>
 	setMotorFwd();
- 89e:	0e 94 23 01 	call	0x246	; 0x246 <setMotorFwd>
-	
-	while(1) {
+     9a0:	0e 94 29 01 	call	0x252	; 0x252 <setMotorFwd>
+			delaynms(2000);
+		}
 		// check the next item off the conveyer belt, rotate to the correct position
 		delaynms(100);
 		if(bufLength != 0) {
 			switch(ringBuf[ringTop].type) {
- 8a2:	c4 e6       	ldi	r28, 0x64	; 100
- 8a4:	d1 e0       	ldi	r29, 0x01	; 1
+     9a4:	c7 e6       	ldi	r28, 0x67	; 103
+     9a6:	d1 e0       	ldi	r29, 0x01	; 1
+     9a8:	42 c0       	rjmp	.+132    	; 0xa2e <main+0x12a>
+	setMotorFwd();
+	
+	while(1) {
+		// pause if we need to
+		while(inPause == 1) {
+			writeTotal(totalSorted);
+     9aa:	80 91 ae 01 	lds	r24, 0x01AE
+     9ae:	90 91 af 01 	lds	r25, 0x01AF
+     9b2:	0e 94 fd 06 	call	0xdfa	; 0xdfa <writeTotal>
+			delaynms(2000);
+     9b6:	80 ed       	ldi	r24, 0xD0	; 208
+     9b8:	97 e0       	ldi	r25, 0x07	; 7
+     9ba:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
+			if(inPause == 0) break;
+     9be:	80 91 60 01 	lds	r24, 0x0160
+     9c2:	88 23       	and	r24, r24
+     9c4:	c9 f1       	breq	.+114    	; 0xa38 <main+0x134>
+			writeWhite(whiteSorted);
+     9c6:	80 91 aa 01 	lds	r24, 0x01AA
+     9ca:	90 91 ab 01 	lds	r25, 0x01AB
+     9ce:	0e 94 8d 07 	call	0xf1a	; 0xf1a <writeWhite>
+			delaynms(2000);
+     9d2:	80 ed       	ldi	r24, 0xD0	; 208
+     9d4:	97 e0       	ldi	r25, 0x07	; 7
+     9d6:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
+			if(inPause == 0) break;
+     9da:	80 91 60 01 	lds	r24, 0x0160
+     9de:	88 23       	and	r24, r24
+     9e0:	59 f1       	breq	.+86     	; 0xa38 <main+0x134>
+			writeBlack(blackSorted);
+     9e2:	80 91 a8 01 	lds	r24, 0x01A8
+     9e6:	90 91 a9 01 	lds	r25, 0x01A9
+     9ea:	0e 94 69 07 	call	0xed2	; 0xed2 <writeBlack>
+			delaynms(2000);
+     9ee:	80 ed       	ldi	r24, 0xD0	; 208
+     9f0:	97 e0       	ldi	r25, 0x07	; 7
+     9f2:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
+			if(inPause == 0) break;
+     9f6:	80 91 60 01 	lds	r24, 0x0160
+     9fa:	88 23       	and	r24, r24
+     9fc:	e9 f0       	breq	.+58     	; 0xa38 <main+0x134>
+			writeSteel(steelSorted);
+     9fe:	80 91 a3 01 	lds	r24, 0x01A3
+     a02:	90 91 a4 01 	lds	r25, 0x01A4
+     a06:	0e 94 45 07 	call	0xe8a	; 0xe8a <writeSteel>
+			delaynms(2000);
+     a0a:	80 ed       	ldi	r24, 0xD0	; 208
+     a0c:	97 e0       	ldi	r25, 0x07	; 7
+     a0e:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
+			if(inPause == 0) break;
+     a12:	80 91 60 01 	lds	r24, 0x0160
+     a16:	88 23       	and	r24, r24
+     a18:	79 f0       	breq	.+30     	; 0xa38 <main+0x134>
+			writeAluminum(aluminumSorted);
+     a1a:	80 91 a5 01 	lds	r24, 0x01A5
+     a1e:	90 91 a6 01 	lds	r25, 0x01A6
+     a22:	0e 94 21 07 	call	0xe42	; 0xe42 <writeAluminum>
+			delaynms(2000);
+     a26:	80 ed       	ldi	r24, 0xD0	; 208
+     a28:	97 e0       	ldi	r25, 0x07	; 7
+     a2a:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	writeHexInt(0x54);
 	setMotorFwd();
 	
 	while(1) {
+		// pause if we need to
+		while(inPause == 1) {
+     a2e:	80 91 60 01 	lds	r24, 0x0160
+     a32:	81 30       	cpi	r24, 0x01	; 1
+     a34:	09 f4       	brne	.+2      	; 0xa38 <main+0x134>
+     a36:	b9 cf       	rjmp	.-142    	; 0x9aa <main+0xa6>
+			if(inPause == 0) break;
+			writeAluminum(aluminumSorted);
+			delaynms(2000);
+		}
 		// check the next item off the conveyer belt, rotate to the correct position
 		delaynms(100);
- 8a6:	84 e6       	ldi	r24, 0x64	; 100
- 8a8:	90 e0       	ldi	r25, 0x00	; 0
- 8aa:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+     a38:	84 e6       	ldi	r24, 0x64	; 100
+     a3a:	90 e0       	ldi	r25, 0x00	; 0
+     a3c:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 		if(bufLength != 0) {
- 8ae:	80 91 a1 01 	lds	r24, 0x01A1
- 8b2:	90 91 a2 01 	lds	r25, 0x01A2
- 8b6:	00 97       	sbiw	r24, 0x00	; 0
- 8b8:	b1 f3       	breq	.-20     	; 0x8a6 <main+0xa4>
+     a40:	80 91 ac 01 	lds	r24, 0x01AC
+     a44:	90 91 ad 01 	lds	r25, 0x01AD
+     a48:	00 97       	sbiw	r24, 0x00	; 0
+     a4a:	89 f3       	breq	.-30     	; 0xa2e <main+0x12a>
 			switch(ringBuf[ringTop].type) {
- 8ba:	80 91 62 01 	lds	r24, 0x0162
- 8be:	90 91 63 01 	lds	r25, 0x0163
- 8c2:	fc 01       	movw	r30, r24
- 8c4:	ee 0f       	add	r30, r30
- 8c6:	ff 1f       	adc	r31, r31
- 8c8:	8e 0f       	add	r24, r30
- 8ca:	9f 1f       	adc	r25, r31
- 8cc:	fc 01       	movw	r30, r24
- 8ce:	ee 0f       	add	r30, r30
- 8d0:	ff 1f       	adc	r31, r31
- 8d2:	ec 0f       	add	r30, r28
- 8d4:	fd 1f       	adc	r31, r29
- 8d6:	80 81       	ld	r24, Z
- 8d8:	82 30       	cpi	r24, 0x02	; 2
- 8da:	79 f0       	breq	.+30     	; 0x8fa <main+0xf8>
- 8dc:	83 30       	cpi	r24, 0x03	; 3
- 8de:	18 f4       	brcc	.+6      	; 0x8e6 <main+0xe4>
- 8e0:	81 30       	cpi	r24, 0x01	; 1
- 8e2:	09 f7       	brne	.-62     	; 0x8a6 <main+0xa4>
- 8e4:	05 c0       	rjmp	.+10     	; 0x8f0 <main+0xee>
- 8e6:	83 30       	cpi	r24, 0x03	; 3
- 8e8:	69 f0       	breq	.+26     	; 0x904 <main+0x102>
- 8ea:	84 30       	cpi	r24, 0x04	; 4
- 8ec:	e1 f6       	brne	.-72     	; 0x8a6 <main+0xa4>
- 8ee:	0f c0       	rjmp	.+30     	; 0x90e <main+0x10c>
+     a4c:	80 91 65 01 	lds	r24, 0x0165
+     a50:	90 91 66 01 	lds	r25, 0x0166
+     a54:	fc 01       	movw	r30, r24
+     a56:	ee 0f       	add	r30, r30
+     a58:	ff 1f       	adc	r31, r31
+     a5a:	8e 0f       	add	r24, r30
+     a5c:	9f 1f       	adc	r25, r31
+     a5e:	fc 01       	movw	r30, r24
+     a60:	ee 0f       	add	r30, r30
+     a62:	ff 1f       	adc	r31, r31
+     a64:	ec 0f       	add	r30, r28
+     a66:	fd 1f       	adc	r31, r29
+     a68:	80 81       	ld	r24, Z
+     a6a:	82 30       	cpi	r24, 0x02	; 2
+     a6c:	79 f0       	breq	.+30     	; 0xa8c <main+0x188>
+     a6e:	83 30       	cpi	r24, 0x03	; 3
+     a70:	18 f4       	brcc	.+6      	; 0xa78 <main+0x174>
+     a72:	81 30       	cpi	r24, 0x01	; 1
+     a74:	e1 f6       	brne	.-72     	; 0xa2e <main+0x12a>
+     a76:	05 c0       	rjmp	.+10     	; 0xa82 <main+0x17e>
+     a78:	83 30       	cpi	r24, 0x03	; 3
+     a7a:	69 f0       	breq	.+26     	; 0xa96 <main+0x192>
+     a7c:	84 30       	cpi	r24, 0x04	; 4
+     a7e:	b9 f6       	brne	.-82     	; 0xa2e <main+0x12a>
+     a80:	0f c0       	rjmp	.+30     	; 0xaa0 <main+0x19c>
 				case BLACK:
 					stepperMoveTo(BLACK_POSITION);
- 8f0:	80 e0       	ldi	r24, 0x00	; 0
- 8f2:	90 e0       	ldi	r25, 0x00	; 0
- 8f4:	0e 94 f7 06 	call	0xdee	; 0xdee <stepperMoveTo>
+     a82:	80 e0       	ldi	r24, 0x00	; 0
+     a84:	90 e0       	ldi	r25, 0x00	; 0
+     a86:	0e 94 b3 08 	call	0x1166	; 0x1166 <stepperMoveTo>
 					break;
- 8f8:	d6 cf       	rjmp	.-84     	; 0x8a6 <main+0xa4>
+     a8a:	d1 cf       	rjmp	.-94     	; 0xa2e <main+0x12a>
 				case WHITE:
 					stepperMoveTo(WHITE_POSITION);
- 8fa:	84 e6       	ldi	r24, 0x64	; 100
- 8fc:	90 e0       	ldi	r25, 0x00	; 0
- 8fe:	0e 94 f7 06 	call	0xdee	; 0xdee <stepperMoveTo>
+     a8c:	84 e6       	ldi	r24, 0x64	; 100
+     a8e:	90 e0       	ldi	r25, 0x00	; 0
+     a90:	0e 94 b3 08 	call	0x1166	; 0x1166 <stepperMoveTo>
 					break;
- 902:	d1 cf       	rjmp	.-94     	; 0x8a6 <main+0xa4>
+     a94:	cc cf       	rjmp	.-104    	; 0xa2e <main+0x12a>
 				case STEEL:
 					stepperMoveTo(STEEL_POSITION);
- 904:	86 e9       	ldi	r24, 0x96	; 150
- 906:	90 e0       	ldi	r25, 0x00	; 0
- 908:	0e 94 f7 06 	call	0xdee	; 0xdee <stepperMoveTo>
+     a96:	86 e9       	ldi	r24, 0x96	; 150
+     a98:	90 e0       	ldi	r25, 0x00	; 0
+     a9a:	0e 94 b3 08 	call	0x1166	; 0x1166 <stepperMoveTo>
 					break;
- 90c:	cc cf       	rjmp	.-104    	; 0x8a6 <main+0xa4>
+     a9e:	c7 cf       	rjmp	.-114    	; 0xa2e <main+0x12a>
 				case ALUMINUM:
 					stepperMoveTo(ALUMINUM_POSIITION);
- 90e:	82 e3       	ldi	r24, 0x32	; 50
- 910:	90 e0       	ldi	r25, 0x00	; 0
- 912:	0e 94 f7 06 	call	0xdee	; 0xdee <stepperMoveTo>
+     aa0:	82 e3       	ldi	r24, 0x32	; 50
+     aa2:	90 e0       	ldi	r25, 0x00	; 0
+     aa4:	0e 94 b3 08 	call	0x1166	; 0x1166 <stepperMoveTo>
 					break;
- 916:	c7 cf       	rjmp	.-114    	; 0x8a6 <main+0xa4>
+     aa8:	c2 cf       	rjmp	.-124    	; 0xa2e <main+0x12a>
 
-00000918 <initMetalQueue>:
+00000aaa <initMetalQueue>:
 
 /* void initMetalQueue()
    Purpose: initializes the ring buffer
    */
 void initMetalQueue() {
 	metalTop = 0;
- 918:	10 92 08 01 	sts	0x0108, r1
- 91c:	10 92 07 01 	sts	0x0107, r1
+     aaa:	10 92 0b 01 	sts	0x010B, r1
+     aae:	10 92 0a 01 	sts	0x010A, r1
 	metalBottom = 0;
- 920:	10 92 0a 01 	sts	0x010A, r1
- 924:	10 92 09 01 	sts	0x0109, r1
+     ab2:	10 92 0d 01 	sts	0x010D, r1
+     ab6:	10 92 0c 01 	sts	0x010C, r1
 	metalCount = 0;
- 928:	10 92 0c 01 	sts	0x010C, r1
- 92c:	10 92 0b 01 	sts	0x010B, r1
+     aba:	10 92 0f 01 	sts	0x010F, r1
+     abe:	10 92 0e 01 	sts	0x010E, r1
 	metalQueue[metalTop] = 0;
- 930:	10 92 0e 01 	sts	0x010E, r1
- 934:	10 92 0d 01 	sts	0x010D, r1
+     ac2:	10 92 11 01 	sts	0x0111, r1
+     ac6:	10 92 10 01 	sts	0x0110, r1
 }
- 938:	08 95       	ret
+     aca:	08 95       	ret
 
-0000093a <getMetalOffset>:
+00000acc <getMetalOffset>:
    Purpose: gets the index which is an integer offset of the given
    index.
    */
 int getMetalOffset(int index, int offset) {
 	// case for wrapping around top end
 	if((index + offset) > (METAL_QUEUE_SIZE - 1)) {
- 93a:	86 0f       	add	r24, r22
- 93c:	97 1f       	adc	r25, r23
- 93e:	88 32       	cpi	r24, 0x28	; 40
- 940:	91 05       	cpc	r25, r1
- 942:	14 f0       	brlt	.+4      	; 0x948 <getMetalOffset+0xe>
+     acc:	86 0f       	add	r24, r22
+     ace:	97 1f       	adc	r25, r23
+     ad0:	88 32       	cpi	r24, 0x28	; 40
+     ad2:	91 05       	cpc	r25, r1
+     ad4:	14 f0       	brlt	.+4      	; 0xada <getMetalOffset+0xe>
 		return ((index + offset) - METAL_QUEUE_SIZE);
- 944:	88 97       	sbiw	r24, 0x28	; 40
- 946:	08 95       	ret
+     ad6:	88 97       	sbiw	r24, 0x28	; 40
+     ad8:	08 95       	ret
 	}
 	// case for wrapping around bottom end
 	if((index + offset) < 0) {
- 948:	99 23       	and	r25, r25
- 94a:	0c f4       	brge	.+2      	; 0x94e <getMetalOffset+0x14>
+     ada:	99 23       	and	r25, r25
+     adc:	0c f4       	brge	.+2      	; 0xae0 <getMetalOffset+0x14>
 		return ((index + offset) + METAL_QUEUE_SIZE);
- 94c:	88 96       	adiw	r24, 0x28	; 40
+     ade:	88 96       	adiw	r24, 0x28	; 40
 	}
 
 	// didn't wrap
 	return (index + offset);
- 94e:	08 95       	ret
+     ae0:	08 95       	ret
 
-00000950 <popMetal>:
+00000ae2 <popMetal>:
 }
 
 /* void popMetal()
    Purpose: pops the top item off the buffer
    */
 int popMetal() {
- 950:	0f 93       	push	r16
- 952:	1f 93       	push	r17
- 954:	cf 93       	push	r28
- 956:	df 93       	push	r29
+     ae2:	0f 93       	push	r16
+     ae4:	1f 93       	push	r17
+     ae6:	cf 93       	push	r28
+     ae8:	df 93       	push	r29
 	// if the buffer is empty, break
 	if (metalCount == 0) return -1;
- 958:	c0 91 0b 01 	lds	r28, 0x010B
- 95c:	d0 91 0c 01 	lds	r29, 0x010C
- 960:	20 97       	sbiw	r28, 0x00	; 0
- 962:	c9 f0       	breq	.+50     	; 0x996 <popMetal+0x46>
+     aea:	c0 91 0e 01 	lds	r28, 0x010E
+     aee:	d0 91 0f 01 	lds	r29, 0x010F
+     af2:	20 97       	sbiw	r28, 0x00	; 0
+     af4:	c9 f0       	breq	.+50     	; 0xb28 <popMetal+0x46>
 	int content = metalQueue[metalTop];
- 964:	80 91 07 01 	lds	r24, 0x0107
- 968:	90 91 08 01 	lds	r25, 0x0108
- 96c:	fc 01       	movw	r30, r24
- 96e:	ee 0f       	add	r30, r30
- 970:	ff 1f       	adc	r31, r31
- 972:	e3 5f       	subi	r30, 0xF3	; 243
- 974:	fe 4f       	sbci	r31, 0xFE	; 254
- 976:	00 81       	ld	r16, Z
- 978:	11 81       	ldd	r17, Z+1	; 0x01
+     af6:	80 91 0a 01 	lds	r24, 0x010A
+     afa:	90 91 0b 01 	lds	r25, 0x010B
+     afe:	fc 01       	movw	r30, r24
+     b00:	ee 0f       	add	r30, r30
+     b02:	ff 1f       	adc	r31, r31
+     b04:	e0 5f       	subi	r30, 0xF0	; 240
+     b06:	fe 4f       	sbci	r31, 0xFE	; 254
+     b08:	00 81       	ld	r16, Z
+     b0a:	11 81       	ldd	r17, Z+1	; 0x01
 	metalTop = getMetalOffset(metalTop, 1);
- 97a:	61 e0       	ldi	r22, 0x01	; 1
- 97c:	70 e0       	ldi	r23, 0x00	; 0
- 97e:	0e 94 9d 04 	call	0x93a	; 0x93a <getMetalOffset>
- 982:	90 93 08 01 	sts	0x0108, r25
- 986:	80 93 07 01 	sts	0x0107, r24
+     b0c:	61 e0       	ldi	r22, 0x01	; 1
+     b0e:	70 e0       	ldi	r23, 0x00	; 0
+     b10:	0e 94 66 05 	call	0xacc	; 0xacc <getMetalOffset>
+     b14:	90 93 0b 01 	sts	0x010B, r25
+     b18:	80 93 0a 01 	sts	0x010A, r24
 	metalCount--;
- 98a:	21 97       	sbiw	r28, 0x01	; 1
- 98c:	d0 93 0c 01 	sts	0x010C, r29
- 990:	c0 93 0b 01 	sts	0x010B, r28
+     b1c:	21 97       	sbiw	r28, 0x01	; 1
+     b1e:	d0 93 0f 01 	sts	0x010F, r29
+     b22:	c0 93 0e 01 	sts	0x010E, r28
 	return content;
- 994:	02 c0       	rjmp	.+4      	; 0x99a <popMetal+0x4a>
+     b26:	02 c0       	rjmp	.+4      	; 0xb2c <popMetal+0x4a>
 /* void popMetal()
    Purpose: pops the top item off the buffer
    */
 int popMetal() {
 	// if the buffer is empty, break
 	if (metalCount == 0) return -1;
- 996:	0f ef       	ldi	r16, 0xFF	; 255
- 998:	1f ef       	ldi	r17, 0xFF	; 255
+     b28:	0f ef       	ldi	r16, 0xFF	; 255
+     b2a:	1f ef       	ldi	r17, 0xFF	; 255
 	int content = metalQueue[metalTop];
 	metalTop = getMetalOffset(metalTop, 1);
 	metalCount--;
 	return content;
 }
- 99a:	80 2f       	mov	r24, r16
- 99c:	91 2f       	mov	r25, r17
- 99e:	df 91       	pop	r29
- 9a0:	cf 91       	pop	r28
- 9a2:	1f 91       	pop	r17
- 9a4:	0f 91       	pop	r16
- 9a6:	08 95       	ret
+     b2c:	80 2f       	mov	r24, r16
+     b2e:	91 2f       	mov	r25, r17
+     b30:	df 91       	pop	r29
+     b32:	cf 91       	pop	r28
+     b34:	1f 91       	pop	r17
+     b36:	0f 91       	pop	r16
+     b38:	08 95       	ret
 
-000009a8 <newMetal>:
+00000b3a <newMetal>:
 }
 
 /* int newMetal()
    Purpose: adds an item to the ring buffer and returns its index
    */
 int newMetal(int content) {
- 9a8:	0f 93       	push	r16
- 9aa:	1f 93       	push	r17
- 9ac:	cf 93       	push	r28
- 9ae:	df 93       	push	r29
- 9b0:	8c 01       	movw	r16, r24
+     b3a:	0f 93       	push	r16
+     b3c:	1f 93       	push	r17
+     b3e:	cf 93       	push	r28
+     b40:	df 93       	push	r29
+     b42:	8c 01       	movw	r16, r24
 	// if bottom is lagging behind top, reset bottom
 	if(metalCount==0) metalBottom = metalTop;
- 9b2:	c0 91 0b 01 	lds	r28, 0x010B
- 9b6:	d0 91 0c 01 	lds	r29, 0x010C
- 9ba:	20 97       	sbiw	r28, 0x00	; 0
- 9bc:	49 f4       	brne	.+18     	; 0x9d0 <newMetal+0x28>
- 9be:	80 91 07 01 	lds	r24, 0x0107
- 9c2:	90 91 08 01 	lds	r25, 0x0108
- 9c6:	90 93 0a 01 	sts	0x010A, r25
- 9ca:	80 93 09 01 	sts	0x0109, r24
- 9ce:	0f c0       	rjmp	.+30     	; 0x9ee <newMetal+0x46>
+     b44:	c0 91 0e 01 	lds	r28, 0x010E
+     b48:	d0 91 0f 01 	lds	r29, 0x010F
+     b4c:	20 97       	sbiw	r28, 0x00	; 0
+     b4e:	49 f4       	brne	.+18     	; 0xb62 <newMetal+0x28>
+     b50:	80 91 0a 01 	lds	r24, 0x010A
+     b54:	90 91 0b 01 	lds	r25, 0x010B
+     b58:	90 93 0d 01 	sts	0x010D, r25
+     b5c:	80 93 0c 01 	sts	0x010C, r24
+     b60:	0f c0       	rjmp	.+30     	; 0xb80 <newMetal+0x46>
 	// this next line is for cases when queue is not empty
 	if(metalCount > 0) metalBottom = getMetalOffset(metalBottom, 1);
- 9d0:	1c 16       	cp	r1, r28
- 9d2:	1d 06       	cpc	r1, r29
- 9d4:	64 f4       	brge	.+24     	; 0x9ee <newMetal+0x46>
- 9d6:	80 91 09 01 	lds	r24, 0x0109
- 9da:	90 91 0a 01 	lds	r25, 0x010A
- 9de:	61 e0       	ldi	r22, 0x01	; 1
- 9e0:	70 e0       	ldi	r23, 0x00	; 0
- 9e2:	0e 94 9d 04 	call	0x93a	; 0x93a <getMetalOffset>
- 9e6:	90 93 0a 01 	sts	0x010A, r25
- 9ea:	80 93 09 01 	sts	0x0109, r24
+     b62:	1c 16       	cp	r1, r28
+     b64:	1d 06       	cpc	r1, r29
+     b66:	64 f4       	brge	.+24     	; 0xb80 <newMetal+0x46>
+     b68:	80 91 0c 01 	lds	r24, 0x010C
+     b6c:	90 91 0d 01 	lds	r25, 0x010D
+     b70:	61 e0       	ldi	r22, 0x01	; 1
+     b72:	70 e0       	ldi	r23, 0x00	; 0
+     b74:	0e 94 66 05 	call	0xacc	; 0xacc <getMetalOffset>
+     b78:	90 93 0d 01 	sts	0x010D, r25
+     b7c:	80 93 0c 01 	sts	0x010C, r24
 	metalCount++;
- 9ee:	21 96       	adiw	r28, 0x01	; 1
- 9f0:	d0 93 0c 01 	sts	0x010C, r29
- 9f4:	c0 93 0b 01 	sts	0x010B, r28
+     b80:	21 96       	adiw	r28, 0x01	; 1
+     b82:	d0 93 0f 01 	sts	0x010F, r29
+     b86:	c0 93 0e 01 	sts	0x010E, r28
 	metalQueue[metalBottom] = content;
- 9f8:	80 91 09 01 	lds	r24, 0x0109
- 9fc:	90 91 0a 01 	lds	r25, 0x010A
- a00:	fc 01       	movw	r30, r24
- a02:	ee 0f       	add	r30, r30
- a04:	ff 1f       	adc	r31, r31
- a06:	e3 5f       	subi	r30, 0xF3	; 243
- a08:	fe 4f       	sbci	r31, 0xFE	; 254
- a0a:	11 83       	std	Z+1, r17	; 0x01
- a0c:	00 83       	st	Z, r16
+     b8a:	80 91 0c 01 	lds	r24, 0x010C
+     b8e:	90 91 0d 01 	lds	r25, 0x010D
+     b92:	fc 01       	movw	r30, r24
+     b94:	ee 0f       	add	r30, r30
+     b96:	ff 1f       	adc	r31, r31
+     b98:	e0 5f       	subi	r30, 0xF0	; 240
+     b9a:	fe 4f       	sbci	r31, 0xFE	; 254
+     b9c:	11 83       	std	Z+1, r17	; 0x01
+     b9e:	00 83       	st	Z, r16
 	return metalBottom;
 }
- a0e:	df 91       	pop	r29
- a10:	cf 91       	pop	r28
- a12:	1f 91       	pop	r17
- a14:	0f 91       	pop	r16
- a16:	08 95       	ret
+     ba0:	df 91       	pop	r29
+     ba2:	cf 91       	pop	r28
+     ba4:	1f 91       	pop	r17
+     ba6:	0f 91       	pop	r16
+     ba8:	08 95       	ret
 
-00000a18 <initRingBuf>:
+00000baa <initRingBuf>:
 
 /* void initRingBuf()
    Purpose: initializes the ring buffer
    */
 void initRingBuf() {
 	ringTop = 0;
- a18:	10 92 63 01 	sts	0x0163, r1
- a1c:	10 92 62 01 	sts	0x0162, r1
+     baa:	10 92 66 01 	sts	0x0166, r1
+     bae:	10 92 65 01 	sts	0x0165, r1
 	ringBottom = 0;
- a20:	10 92 5f 01 	sts	0x015F, r1
- a24:	10 92 5e 01 	sts	0x015E, r1
+     bb2:	10 92 62 01 	sts	0x0162, r1
+     bb6:	10 92 61 01 	sts	0x0161, r1
 	currentMetal = -1;
- a28:	8f ef       	ldi	r24, 0xFF	; 255
- a2a:	9f ef       	ldi	r25, 0xFF	; 255
- a2c:	90 93 a4 01 	sts	0x01A4, r25
- a30:	80 93 a3 01 	sts	0x01A3, r24
+     bba:	8f ef       	ldi	r24, 0xFF	; 255
+     bbc:	9f ef       	ldi	r25, 0xFF	; 255
+     bbe:	90 93 b1 01 	sts	0x01B1, r25
+     bc2:	80 93 b0 01 	sts	0x01B0, r24
 	currentRefl = 0;
- a34:	10 92 61 01 	sts	0x0161, r1
- a38:	10 92 60 01 	sts	0x0160, r1
+     bc6:	10 92 64 01 	sts	0x0164, r1
+     bca:	10 92 63 01 	sts	0x0163, r1
 	bufLength = 0;
- a3c:	10 92 a2 01 	sts	0x01A2, r1
- a40:	10 92 a1 01 	sts	0x01A1, r1
+     bce:	10 92 ad 01 	sts	0x01AD, r1
+     bd2:	10 92 ac 01 	sts	0x01AC, r1
 	inPause = 0;
- a44:	10 92 5d 01 	sts	0x015D, r1
+     bd6:	10 92 60 01 	sts	0x0160, r1
 	shutdown = 0;
- a48:	10 92 a0 01 	sts	0x01A0, r1
+     bda:	10 92 a7 01 	sts	0x01A7, r1
+	
+	totalSorted = 0;
+     bde:	10 92 af 01 	sts	0x01AF, r1
+     be2:	10 92 ae 01 	sts	0x01AE, r1
+	whiteSorted = 0;
+     be6:	10 92 ab 01 	sts	0x01AB, r1
+     bea:	10 92 aa 01 	sts	0x01AA, r1
+	blackSorted = 0;
+     bee:	10 92 a9 01 	sts	0x01A9, r1
+     bf2:	10 92 a8 01 	sts	0x01A8, r1
+	steelSorted = 0;
+     bf6:	10 92 a4 01 	sts	0x01A4, r1
+     bfa:	10 92 a3 01 	sts	0x01A3, r1
+	aluminumSorted = 0;
+     bfe:	10 92 a6 01 	sts	0x01A6, r1
+     c02:	10 92 a5 01 	sts	0x01A5, r1
 }
- a4c:	08 95       	ret
+     c06:	08 95       	ret
 
-00000a4e <getBufOffset>:
+00000c08 <getBufOffset>:
    Purpose: gets the index which is an integer offset of the given
    index.
    */
 int getBufOffset(int index, int offset) {
 	// case for wrapping around top end
 	if((index + offset) > (RING_BUF_SIZE - 1)) {
- a4e:	86 0f       	add	r24, r22
- a50:	97 1f       	adc	r25, r23
- a52:	8a 30       	cpi	r24, 0x0A	; 10
- a54:	91 05       	cpc	r25, r1
- a56:	14 f0       	brlt	.+4      	; 0xa5c <getBufOffset+0xe>
+     c08:	86 0f       	add	r24, r22
+     c0a:	97 1f       	adc	r25, r23
+     c0c:	8a 30       	cpi	r24, 0x0A	; 10
+     c0e:	91 05       	cpc	r25, r1
+     c10:	14 f0       	brlt	.+4      	; 0xc16 <getBufOffset+0xe>
 		return ((index + offset) - RING_BUF_SIZE);
- a58:	0a 97       	sbiw	r24, 0x0a	; 10
- a5a:	08 95       	ret
+     c12:	0a 97       	sbiw	r24, 0x0a	; 10
+     c14:	08 95       	ret
 	}
 	// case for wrapping around bottom end
 	if((index + offset) < 0) {
- a5c:	99 23       	and	r25, r25
- a5e:	0c f4       	brge	.+2      	; 0xa62 <getBufOffset+0x14>
+     c16:	99 23       	and	r25, r25
+     c18:	0c f4       	brge	.+2      	; 0xc1c <getBufOffset+0x14>
 		return ((index + offset) + RING_BUF_SIZE);
- a60:	0a 96       	adiw	r24, 0x0a	; 10
+     c1a:	0a 96       	adiw	r24, 0x0a	; 10
 	}
 
 	// didn't wrap
 	return (index + offset);
- a62:	08 95       	ret
+     c1c:	08 95       	ret
 
-00000a64 <popBuf>:
+00000c1e <popBuf>:
 }
 
 /* void popBuf()
    Purpose: pops the top item off the buffer
    */
 void popBuf() {
- a64:	cf 93       	push	r28
- a66:	df 93       	push	r29
+     c1e:	cf 93       	push	r28
+     c20:	df 93       	push	r29
 	// if the buffer is empty, break
 	if (bufLength == 0) return;
- a68:	c0 91 a1 01 	lds	r28, 0x01A1
- a6c:	d0 91 a2 01 	lds	r29, 0x01A2
- a70:	20 97       	sbiw	r28, 0x00	; 0
- a72:	c9 f0       	breq	.+50     	; 0xaa6 <popBuf+0x42>
+     c22:	c0 91 ac 01 	lds	r28, 0x01AC
+     c26:	d0 91 ad 01 	lds	r29, 0x01AD
+     c2a:	20 97       	sbiw	r28, 0x00	; 0
+     c2c:	c9 f0       	breq	.+50     	; 0xc60 <popBuf+0x42>
 	ringTop = getBufOffset(ringTop, 1);
- a74:	80 91 62 01 	lds	r24, 0x0162
- a78:	90 91 63 01 	lds	r25, 0x0163
- a7c:	61 e0       	ldi	r22, 0x01	; 1
- a7e:	70 e0       	ldi	r23, 0x00	; 0
- a80:	0e 94 27 05 	call	0xa4e	; 0xa4e <getBufOffset>
- a84:	90 93 63 01 	sts	0x0163, r25
- a88:	80 93 62 01 	sts	0x0162, r24
+     c2e:	80 91 65 01 	lds	r24, 0x0165
+     c32:	90 91 66 01 	lds	r25, 0x0166
+     c36:	61 e0       	ldi	r22, 0x01	; 1
+     c38:	70 e0       	ldi	r23, 0x00	; 0
+     c3a:	0e 94 04 06 	call	0xc08	; 0xc08 <getBufOffset>
+     c3e:	90 93 66 01 	sts	0x0166, r25
+     c42:	80 93 65 01 	sts	0x0165, r24
 	bufLength--;
- a8c:	21 97       	sbiw	r28, 0x01	; 1
- a8e:	d0 93 a2 01 	sts	0x01A2, r29
- a92:	c0 93 a1 01 	sts	0x01A1, r28
+     c46:	21 97       	sbiw	r28, 0x01	; 1
+     c48:	d0 93 ad 01 	sts	0x01AD, r29
+     c4c:	c0 93 ac 01 	sts	0x01AC, r28
 	if((bufLength == 0) && (shutdown == 1)) {
- a96:	20 97       	sbiw	r28, 0x00	; 0
- a98:	31 f4       	brne	.+12     	; 0xaa6 <popBuf+0x42>
- a9a:	80 91 a0 01 	lds	r24, 0x01A0
- a9e:	81 30       	cpi	r24, 0x01	; 1
- aa0:	11 f4       	brne	.+4      	; 0xaa6 <popBuf+0x42>
+     c50:	20 97       	sbiw	r28, 0x00	; 0
+     c52:	31 f4       	brne	.+12     	; 0xc60 <popBuf+0x42>
+     c54:	80 91 a7 01 	lds	r24, 0x01A7
+     c58:	81 30       	cpi	r24, 0x01	; 1
+     c5a:	11 f4       	brne	.+4      	; 0xc60 <popBuf+0x42>
 		shutdownHandler();
- aa2:	0e 94 b6 02 	call	0x56c	; 0x56c <shutdownHandler>
+     c5c:	0e 94 34 03 	call	0x668	; 0x668 <shutdownHandler>
 	}
 }
- aa6:	df 91       	pop	r29
- aa8:	cf 91       	pop	r28
- aaa:	08 95       	ret
+     c60:	df 91       	pop	r29
+     c62:	cf 91       	pop	r28
+     c64:	08 95       	ret
 
-00000aac <newRingBufItem>:
+00000c66 <newRingBufItem>:
 }
 
 /* int newRingBufItem()
    Purpose: adds an item to the ring buffer and returns its index
    */
 int newRingBufItem() {
- aac:	cf 93       	push	r28
- aae:	df 93       	push	r29
+     c66:	cf 93       	push	r28
+     c68:	df 93       	push	r29
 	// if bottom is lagging behind top, reset bottom
 	if(bufLength==0) ringBottom = ringTop;
- ab0:	c0 91 a1 01 	lds	r28, 0x01A1
- ab4:	d0 91 a2 01 	lds	r29, 0x01A2
- ab8:	20 97       	sbiw	r28, 0x00	; 0
- aba:	49 f4       	brne	.+18     	; 0xace <newRingBufItem+0x22>
- abc:	80 91 62 01 	lds	r24, 0x0162
- ac0:	90 91 63 01 	lds	r25, 0x0163
- ac4:	90 93 5f 01 	sts	0x015F, r25
- ac8:	80 93 5e 01 	sts	0x015E, r24
- acc:	0f c0       	rjmp	.+30     	; 0xaec <newRingBufItem+0x40>
+     c6a:	c0 91 ac 01 	lds	r28, 0x01AC
+     c6e:	d0 91 ad 01 	lds	r29, 0x01AD
+     c72:	20 97       	sbiw	r28, 0x00	; 0
+     c74:	49 f4       	brne	.+18     	; 0xc88 <newRingBufItem+0x22>
+     c76:	80 91 65 01 	lds	r24, 0x0165
+     c7a:	90 91 66 01 	lds	r25, 0x0166
+     c7e:	90 93 62 01 	sts	0x0162, r25
+     c82:	80 93 61 01 	sts	0x0161, r24
+     c86:	0f c0       	rjmp	.+30     	; 0xca6 <newRingBufItem+0x40>
 	// this next line is for cases when queue is not empty
 	if(bufLength > 0) ringBottom = getBufOffset(ringBottom, 1);
- ace:	1c 16       	cp	r1, r28
- ad0:	1d 06       	cpc	r1, r29
- ad2:	64 f4       	brge	.+24     	; 0xaec <newRingBufItem+0x40>
- ad4:	80 91 5e 01 	lds	r24, 0x015E
- ad8:	90 91 5f 01 	lds	r25, 0x015F
- adc:	61 e0       	ldi	r22, 0x01	; 1
- ade:	70 e0       	ldi	r23, 0x00	; 0
- ae0:	0e 94 27 05 	call	0xa4e	; 0xa4e <getBufOffset>
- ae4:	90 93 5f 01 	sts	0x015F, r25
- ae8:	80 93 5e 01 	sts	0x015E, r24
+     c88:	1c 16       	cp	r1, r28
+     c8a:	1d 06       	cpc	r1, r29
+     c8c:	64 f4       	brge	.+24     	; 0xca6 <newRingBufItem+0x40>
+     c8e:	80 91 61 01 	lds	r24, 0x0161
+     c92:	90 91 62 01 	lds	r25, 0x0162
+     c96:	61 e0       	ldi	r22, 0x01	; 1
+     c98:	70 e0       	ldi	r23, 0x00	; 0
+     c9a:	0e 94 04 06 	call	0xc08	; 0xc08 <getBufOffset>
+     c9e:	90 93 62 01 	sts	0x0162, r25
+     ca2:	80 93 61 01 	sts	0x0161, r24
 	bufLength++;
- aec:	21 96       	adiw	r28, 0x01	; 1
- aee:	d0 93 a2 01 	sts	0x01A2, r29
- af2:	c0 93 a1 01 	sts	0x01A1, r28
+     ca6:	21 96       	adiw	r28, 0x01	; 1
+     ca8:	d0 93 ad 01 	sts	0x01AD, r29
+     cac:	c0 93 ac 01 	sts	0x01AC, r28
 	ringBuf[ringBottom].minRefl = 1024;
- af6:	80 91 5e 01 	lds	r24, 0x015E
- afa:	90 91 5f 01 	lds	r25, 0x015F
- afe:	fc 01       	movw	r30, r24
- b00:	ee 0f       	add	r30, r30
- b02:	ff 1f       	adc	r31, r31
- b04:	e8 0f       	add	r30, r24
- b06:	f9 1f       	adc	r31, r25
- b08:	ee 0f       	add	r30, r30
- b0a:	ff 1f       	adc	r31, r31
- b0c:	ec 59       	subi	r30, 0x9C	; 156
- b0e:	fe 4f       	sbci	r31, 0xFE	; 254
- b10:	20 e0       	ldi	r18, 0x00	; 0
- b12:	34 e0       	ldi	r19, 0x04	; 4
- b14:	33 83       	std	Z+3, r19	; 0x03
- b16:	22 83       	std	Z+2, r18	; 0x02
+     cb0:	80 91 61 01 	lds	r24, 0x0161
+     cb4:	90 91 62 01 	lds	r25, 0x0162
+     cb8:	fc 01       	movw	r30, r24
+     cba:	ee 0f       	add	r30, r30
+     cbc:	ff 1f       	adc	r31, r31
+     cbe:	e8 0f       	add	r30, r24
+     cc0:	f9 1f       	adc	r31, r25
+     cc2:	ee 0f       	add	r30, r30
+     cc4:	ff 1f       	adc	r31, r31
+     cc6:	e9 59       	subi	r30, 0x99	; 153
+     cc8:	fe 4f       	sbci	r31, 0xFE	; 254
+     cca:	20 e0       	ldi	r18, 0x00	; 0
+     ccc:	34 e0       	ldi	r19, 0x04	; 4
+     cce:	33 83       	std	Z+3, r19	; 0x03
+     cd0:	22 83       	std	Z+2, r18	; 0x02
 	ringBuf[ringBottom].reflSamples = 0;
- b18:	15 82       	std	Z+5, r1	; 0x05
- b1a:	14 82       	std	Z+4, r1	; 0x04
+     cd2:	15 82       	std	Z+5, r1	; 0x05
+     cd4:	14 82       	std	Z+4, r1	; 0x04
 	ringBuf[ringBottom].metal = 0;
- b1c:	11 82       	std	Z+1, r1	; 0x01
+     cd6:	11 82       	std	Z+1, r1	; 0x01
 	ringBuf[ringBottom].type = UNDEF;
- b1e:	10 82       	st	Z, r1
+     cd8:	10 82       	st	Z, r1
 	return ringBottom;
 }
- b20:	df 91       	pop	r29
- b22:	cf 91       	pop	r28
- b24:	08 95       	ret
+     cda:	df 91       	pop	r29
+     cdc:	cf 91       	pop	r28
+     cde:	08 95       	ret
 
-00000b26 <getPatFomHex>:
+00000ce0 <getPatFomHex>:
    Purpose: looks up the appropriate pattern for 
    the seven segment display for a given number.
    If input is not between 0-F, returns blank pattern
    */
 char getPatFomHex(char number) {
 	switch(number) {
- b26:	87 30       	cpi	r24, 0x07	; 7
- b28:	71 f1       	breq	.+92     	; 0xb86 <getPatFomHex+0x60>
- b2a:	88 30       	cpi	r24, 0x08	; 8
- b2c:	70 f4       	brcc	.+28     	; 0xb4a <getPatFomHex+0x24>
- b2e:	83 30       	cpi	r24, 0x03	; 3
- b30:	11 f1       	breq	.+68     	; 0xb76 <getPatFomHex+0x50>
- b32:	84 30       	cpi	r24, 0x04	; 4
- b34:	28 f4       	brcc	.+10     	; 0xb40 <getPatFomHex+0x1a>
- b36:	81 30       	cpi	r24, 0x01	; 1
- b38:	d1 f1       	breq	.+116    	; 0xbae <getPatFomHex+0x88>
- b3a:	82 30       	cpi	r24, 0x02	; 2
- b3c:	d0 f4       	brcc	.+52     	; 0xb72 <getPatFomHex+0x4c>
- b3e:	17 c0       	rjmp	.+46     	; 0xb6e <getPatFomHex+0x48>
- b40:	85 30       	cpi	r24, 0x05	; 5
- b42:	e9 f0       	breq	.+58     	; 0xb7e <getPatFomHex+0x58>
- b44:	86 30       	cpi	r24, 0x06	; 6
- b46:	e8 f4       	brcc	.+58     	; 0xb82 <getPatFomHex+0x5c>
- b48:	18 c0       	rjmp	.+48     	; 0xb7a <getPatFomHex+0x54>
- b4a:	8b 30       	cpi	r24, 0x0B	; 11
- b4c:	21 f1       	breq	.+72     	; 0xb96 <getPatFomHex+0x70>
- b4e:	8c 30       	cpi	r24, 0x0C	; 12
- b50:	28 f4       	brcc	.+10     	; 0xb5c <getPatFomHex+0x36>
- b52:	89 30       	cpi	r24, 0x09	; 9
- b54:	e1 f0       	breq	.+56     	; 0xb8e <getPatFomHex+0x68>
- b56:	8a 30       	cpi	r24, 0x0A	; 10
- b58:	e0 f4       	brcc	.+56     	; 0xb92 <getPatFomHex+0x6c>
- b5a:	17 c0       	rjmp	.+46     	; 0xb8a <getPatFomHex+0x64>
- b5c:	8d 30       	cpi	r24, 0x0D	; 13
- b5e:	f9 f0       	breq	.+62     	; 0xb9e <getPatFomHex+0x78>
- b60:	8d 30       	cpi	r24, 0x0D	; 13
- b62:	d8 f0       	brcs	.+54     	; 0xb9a <getPatFomHex+0x74>
- b64:	8e 30       	cpi	r24, 0x0E	; 14
- b66:	e9 f0       	breq	.+58     	; 0xba2 <getPatFomHex+0x7c>
- b68:	8f 30       	cpi	r24, 0x0F	; 15
- b6a:	f9 f4       	brne	.+62     	; 0xbaa <getPatFomHex+0x84>
- b6c:	1c c0       	rjmp	.+56     	; 0xba6 <getPatFomHex+0x80>
+     ce0:	87 30       	cpi	r24, 0x07	; 7
+     ce2:	71 f1       	breq	.+92     	; 0xd40 <getPatFomHex+0x60>
+     ce4:	88 30       	cpi	r24, 0x08	; 8
+     ce6:	70 f4       	brcc	.+28     	; 0xd04 <getPatFomHex+0x24>
+     ce8:	83 30       	cpi	r24, 0x03	; 3
+     cea:	11 f1       	breq	.+68     	; 0xd30 <getPatFomHex+0x50>
+     cec:	84 30       	cpi	r24, 0x04	; 4
+     cee:	28 f4       	brcc	.+10     	; 0xcfa <getPatFomHex+0x1a>
+     cf0:	81 30       	cpi	r24, 0x01	; 1
+     cf2:	d1 f1       	breq	.+116    	; 0xd68 <getPatFomHex+0x88>
+     cf4:	82 30       	cpi	r24, 0x02	; 2
+     cf6:	d0 f4       	brcc	.+52     	; 0xd2c <getPatFomHex+0x4c>
+     cf8:	17 c0       	rjmp	.+46     	; 0xd28 <getPatFomHex+0x48>
+     cfa:	85 30       	cpi	r24, 0x05	; 5
+     cfc:	e9 f0       	breq	.+58     	; 0xd38 <getPatFomHex+0x58>
+     cfe:	86 30       	cpi	r24, 0x06	; 6
+     d00:	e8 f4       	brcc	.+58     	; 0xd3c <getPatFomHex+0x5c>
+     d02:	18 c0       	rjmp	.+48     	; 0xd34 <getPatFomHex+0x54>
+     d04:	8b 30       	cpi	r24, 0x0B	; 11
+     d06:	21 f1       	breq	.+72     	; 0xd50 <getPatFomHex+0x70>
+     d08:	8c 30       	cpi	r24, 0x0C	; 12
+     d0a:	28 f4       	brcc	.+10     	; 0xd16 <getPatFomHex+0x36>
+     d0c:	89 30       	cpi	r24, 0x09	; 9
+     d0e:	e1 f0       	breq	.+56     	; 0xd48 <getPatFomHex+0x68>
+     d10:	8a 30       	cpi	r24, 0x0A	; 10
+     d12:	e0 f4       	brcc	.+56     	; 0xd4c <getPatFomHex+0x6c>
+     d14:	17 c0       	rjmp	.+46     	; 0xd44 <getPatFomHex+0x64>
+     d16:	8d 30       	cpi	r24, 0x0D	; 13
+     d18:	f9 f0       	breq	.+62     	; 0xd58 <getPatFomHex+0x78>
+     d1a:	8d 30       	cpi	r24, 0x0D	; 13
+     d1c:	d8 f0       	brcs	.+54     	; 0xd54 <getPatFomHex+0x74>
+     d1e:	8e 30       	cpi	r24, 0x0E	; 14
+     d20:	e9 f0       	breq	.+58     	; 0xd5c <getPatFomHex+0x7c>
+     d22:	8f 30       	cpi	r24, 0x0F	; 15
+     d24:	f9 f4       	brne	.+62     	; 0xd64 <getPatFomHex+0x84>
+     d26:	1c c0       	rjmp	.+56     	; 0xd60 <getPatFomHex+0x80>
 		case 0:
 			return 0b11111100;
- b6e:	8c ef       	ldi	r24, 0xFC	; 252
- b70:	08 95       	ret
+     d28:	8c ef       	ldi	r24, 0xFC	; 252
+     d2a:	08 95       	ret
 			break;
 		case 1:
 			return 0b01100000;
 			break;
 		case 2:
 			return 0b11011010;
- b72:	8a ed       	ldi	r24, 0xDA	; 218
- b74:	08 95       	ret
+     d2c:	8a ed       	ldi	r24, 0xDA	; 218
+     d2e:	08 95       	ret
 			break;
 		case 3:
 			return 0b11110010;
- b76:	82 ef       	ldi	r24, 0xF2	; 242
- b78:	08 95       	ret
+     d30:	82 ef       	ldi	r24, 0xF2	; 242
+     d32:	08 95       	ret
 			break;
 		case 4:
 			return 0b01100110;
- b7a:	86 e6       	ldi	r24, 0x66	; 102
- b7c:	08 95       	ret
+     d34:	86 e6       	ldi	r24, 0x66	; 102
+     d36:	08 95       	ret
 			break;
 		case 5:
 			return 0b10110110;
- b7e:	86 eb       	ldi	r24, 0xB6	; 182
- b80:	08 95       	ret
+     d38:	86 eb       	ldi	r24, 0xB6	; 182
+     d3a:	08 95       	ret
 			break;
 		case 6:
 			return 0b10111110;
- b82:	8e eb       	ldi	r24, 0xBE	; 190
- b84:	08 95       	ret
+     d3c:	8e eb       	ldi	r24, 0xBE	; 190
+     d3e:	08 95       	ret
 			break;
 		case 7:
 			return 0b11100000;
- b86:	80 ee       	ldi	r24, 0xE0	; 224
- b88:	08 95       	ret
+     d40:	80 ee       	ldi	r24, 0xE0	; 224
+     d42:	08 95       	ret
 			break;
 		case 8:
 			return 0b11111110;
- b8a:	8e ef       	ldi	r24, 0xFE	; 254
- b8c:	08 95       	ret
+     d44:	8e ef       	ldi	r24, 0xFE	; 254
+     d46:	08 95       	ret
 			break;
 		case 9:
 			return 0b11100110;
- b8e:	86 ee       	ldi	r24, 0xE6	; 230
- b90:	08 95       	ret
+     d48:	86 ee       	ldi	r24, 0xE6	; 230
+     d4a:	08 95       	ret
 			break;
 		case 10:
 			return 0b11101110;
- b92:	8e ee       	ldi	r24, 0xEE	; 238
- b94:	08 95       	ret
+     d4c:	8e ee       	ldi	r24, 0xEE	; 238
+     d4e:	08 95       	ret
 			break;
 		case 11:
 			return 0b00111110;
- b96:	8e e3       	ldi	r24, 0x3E	; 62
- b98:	08 95       	ret
+     d50:	8e e3       	ldi	r24, 0x3E	; 62
+     d52:	08 95       	ret
 			break;
 		case 12:
 			return 0b10011100;
- b9a:	8c e9       	ldi	r24, 0x9C	; 156
- b9c:	08 95       	ret
+     d54:	8c e9       	ldi	r24, 0x9C	; 156
+     d56:	08 95       	ret
 			break;
 		case 13:
 			return 0b01111010;
- b9e:	8a e7       	ldi	r24, 0x7A	; 122
- ba0:	08 95       	ret
+     d58:	8a e7       	ldi	r24, 0x7A	; 122
+     d5a:	08 95       	ret
 			break;
 		case 14:
 			return 0b10011110;
- ba2:	8e e9       	ldi	r24, 0x9E	; 158
- ba4:	08 95       	ret
+     d5c:	8e e9       	ldi	r24, 0x9E	; 158
+     d5e:	08 95       	ret
 			break;
 		case 15:
 			return 0b10001110;
- ba6:	8e e8       	ldi	r24, 0x8E	; 142
- ba8:	08 95       	ret
+     d60:	8e e8       	ldi	r24, 0x8E	; 142
+     d62:	08 95       	ret
 		default:
 			break;			
 	}
 	return 0x00;
- baa:	80 e0       	ldi	r24, 0x00	; 0
- bac:	08 95       	ret
+     d64:	80 e0       	ldi	r24, 0x00	; 0
+     d66:	08 95       	ret
 	switch(number) {
 		case 0:
 			return 0b11111100;
 			break;
 		case 1:
 			return 0b01100000;
- bae:	80 e6       	ldi	r24, 0x60	; 96
+     d68:	80 e6       	ldi	r24, 0x60	; 96
 			return 0b10001110;
 		default:
 			break;			
 	}
 	return 0x00;
 }
- bb0:	08 95       	ret
+     d6a:	08 95       	ret
 
-00000bb2 <writePattern>:
+00000d6c <writePattern>:
 /* void writePattern(char pattern)
    Purpose: Bit-bangs out an integer over
    the serial interface to the display
    */
 void writePattern(char pattern) {
 	for (int i=0; i<8; i++) {
- bb2:	20 e0       	ldi	r18, 0x00	; 0
- bb4:	30 e0       	ldi	r19, 0x00	; 0
+     d6c:	20 e0       	ldi	r18, 0x00	; 0
+     d6e:	30 e0       	ldi	r19, 0x00	; 0
 		// assert the data
 		char databit = 0x01 & (pattern >> i);
- bb6:	90 e0       	ldi	r25, 0x00	; 0
+     d70:	90 e0       	ldi	r25, 0x00	; 0
 		PORTA = (PORTA & 0b10111111) | (databit << 6);
- bb8:	62 b1       	in	r22, 0x02	; 2
+     d72:	62 b1       	in	r22, 0x02	; 2
    the serial interface to the display
    */
 void writePattern(char pattern) {
 	for (int i=0; i<8; i++) {
 		// assert the data
 		char databit = 0x01 & (pattern >> i);
- bba:	ac 01       	movw	r20, r24
- bbc:	02 2e       	mov	r0, r18
- bbe:	02 c0       	rjmp	.+4      	; 0xbc4 <writePattern+0x12>
- bc0:	55 95       	asr	r21
- bc2:	47 95       	ror	r20
- bc4:	0a 94       	dec	r0
- bc6:	e2 f7       	brpl	.-8      	; 0xbc0 <writePattern+0xe>
- bc8:	41 70       	andi	r20, 0x01	; 1
+     d74:	ac 01       	movw	r20, r24
+     d76:	02 2e       	mov	r0, r18
+     d78:	02 c0       	rjmp	.+4      	; 0xd7e <writePattern+0x12>
+     d7a:	55 95       	asr	r21
+     d7c:	47 95       	ror	r20
+     d7e:	0a 94       	dec	r0
+     d80:	e2 f7       	brpl	.-8      	; 0xd7a <writePattern+0xe>
+     d82:	41 70       	andi	r20, 0x01	; 1
 		PORTA = (PORTA & 0b10111111) | (databit << 6);
- bca:	42 95       	swap	r20
- bcc:	44 0f       	add	r20, r20
- bce:	44 0f       	add	r20, r20
- bd0:	40 7c       	andi	r20, 0xC0	; 192
- bd2:	56 2f       	mov	r21, r22
- bd4:	5f 7b       	andi	r21, 0xBF	; 191
- bd6:	45 2b       	or	r20, r21
- bd8:	42 b9       	out	0x02, r20	; 2
+     d84:	42 95       	swap	r20
+     d86:	44 0f       	add	r20, r20
+     d88:	44 0f       	add	r20, r20
+     d8a:	40 7c       	andi	r20, 0xC0	; 192
+     d8c:	56 2f       	mov	r21, r22
+     d8e:	5f 7b       	andi	r21, 0xBF	; 191
+     d90:	45 2b       	or	r20, r21
+     d92:	42 b9       	out	0x02, r20	; 2
 		// rising edge
 		PORTA = (PORTA & 0b01111111) | 0b10000000;
- bda:	17 9a       	sbi	0x02, 7	; 2
+     d94:	17 9a       	sbi	0x02, 7	; 2
 		// falling edge
 		PORTA = (PORTA & 0b01111111);
- bdc:	17 98       	cbi	0x02, 7	; 2
+     d96:	17 98       	cbi	0x02, 7	; 2
 /* void writePattern(char pattern)
    Purpose: Bit-bangs out an integer over
    the serial interface to the display
    */
 void writePattern(char pattern) {
 	for (int i=0; i<8; i++) {
- bde:	2f 5f       	subi	r18, 0xFF	; 255
- be0:	3f 4f       	sbci	r19, 0xFF	; 255
- be2:	28 30       	cpi	r18, 0x08	; 8
- be4:	31 05       	cpc	r19, r1
- be6:	41 f7       	brne	.-48     	; 0xbb8 <writePattern+0x6>
+     d98:	2f 5f       	subi	r18, 0xFF	; 255
+     d9a:	3f 4f       	sbci	r19, 0xFF	; 255
+     d9c:	28 30       	cpi	r18, 0x08	; 8
+     d9e:	31 05       	cpc	r19, r1
+     da0:	41 f7       	brne	.-48     	; 0xd72 <writePattern+0x6>
 		// rising edge
 		PORTA = (PORTA & 0b01111111) | 0b10000000;
 		// falling edge
 		PORTA = (PORTA & 0b01111111);
 	}
 }
- be8:	08 95       	ret
+     da2:	08 95       	ret
 
-00000bea <writeDecInt>:
+00000da4 <writeError>:
+
+/* void writeError(int code)
+   Purpose: displays "ErrXX" on the 
+   display, where XX is the hex representation of the integer
+   */
+void writeError(int code) {
+     da4:	cf 93       	push	r28
+     da6:	df 93       	push	r29
+     da8:	ec 01       	movw	r28, r24
+	// write the error code
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(code % 16));
+     daa:	60 e1       	ldi	r22, 0x10	; 16
+     dac:	70 e0       	ldi	r23, 0x00	; 0
+     dae:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     db2:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     db6:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		code = code / 16;
+     dba:	ce 01       	movw	r24, r28
+     dbc:	dd 23       	and	r29, r29
+     dbe:	0c f4       	brge	.+2      	; 0xdc2 <writeError+0x1e>
+     dc0:	0f 96       	adiw	r24, 0x0f	; 15
+     dc2:	95 95       	asr	r25
+     dc4:	87 95       	ror	r24
+     dc6:	95 95       	asr	r25
+     dc8:	87 95       	ror	r24
+     dca:	95 95       	asr	r25
+     dcc:	87 95       	ror	r24
+     dce:	95 95       	asr	r25
+     dd0:	87 95       	ror	r24
+   display, where XX is the hex representation of the integer
+   */
+void writeError(int code) {
+	// write the error code
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(code % 16));
+     dd2:	60 e1       	ldi	r22, 0x10	; 16
+     dd4:	70 e0       	ldi	r23, 0x00	; 0
+     dd6:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     dda:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     dde:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		code = code / 16;
+	}
+	// write "r"
+	writePattern(0b00001010);
+     de2:	8a e0       	ldi	r24, 0x0A	; 10
+     de4:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "r"
+	writePattern(0b00001010);
+     de8:	8a e0       	ldi	r24, 0x0A	; 10
+     dea:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "E"
+	writePattern(0b10011110);
+     dee:	8e e9       	ldi	r24, 0x9E	; 158
+     df0:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     df4:	df 91       	pop	r29
+     df6:	cf 91       	pop	r28
+     df8:	08 95       	ret
+
+00000dfa <writeTotal>:
+/* void writeTotal(int count)
+   Purpose: displays "totXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeTotal(int count) {
+     dfa:	0f 93       	push	r16
+     dfc:	1f 93       	push	r17
+     dfe:	cf 93       	push	r28
+     e00:	df 93       	push	r29
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+     e02:	ca e0       	ldi	r28, 0x0A	; 10
+     e04:	d0 e0       	ldi	r29, 0x00	; 0
+     e06:	be 01       	movw	r22, r28
+     e08:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     e0c:	8b 01       	movw	r16, r22
+     e0e:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     e12:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+     e16:	c8 01       	movw	r24, r16
+     e18:	be 01       	movw	r22, r28
+     e1a:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     e1e:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     e22:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		count = count / 10;
+	}
+	// write "t"
+	writePattern(0b00011110);
+     e26:	8e e1       	ldi	r24, 0x1E	; 30
+     e28:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "o"
+	writePattern(0b00111010);
+     e2c:	8a e3       	ldi	r24, 0x3A	; 58
+     e2e:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "t"
+	writePattern(0b00011110);
+     e32:	8e e1       	ldi	r24, 0x1E	; 30
+     e34:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     e38:	df 91       	pop	r29
+     e3a:	cf 91       	pop	r28
+     e3c:	1f 91       	pop	r17
+     e3e:	0f 91       	pop	r16
+     e40:	08 95       	ret
+
+00000e42 <writeAluminum>:
+/* void writeAluminum(int count)
+   Purpose: displays "ALUXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeAluminum(int count) {
+     e42:	0f 93       	push	r16
+     e44:	1f 93       	push	r17
+     e46:	cf 93       	push	r28
+     e48:	df 93       	push	r29
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+     e4a:	ca e0       	ldi	r28, 0x0A	; 10
+     e4c:	d0 e0       	ldi	r29, 0x00	; 0
+     e4e:	be 01       	movw	r22, r28
+     e50:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     e54:	8b 01       	movw	r16, r22
+     e56:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     e5a:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+     e5e:	c8 01       	movw	r24, r16
+     e60:	be 01       	movw	r22, r28
+     e62:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     e66:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     e6a:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		count = count / 10;
+	}
+	// write "U"
+	writePattern(0b01111100);
+     e6e:	8c e7       	ldi	r24, 0x7C	; 124
+     e70:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "L"
+	writePattern(0b00011100);
+     e74:	8c e1       	ldi	r24, 0x1C	; 28
+     e76:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "A"
+	writePattern(0b11101110);
+     e7a:	8e ee       	ldi	r24, 0xEE	; 238
+     e7c:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     e80:	df 91       	pop	r29
+     e82:	cf 91       	pop	r28
+     e84:	1f 91       	pop	r17
+     e86:	0f 91       	pop	r16
+     e88:	08 95       	ret
+
+00000e8a <writeSteel>:
+/* void writeSteel(int count)
+   Purpose: displays "StLXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeSteel(int count) {
+     e8a:	0f 93       	push	r16
+     e8c:	1f 93       	push	r17
+     e8e:	cf 93       	push	r28
+     e90:	df 93       	push	r29
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+     e92:	ca e0       	ldi	r28, 0x0A	; 10
+     e94:	d0 e0       	ldi	r29, 0x00	; 0
+     e96:	be 01       	movw	r22, r28
+     e98:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     e9c:	8b 01       	movw	r16, r22
+     e9e:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     ea2:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+     ea6:	c8 01       	movw	r24, r16
+     ea8:	be 01       	movw	r22, r28
+     eaa:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     eae:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     eb2:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		count = count / 10;
+	}
+	// write "L"
+	writePattern(0b00011100);
+     eb6:	8c e1       	ldi	r24, 0x1C	; 28
+     eb8:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "t"
+	writePattern(0b00011110);
+     ebc:	8e e1       	ldi	r24, 0x1E	; 30
+     ebe:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "S"
+	writePattern(0b10110110);
+     ec2:	86 eb       	ldi	r24, 0xB6	; 182
+     ec4:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     ec8:	df 91       	pop	r29
+     eca:	cf 91       	pop	r28
+     ecc:	1f 91       	pop	r17
+     ece:	0f 91       	pop	r16
+     ed0:	08 95       	ret
+
+00000ed2 <writeBlack>:
+/* void writeBlack(int count)
+   Purpose: displays "bLAXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeBlack(int count) {
+     ed2:	0f 93       	push	r16
+     ed4:	1f 93       	push	r17
+     ed6:	cf 93       	push	r28
+     ed8:	df 93       	push	r29
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+     eda:	ca e0       	ldi	r28, 0x0A	; 10
+     edc:	d0 e0       	ldi	r29, 0x00	; 0
+     ede:	be 01       	movw	r22, r28
+     ee0:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     ee4:	8b 01       	movw	r16, r22
+     ee6:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     eea:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+     eee:	c8 01       	movw	r24, r16
+     ef0:	be 01       	movw	r22, r28
+     ef2:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     ef6:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     efa:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		count = count / 10;
+	}
+	// write "A"
+	writePattern(0b11101110);
+     efe:	8e ee       	ldi	r24, 0xEE	; 238
+     f00:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "L"
+	writePattern(0b00011100);
+     f04:	8c e1       	ldi	r24, 0x1C	; 28
+     f06:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "b"
+	writePattern(0b00111110);
+     f0a:	8e e3       	ldi	r24, 0x3E	; 62
+     f0c:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     f10:	df 91       	pop	r29
+     f12:	cf 91       	pop	r28
+     f14:	1f 91       	pop	r17
+     f16:	0f 91       	pop	r16
+     f18:	08 95       	ret
+
+00000f1a <writeWhite>:
+/* void writeWhite(int count)
+   Purpose: displays "LtEXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeWhite(int count) {
+     f1a:	0f 93       	push	r16
+     f1c:	1f 93       	push	r17
+     f1e:	cf 93       	push	r28
+     f20:	df 93       	push	r29
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+     f22:	ca e0       	ldi	r28, 0x0A	; 10
+     f24:	d0 e0       	ldi	r29, 0x00	; 0
+     f26:	be 01       	movw	r22, r28
+     f28:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     f2c:	8b 01       	movw	r16, r22
+     f2e:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     f32:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+     f36:	c8 01       	movw	r24, r16
+     f38:	be 01       	movw	r22, r28
+     f3a:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     f3e:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     f42:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+		count = count / 10;
+	}
+	// write "E"
+	writePattern(0b10011110);
+     f46:	8e e9       	ldi	r24, 0x9E	; 158
+     f48:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "t"
+	writePattern(0b00011110);
+     f4c:	8e e1       	ldi	r24, 0x1E	; 30
+     f4e:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+	// write "L"
+	writePattern(0b00011100);
+     f52:	8c e1       	ldi	r24, 0x1C	; 28
+     f54:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
+}
+     f58:	df 91       	pop	r29
+     f5a:	cf 91       	pop	r28
+     f5c:	1f 91       	pop	r17
+     f5e:	0f 91       	pop	r16
+     f60:	08 95       	ret
+
+00000f62 <writeDecInt>:
 
 /* void writeDecInt(int number)
    Purpose: fills the seven segment display with
    an integer number, formatted as decimal.
    */
 void writeDecInt(int number) {
- bea:	ef 92       	push	r14
- bec:	ff 92       	push	r15
- bee:	0f 93       	push	r16
- bf0:	1f 93       	push	r17
- bf2:	cf 93       	push	r28
- bf4:	df 93       	push	r29
- bf6:	c3 e0       	ldi	r28, 0x03	; 3
- bf8:	d0 e0       	ldi	r29, 0x00	; 0
+     f62:	ef 92       	push	r14
+     f64:	ff 92       	push	r15
+     f66:	0f 93       	push	r16
+     f68:	1f 93       	push	r17
+     f6a:	cf 93       	push	r28
+     f6c:	df 93       	push	r29
+     f6e:	c5 e0       	ldi	r28, 0x05	; 5
+     f70:	d0 e0       	ldi	r29, 0x00	; 0
 	for (int i=0; i < DISPLAY_DIGITS; i++) {
 		writePattern(getPatFomHex(number % 10));
- bfa:	0f 2e       	mov	r0, r31
- bfc:	fa e0       	ldi	r31, 0x0A	; 10
- bfe:	ef 2e       	mov	r14, r31
- c00:	ff 24       	eor	r15, r15
- c02:	f0 2d       	mov	r31, r0
- c04:	b7 01       	movw	r22, r14
- c06:	0e 94 62 07 	call	0xec4	; 0xec4 <__divmodhi4>
- c0a:	16 2f       	mov	r17, r22
- c0c:	07 2f       	mov	r16, r23
- c0e:	0e 94 93 05 	call	0xb26	; 0xb26 <getPatFomHex>
- c12:	0e 94 d9 05 	call	0xbb2	; 0xbb2 <writePattern>
+     f72:	0f 2e       	mov	r0, r31
+     f74:	fa e0       	ldi	r31, 0x0A	; 10
+     f76:	ef 2e       	mov	r14, r31
+     f78:	ff 24       	eor	r15, r15
+     f7a:	f0 2d       	mov	r31, r0
+     f7c:	b7 01       	movw	r22, r14
+     f7e:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     f82:	16 2f       	mov	r17, r22
+     f84:	07 2f       	mov	r16, r23
+     f86:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     f8a:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
 		number = number / 10;
- c16:	81 2f       	mov	r24, r17
- c18:	90 2f       	mov	r25, r16
- c1a:	21 97       	sbiw	r28, 0x01	; 1
+     f8e:	81 2f       	mov	r24, r17
+     f90:	90 2f       	mov	r25, r16
+     f92:	21 97       	sbiw	r28, 0x01	; 1
 /* void writeDecInt(int number)
    Purpose: fills the seven segment display with
    an integer number, formatted as decimal.
    */
 void writeDecInt(int number) {
 	for (int i=0; i < DISPLAY_DIGITS; i++) {
- c1c:	99 f7       	brne	.-26     	; 0xc04 <writeDecInt+0x1a>
+     f94:	99 f7       	brne	.-26     	; 0xf7c <writeDecInt+0x1a>
 		writePattern(getPatFomHex(number % 10));
 		number = number / 10;
 	}
 }
- c1e:	df 91       	pop	r29
- c20:	cf 91       	pop	r28
- c22:	1f 91       	pop	r17
- c24:	0f 91       	pop	r16
- c26:	ff 90       	pop	r15
- c28:	ef 90       	pop	r14
- c2a:	08 95       	ret
+     f96:	df 91       	pop	r29
+     f98:	cf 91       	pop	r28
+     f9a:	1f 91       	pop	r17
+     f9c:	0f 91       	pop	r16
+     f9e:	ff 90       	pop	r15
+     fa0:	ef 90       	pop	r14
+     fa2:	08 95       	ret
 
-00000c2c <writeHexInt>:
+00000fa4 <writeHexInt>:
 
 /* void writeHexInt(int number)
    Purpose: fills the seven segment display with
    an integer number, formatted as hexadecimal.
    */
 void writeHexInt(int number) {
- c2c:	ef 92       	push	r14
- c2e:	ff 92       	push	r15
- c30:	0f 93       	push	r16
- c32:	1f 93       	push	r17
- c34:	cf 93       	push	r28
- c36:	df 93       	push	r29
- c38:	ec 01       	movw	r28, r24
- c3a:	03 e0       	ldi	r16, 0x03	; 3
- c3c:	10 e0       	ldi	r17, 0x00	; 0
+     fa4:	ef 92       	push	r14
+     fa6:	ff 92       	push	r15
+     fa8:	0f 93       	push	r16
+     faa:	1f 93       	push	r17
+     fac:	cf 93       	push	r28
+     fae:	df 93       	push	r29
+     fb0:	ec 01       	movw	r28, r24
+     fb2:	05 e0       	ldi	r16, 0x05	; 5
+     fb4:	10 e0       	ldi	r17, 0x00	; 0
 	for (int i=0; i < DISPLAY_DIGITS; i++) {
 		writePattern(getPatFomHex(number % 16));
- c3e:	ee 24       	eor	r14, r14
- c40:	ff 24       	eor	r15, r15
- c42:	68 94       	set
- c44:	e4 f8       	bld	r14, 4
- c46:	ce 01       	movw	r24, r28
- c48:	b7 01       	movw	r22, r14
- c4a:	0e 94 62 07 	call	0xec4	; 0xec4 <__divmodhi4>
- c4e:	0e 94 93 05 	call	0xb26	; 0xb26 <getPatFomHex>
- c52:	0e 94 d9 05 	call	0xbb2	; 0xbb2 <writePattern>
+     fb6:	ee 24       	eor	r14, r14
+     fb8:	ff 24       	eor	r15, r15
+     fba:	68 94       	set
+     fbc:	e4 f8       	bld	r14, 4
+     fbe:	ce 01       	movw	r24, r28
+     fc0:	b7 01       	movw	r22, r14
+     fc2:	0e 94 1e 09 	call	0x123c	; 0x123c <__divmodhi4>
+     fc6:	0e 94 70 06 	call	0xce0	; 0xce0 <getPatFomHex>
+     fca:	0e 94 b6 06 	call	0xd6c	; 0xd6c <writePattern>
 		number = number / 16;
- c56:	ce 01       	movw	r24, r28
- c58:	dd 23       	and	r29, r29
- c5a:	0c f4       	brge	.+2      	; 0xc5e <writeHexInt+0x32>
- c5c:	0f 96       	adiw	r24, 0x0f	; 15
- c5e:	ec 01       	movw	r28, r24
- c60:	d5 95       	asr	r29
- c62:	c7 95       	ror	r28
- c64:	d5 95       	asr	r29
- c66:	c7 95       	ror	r28
- c68:	d5 95       	asr	r29
- c6a:	c7 95       	ror	r28
- c6c:	d5 95       	asr	r29
- c6e:	c7 95       	ror	r28
- c70:	01 50       	subi	r16, 0x01	; 1
- c72:	10 40       	sbci	r17, 0x00	; 0
+     fce:	ce 01       	movw	r24, r28
+     fd0:	dd 23       	and	r29, r29
+     fd2:	0c f4       	brge	.+2      	; 0xfd6 <writeHexInt+0x32>
+     fd4:	0f 96       	adiw	r24, 0x0f	; 15
+     fd6:	ec 01       	movw	r28, r24
+     fd8:	d5 95       	asr	r29
+     fda:	c7 95       	ror	r28
+     fdc:	d5 95       	asr	r29
+     fde:	c7 95       	ror	r28
+     fe0:	d5 95       	asr	r29
+     fe2:	c7 95       	ror	r28
+     fe4:	d5 95       	asr	r29
+     fe6:	c7 95       	ror	r28
+     fe8:	01 50       	subi	r16, 0x01	; 1
+     fea:	10 40       	sbci	r17, 0x00	; 0
 /* void writeHexInt(int number)
    Purpose: fills the seven segment display with
    an integer number, formatted as hexadecimal.
    */
 void writeHexInt(int number) {
 	for (int i=0; i < DISPLAY_DIGITS; i++) {
- c74:	41 f7       	brne	.-48     	; 0xc46 <writeHexInt+0x1a>
+     fec:	41 f7       	brne	.-48     	; 0xfbe <writeHexInt+0x1a>
 		writePattern(getPatFomHex(number % 16));
 		number = number / 16;
 	}
- c76:	df 91       	pop	r29
- c78:	cf 91       	pop	r28
- c7a:	1f 91       	pop	r17
- c7c:	0f 91       	pop	r16
- c7e:	ff 90       	pop	r15
- c80:	ef 90       	pop	r14
- c82:	08 95       	ret
+     fee:	df 91       	pop	r29
+     ff0:	cf 91       	pop	r28
+     ff2:	1f 91       	pop	r17
+     ff4:	0f 91       	pop	r16
+     ff6:	ff 90       	pop	r15
+     ff8:	ef 90       	pop	r14
+     ffa:	08 95       	ret
 
-00000c84 <initalizeStepper>:
+00000ffc <initalizeStepper>:
 
 
 // set initial values for stepper
 void initalizeStepper() {
 	// enable output
 	DDRA |= 0b00111111;
- c84:	81 b1       	in	r24, 0x01	; 1
- c86:	8f 63       	ori	r24, 0x3F	; 63
- c88:	81 b9       	out	0x01, r24	; 1
+     ffc:	81 b1       	in	r24, 0x01	; 1
+     ffe:	8f 63       	ori	r24, 0x3F	; 63
+    1000:	81 b9       	out	0x01, r24	; 1
 	currentState = 0;
- c8a:	10 92 a6 01 	sts	0x01A6, r1
- c8e:	10 92 a5 01 	sts	0x01A5, r1
+    1002:	10 92 b3 01 	sts	0x01B3, r1
+    1006:	10 92 b2 01 	sts	0x01B2, r1
 	PORTA = (PORTA & 0b11000000) | states[currentState];
- c92:	82 b1       	in	r24, 0x02	; 2
- c94:	80 7c       	andi	r24, 0xC0	; 192
- c96:	80 63       	ori	r24, 0x30	; 48
- c98:	82 b9       	out	0x02, r24	; 2
+    100a:	82 b1       	in	r24, 0x02	; 2
+    100c:	80 7c       	andi	r24, 0xC0	; 192
+    100e:	80 63       	ori	r24, 0x30	; 48
+    1010:	82 b9       	out	0x02, r24	; 2
 	hallLow = 0;
- c9a:	10 92 a9 01 	sts	0x01A9, r1
+    1012:	10 92 b6 01 	sts	0x01B6, r1
 	steps = 1;
- c9e:	81 e0       	ldi	r24, 0x01	; 1
- ca0:	90 e0       	ldi	r25, 0x00	; 0
- ca2:	90 93 a8 01 	sts	0x01A8, r25
- ca6:	80 93 a7 01 	sts	0x01A7, r24
+    1016:	81 e0       	ldi	r24, 0x01	; 1
+    1018:	90 e0       	ldi	r25, 0x00	; 0
+    101a:	90 93 b5 01 	sts	0x01B5, r25
+    101e:	80 93 b4 01 	sts	0x01B4, r24
 }
- caa:	08 95       	ret
+    1022:	08 95       	ret
 
-00000cac <stepTime>:
+00001024 <stepTime>:
 
 
 void stepTime(int stepTime, char direction) {
- cac:	cf 93       	push	r28
- cae:	c6 2f       	mov	r28, r22
+    1024:	cf 93       	push	r28
+    1026:	c6 2f       	mov	r28, r22
 	delaynms(stepTime);
- cb0:	0e 94 41 07 	call	0xe82	; 0xe82 <delaynms>
+    1028:	0e 94 fd 08 	call	0x11fa	; 0x11fa <delaynms>
 	if(direction == 0) { //forward direction
- cb4:	cc 23       	and	r28, r28
- cb6:	81 f5       	brne	.+96     	; 0xd18 <stepTime+0x6c>
+    102c:	cc 23       	and	r28, r28
+    102e:	81 f5       	brne	.+96     	; 0x1090 <stepTime+0x6c>
 		currentState++;
- cb8:	80 91 a5 01 	lds	r24, 0x01A5
- cbc:	90 91 a6 01 	lds	r25, 0x01A6
- cc0:	01 96       	adiw	r24, 0x01	; 1
- cc2:	90 93 a6 01 	sts	0x01A6, r25
- cc6:	80 93 a5 01 	sts	0x01A5, r24
+    1030:	80 91 b2 01 	lds	r24, 0x01B2
+    1034:	90 91 b3 01 	lds	r25, 0x01B3
+    1038:	01 96       	adiw	r24, 0x01	; 1
+    103a:	90 93 b3 01 	sts	0x01B3, r25
+    103e:	80 93 b2 01 	sts	0x01B2, r24
 		if (currentState==4) currentState = 0;
- cca:	84 30       	cpi	r24, 0x04	; 4
- ccc:	91 05       	cpc	r25, r1
- cce:	21 f4       	brne	.+8      	; 0xcd8 <stepTime+0x2c>
- cd0:	10 92 a6 01 	sts	0x01A6, r1
- cd4:	10 92 a5 01 	sts	0x01A5, r1
+    1042:	84 30       	cpi	r24, 0x04	; 4
+    1044:	91 05       	cpc	r25, r1
+    1046:	21 f4       	brne	.+8      	; 0x1050 <stepTime+0x2c>
+    1048:	10 92 b3 01 	sts	0x01B3, r1
+    104c:	10 92 b2 01 	sts	0x01B2, r1
 		PORTA = (PORTA & 0b11000000) | states[currentState];
- cd8:	82 b1       	in	r24, 0x02	; 2
- cda:	e0 91 a5 01 	lds	r30, 0x01A5
- cde:	f0 91 a6 01 	lds	r31, 0x01A6
- ce2:	e0 50       	subi	r30, 0x00	; 0
- ce4:	ff 4f       	sbci	r31, 0xFF	; 255
- ce6:	80 7c       	andi	r24, 0xC0	; 192
- ce8:	90 81       	ld	r25, Z
- cea:	89 2b       	or	r24, r25
- cec:	82 b9       	out	0x02, r24	; 2
+    1050:	82 b1       	in	r24, 0x02	; 2
+    1052:	e0 91 b2 01 	lds	r30, 0x01B2
+    1056:	f0 91 b3 01 	lds	r31, 0x01B3
+    105a:	e0 50       	subi	r30, 0x00	; 0
+    105c:	ff 4f       	sbci	r31, 0xFF	; 255
+    105e:	80 7c       	andi	r24, 0xC0	; 192
+    1060:	90 81       	ld	r25, Z
+    1062:	89 2b       	or	r24, r25
+    1064:	82 b9       	out	0x02, r24	; 2
 		steps++;
- cee:	80 91 a7 01 	lds	r24, 0x01A7
- cf2:	90 91 a8 01 	lds	r25, 0x01A8
- cf6:	01 96       	adiw	r24, 0x01	; 1
- cf8:	90 93 a8 01 	sts	0x01A8, r25
- cfc:	80 93 a7 01 	sts	0x01A7, r24
+    1066:	80 91 b4 01 	lds	r24, 0x01B4
+    106a:	90 91 b5 01 	lds	r25, 0x01B5
+    106e:	01 96       	adiw	r24, 0x01	; 1
+    1070:	90 93 b5 01 	sts	0x01B5, r25
+    1074:	80 93 b4 01 	sts	0x01B4, r24
 		if(hallLow == 1) {
- d00:	80 91 a9 01 	lds	r24, 0x01A9
- d04:	81 30       	cpi	r24, 0x01	; 1
- d06:	09 f0       	breq	.+2      	; 0xd0a <stepTime+0x5e>
- d08:	40 c0       	rjmp	.+128    	; 0xd8a <stepTime+0xde>
+    1078:	80 91 b6 01 	lds	r24, 0x01B6
+    107c:	81 30       	cpi	r24, 0x01	; 1
+    107e:	09 f0       	breq	.+2      	; 0x1082 <stepTime+0x5e>
+    1080:	40 c0       	rjmp	.+128    	; 0x1102 <stepTime+0xde>
 			steps = 0;
- d0a:	10 92 a8 01 	sts	0x01A8, r1
- d0e:	10 92 a7 01 	sts	0x01A7, r1
+    1082:	10 92 b5 01 	sts	0x01B5, r1
+    1086:	10 92 b4 01 	sts	0x01B4, r1
 			hallLow = 0;
- d12:	10 92 a9 01 	sts	0x01A9, r1
- d16:	39 c0       	rjmp	.+114    	; 0xd8a <stepTime+0xde>
+    108a:	10 92 b6 01 	sts	0x01B6, r1
+    108e:	39 c0       	rjmp	.+114    	; 0x1102 <stepTime+0xde>
 		}
 	}
 	else { //reverse direction
 		currentState--;
- d18:	80 91 a5 01 	lds	r24, 0x01A5
- d1c:	90 91 a6 01 	lds	r25, 0x01A6
- d20:	01 97       	sbiw	r24, 0x01	; 1
- d22:	90 93 a6 01 	sts	0x01A6, r25
- d26:	80 93 a5 01 	sts	0x01A5, r24
+    1090:	80 91 b2 01 	lds	r24, 0x01B2
+    1094:	90 91 b3 01 	lds	r25, 0x01B3
+    1098:	01 97       	sbiw	r24, 0x01	; 1
+    109a:	90 93 b3 01 	sts	0x01B3, r25
+    109e:	80 93 b2 01 	sts	0x01B2, r24
 		if (currentState==-1) currentState = 3;
- d2a:	2f ef       	ldi	r18, 0xFF	; 255
- d2c:	8f 3f       	cpi	r24, 0xFF	; 255
- d2e:	92 07       	cpc	r25, r18
- d30:	31 f4       	brne	.+12     	; 0xd3e <stepTime+0x92>
- d32:	83 e0       	ldi	r24, 0x03	; 3
- d34:	90 e0       	ldi	r25, 0x00	; 0
- d36:	90 93 a6 01 	sts	0x01A6, r25
- d3a:	80 93 a5 01 	sts	0x01A5, r24
+    10a2:	2f ef       	ldi	r18, 0xFF	; 255
+    10a4:	8f 3f       	cpi	r24, 0xFF	; 255
+    10a6:	92 07       	cpc	r25, r18
+    10a8:	31 f4       	brne	.+12     	; 0x10b6 <stepTime+0x92>
+    10aa:	83 e0       	ldi	r24, 0x03	; 3
+    10ac:	90 e0       	ldi	r25, 0x00	; 0
+    10ae:	90 93 b3 01 	sts	0x01B3, r25
+    10b2:	80 93 b2 01 	sts	0x01B2, r24
 		PORTA = (PORTA & 0b11000000) | states[currentState];
- d3e:	82 b1       	in	r24, 0x02	; 2
- d40:	e0 91 a5 01 	lds	r30, 0x01A5
- d44:	f0 91 a6 01 	lds	r31, 0x01A6
- d48:	e0 50       	subi	r30, 0x00	; 0
- d4a:	ff 4f       	sbci	r31, 0xFF	; 255
- d4c:	80 7c       	andi	r24, 0xC0	; 192
- d4e:	90 81       	ld	r25, Z
- d50:	89 2b       	or	r24, r25
- d52:	82 b9       	out	0x02, r24	; 2
+    10b6:	82 b1       	in	r24, 0x02	; 2
+    10b8:	e0 91 b2 01 	lds	r30, 0x01B2
+    10bc:	f0 91 b3 01 	lds	r31, 0x01B3
+    10c0:	e0 50       	subi	r30, 0x00	; 0
+    10c2:	ff 4f       	sbci	r31, 0xFF	; 255
+    10c4:	80 7c       	andi	r24, 0xC0	; 192
+    10c6:	90 81       	ld	r25, Z
+    10c8:	89 2b       	or	r24, r25
+    10ca:	82 b9       	out	0x02, r24	; 2
 		steps--;
- d54:	80 91 a7 01 	lds	r24, 0x01A7
- d58:	90 91 a8 01 	lds	r25, 0x01A8
- d5c:	01 97       	sbiw	r24, 0x01	; 1
- d5e:	90 93 a8 01 	sts	0x01A8, r25
- d62:	80 93 a7 01 	sts	0x01A7, r24
+    10cc:	80 91 b4 01 	lds	r24, 0x01B4
+    10d0:	90 91 b5 01 	lds	r25, 0x01B5
+    10d4:	01 97       	sbiw	r24, 0x01	; 1
+    10d6:	90 93 b5 01 	sts	0x01B5, r25
+    10da:	80 93 b4 01 	sts	0x01B4, r24
 		if(steps < 0) steps = 199;
- d66:	99 23       	and	r25, r25
- d68:	34 f4       	brge	.+12     	; 0xd76 <stepTime+0xca>
- d6a:	87 ec       	ldi	r24, 0xC7	; 199
- d6c:	90 e0       	ldi	r25, 0x00	; 0
- d6e:	90 93 a8 01 	sts	0x01A8, r25
- d72:	80 93 a7 01 	sts	0x01A7, r24
+    10de:	99 23       	and	r25, r25
+    10e0:	34 f4       	brge	.+12     	; 0x10ee <stepTime+0xca>
+    10e2:	87 ec       	ldi	r24, 0xC7	; 199
+    10e4:	90 e0       	ldi	r25, 0x00	; 0
+    10e6:	90 93 b5 01 	sts	0x01B5, r25
+    10ea:	80 93 b4 01 	sts	0x01B4, r24
 		if(hallLow == 1) {
- d76:	80 91 a9 01 	lds	r24, 0x01A9
- d7a:	81 30       	cpi	r24, 0x01	; 1
- d7c:	31 f4       	brne	.+12     	; 0xd8a <stepTime+0xde>
+    10ee:	80 91 b6 01 	lds	r24, 0x01B6
+    10f2:	81 30       	cpi	r24, 0x01	; 1
+    10f4:	31 f4       	brne	.+12     	; 0x1102 <stepTime+0xde>
 			steps = 0;
- d7e:	10 92 a8 01 	sts	0x01A8, r1
- d82:	10 92 a7 01 	sts	0x01A7, r1
+    10f6:	10 92 b5 01 	sts	0x01B5, r1
+    10fa:	10 92 b4 01 	sts	0x01B4, r1
 			hallLow = 0;
- d86:	10 92 a9 01 	sts	0x01A9, r1
+    10fe:	10 92 b6 01 	sts	0x01B6, r1
 		}				
 	}
 }
- d8a:	cf 91       	pop	r28
- d8c:	08 95       	ret
+    1102:	cf 91       	pop	r28
+    1104:	08 95       	ret
 
-00000d8e <forwardSteps>:
+00001106 <forwardSteps>:
 
 int forwardSteps(int current, int target) {
 	int stepsRequired;
 	
 	// no wrap around
 	if(target > current) stepsRequired = abs(target - current);
- d8e:	86 17       	cp	r24, r22
- d90:	97 07       	cpc	r25, r23
- d92:	4c f4       	brge	.+18     	; 0xda6 <forwardSteps+0x18>
- d94:	68 1b       	sub	r22, r24
- d96:	79 0b       	sbc	r23, r25
- d98:	1a f4       	brpl	.+6      	; 0xda0 <forwardSteps+0x12>
- d9a:	70 95       	com	r23
- d9c:	61 95       	neg	r22
- d9e:	7f 4f       	sbci	r23, 0xFF	; 255
- da0:	86 2f       	mov	r24, r22
- da2:	97 2f       	mov	r25, r23
- da4:	08 95       	ret
+    1106:	86 17       	cp	r24, r22
+    1108:	97 07       	cpc	r25, r23
+    110a:	4c f4       	brge	.+18     	; 0x111e <forwardSteps+0x18>
+    110c:	68 1b       	sub	r22, r24
+    110e:	79 0b       	sbc	r23, r25
+    1110:	1a f4       	brpl	.+6      	; 0x1118 <forwardSteps+0x12>
+    1112:	70 95       	com	r23
+    1114:	61 95       	neg	r22
+    1116:	7f 4f       	sbci	r23, 0xFF	; 255
+    1118:	86 2f       	mov	r24, r22
+    111a:	97 2f       	mov	r25, r23
+    111c:	08 95       	ret
 	
 	// wrap arround
 	else stepsRequired = abs(200 - (target - current));
- da6:	86 1b       	sub	r24, r22
- da8:	97 0b       	sbc	r25, r23
- daa:	9c 01       	movw	r18, r24
- dac:	28 53       	subi	r18, 0x38	; 56
- dae:	3f 4f       	sbci	r19, 0xFF	; 255
- db0:	1a f4       	brpl	.+6      	; 0xdb8 <forwardSteps+0x2a>
- db2:	30 95       	com	r19
- db4:	21 95       	neg	r18
- db6:	3f 4f       	sbci	r19, 0xFF	; 255
- db8:	82 2f       	mov	r24, r18
- dba:	93 2f       	mov	r25, r19
+    111e:	86 1b       	sub	r24, r22
+    1120:	97 0b       	sbc	r25, r23
+    1122:	9c 01       	movw	r18, r24
+    1124:	28 53       	subi	r18, 0x38	; 56
+    1126:	3f 4f       	sbci	r19, 0xFF	; 255
+    1128:	1a f4       	brpl	.+6      	; 0x1130 <forwardSteps+0x2a>
+    112a:	30 95       	com	r19
+    112c:	21 95       	neg	r18
+    112e:	3f 4f       	sbci	r19, 0xFF	; 255
+    1130:	82 2f       	mov	r24, r18
+    1132:	93 2f       	mov	r25, r19
 	
 	return stepsRequired;
 }
- dbc:	08 95       	ret
+    1134:	08 95       	ret
 
-00000dbe <reverseSteps>:
+00001136 <reverseSteps>:
 
 int reverseSteps(int current, int target) {
 	int stepsRequired;
 	
 	// wrap around
 	if(target < current) stepsRequired = abs(target - current);
- dbe:	68 17       	cp	r22, r24
- dc0:	79 07       	cpc	r23, r25
- dc2:	4c f4       	brge	.+18     	; 0xdd6 <reverseSteps+0x18>
- dc4:	68 1b       	sub	r22, r24
- dc6:	79 0b       	sbc	r23, r25
- dc8:	1a f4       	brpl	.+6      	; 0xdd0 <reverseSteps+0x12>
- dca:	70 95       	com	r23
- dcc:	61 95       	neg	r22
- dce:	7f 4f       	sbci	r23, 0xFF	; 255
- dd0:	86 2f       	mov	r24, r22
- dd2:	97 2f       	mov	r25, r23
- dd4:	08 95       	ret
+    1136:	68 17       	cp	r22, r24
+    1138:	79 07       	cpc	r23, r25
+    113a:	4c f4       	brge	.+18     	; 0x114e <reverseSteps+0x18>
+    113c:	68 1b       	sub	r22, r24
+    113e:	79 0b       	sbc	r23, r25
+    1140:	1a f4       	brpl	.+6      	; 0x1148 <reverseSteps+0x12>
+    1142:	70 95       	com	r23
+    1144:	61 95       	neg	r22
+    1146:	7f 4f       	sbci	r23, 0xFF	; 255
+    1148:	86 2f       	mov	r24, r22
+    114a:	97 2f       	mov	r25, r23
+    114c:	08 95       	ret
 
 	// no wrap around
 	else stepsRequired = abs(200 - (target - current));
- dd6:	86 1b       	sub	r24, r22
- dd8:	97 0b       	sbc	r25, r23
- dda:	9c 01       	movw	r18, r24
- ddc:	28 53       	subi	r18, 0x38	; 56
- dde:	3f 4f       	sbci	r19, 0xFF	; 255
- de0:	1a f4       	brpl	.+6      	; 0xde8 <reverseSteps+0x2a>
- de2:	30 95       	com	r19
- de4:	21 95       	neg	r18
- de6:	3f 4f       	sbci	r19, 0xFF	; 255
- de8:	82 2f       	mov	r24, r18
- dea:	93 2f       	mov	r25, r19
+    114e:	86 1b       	sub	r24, r22
+    1150:	97 0b       	sbc	r25, r23
+    1152:	9c 01       	movw	r18, r24
+    1154:	28 53       	subi	r18, 0x38	; 56
+    1156:	3f 4f       	sbci	r19, 0xFF	; 255
+    1158:	1a f4       	brpl	.+6      	; 0x1160 <reverseSteps+0x2a>
+    115a:	30 95       	com	r19
+    115c:	21 95       	neg	r18
+    115e:	3f 4f       	sbci	r19, 0xFF	; 255
+    1160:	82 2f       	mov	r24, r18
+    1162:	93 2f       	mov	r25, r19
 	
 	return stepsRequired;
 }
- dec:	08 95       	ret
+    1164:	08 95       	ret
 
-00000dee <stepperMoveTo>:
+00001166 <stepperMoveTo>:
 		}				
 	}
 }
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
- dee:	ef 92       	push	r14
- df0:	ff 92       	push	r15
- df2:	0f 93       	push	r16
- df4:	1f 93       	push	r17
- df6:	cf 93       	push	r28
- df8:	df 93       	push	r29
- dfa:	7c 01       	movw	r14, r24
+    1166:	ef 92       	push	r14
+    1168:	ff 92       	push	r15
+    116a:	0f 93       	push	r16
+    116c:	1f 93       	push	r17
+    116e:	cf 93       	push	r28
+    1170:	df 93       	push	r29
+    1172:	7c 01       	movw	r14, r24
 	if (steps == nextPosition) return;
- dfc:	c0 91 a7 01 	lds	r28, 0x01A7
- e00:	d0 91 a8 01 	lds	r29, 0x01A8
- e04:	c8 17       	cp	r28, r24
- e06:	d9 07       	cpc	r29, r25
- e08:	79 f1       	breq	.+94     	; 0xe68 <stepperMoveTo+0x7a>
+    1174:	c0 91 b4 01 	lds	r28, 0x01B4
+    1178:	d0 91 b5 01 	lds	r29, 0x01B5
+    117c:	c8 17       	cp	r28, r24
+    117e:	d9 07       	cpc	r29, r25
+    1180:	79 f1       	breq	.+94     	; 0x11e0 <stepperMoveTo+0x7a>
 	if(forwardSteps(steps, nextPosition) < reverseSteps(steps, nextPosition)) {
- e0a:	ce 01       	movw	r24, r28
- e0c:	b7 01       	movw	r22, r14
- e0e:	0e 94 c7 06 	call	0xd8e	; 0xd8e <forwardSteps>
- e12:	8c 01       	movw	r16, r24
- e14:	ce 01       	movw	r24, r28
- e16:	b7 01       	movw	r22, r14
- e18:	0e 94 df 06 	call	0xdbe	; 0xdbe <reverseSteps>
- e1c:	08 17       	cp	r16, r24
- e1e:	19 07       	cpc	r17, r25
- e20:	6c f4       	brge	.+26     	; 0xe3c <stepperMoveTo+0x4e>
+    1182:	ce 01       	movw	r24, r28
+    1184:	b7 01       	movw	r22, r14
+    1186:	0e 94 83 08 	call	0x1106	; 0x1106 <forwardSteps>
+    118a:	8c 01       	movw	r16, r24
+    118c:	ce 01       	movw	r24, r28
+    118e:	b7 01       	movw	r22, r14
+    1190:	0e 94 9b 08 	call	0x1136	; 0x1136 <reverseSteps>
+    1194:	08 17       	cp	r16, r24
+    1196:	19 07       	cpc	r17, r25
+    1198:	6c f4       	brge	.+26     	; 0x11b4 <stepperMoveTo+0x4e>
 		while(steps != nextPosition) {
 			stepTime(15,0);
- e22:	8f e0       	ldi	r24, 0x0F	; 15
- e24:	90 e0       	ldi	r25, 0x00	; 0
- e26:	60 e0       	ldi	r22, 0x00	; 0
- e28:	0e 94 56 06 	call	0xcac	; 0xcac <stepTime>
+    119a:	8f e0       	ldi	r24, 0x0F	; 15
+    119c:	90 e0       	ldi	r25, 0x00	; 0
+    119e:	60 e0       	ldi	r22, 0x00	; 0
+    11a0:	0e 94 12 08 	call	0x1024	; 0x1024 <stepTime>
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
 	if (steps == nextPosition) return;
 	if(forwardSteps(steps, nextPosition) < reverseSteps(steps, nextPosition)) {
 		while(steps != nextPosition) {
- e2c:	80 91 a7 01 	lds	r24, 0x01A7
- e30:	90 91 a8 01 	lds	r25, 0x01A8
- e34:	8e 15       	cp	r24, r14
- e36:	9f 05       	cpc	r25, r15
- e38:	a1 f7       	brne	.-24     	; 0xe22 <stepperMoveTo+0x34>
- e3a:	0c c0       	rjmp	.+24     	; 0xe54 <stepperMoveTo+0x66>
+    11a4:	80 91 b4 01 	lds	r24, 0x01B4
+    11a8:	90 91 b5 01 	lds	r25, 0x01B5
+    11ac:	8e 15       	cp	r24, r14
+    11ae:	9f 05       	cpc	r25, r15
+    11b0:	a1 f7       	brne	.-24     	; 0x119a <stepperMoveTo+0x34>
+    11b2:	0c c0       	rjmp	.+24     	; 0x11cc <stepperMoveTo+0x66>
 		}
 	}
 	
 	else {
 			while(steps != nextPosition) {
 				stepTime(15,1);
- e3c:	8f e0       	ldi	r24, 0x0F	; 15
- e3e:	90 e0       	ldi	r25, 0x00	; 0
- e40:	61 e0       	ldi	r22, 0x01	; 1
- e42:	0e 94 56 06 	call	0xcac	; 0xcac <stepTime>
+    11b4:	8f e0       	ldi	r24, 0x0F	; 15
+    11b6:	90 e0       	ldi	r25, 0x00	; 0
+    11b8:	61 e0       	ldi	r22, 0x01	; 1
+    11ba:	0e 94 12 08 	call	0x1024	; 0x1024 <stepTime>
 			stepTime(15,0);
 		}
 	}
 	
 	else {
 			while(steps != nextPosition) {
- e46:	80 91 a7 01 	lds	r24, 0x01A7
- e4a:	90 91 a8 01 	lds	r25, 0x01A8
- e4e:	8e 15       	cp	r24, r14
- e50:	9f 05       	cpc	r25, r15
- e52:	a1 f7       	brne	.-24     	; 0xe3c <stepperMoveTo+0x4e>
+    11be:	80 91 b4 01 	lds	r24, 0x01B4
+    11c2:	90 91 b5 01 	lds	r25, 0x01B5
+    11c6:	8e 15       	cp	r24, r14
+    11c8:	9f 05       	cpc	r25, r15
+    11ca:	a1 f7       	brne	.-24     	; 0x11b4 <stepperMoveTo+0x4e>
 				stepTime(15,1);
 			}			
 		}
 	
 	if(motorWaitForStepper == 1) {
- e54:	80 91 06 01 	lds	r24, 0x0106
- e58:	81 30       	cpi	r24, 0x01	; 1
- e5a:	31 f4       	brne	.+12     	; 0xe68 <stepperMoveTo+0x7a>
+    11cc:	80 91 07 01 	lds	r24, 0x0107
+    11d0:	81 30       	cpi	r24, 0x01	; 1
+    11d2:	31 f4       	brne	.+12     	; 0x11e0 <stepperMoveTo+0x7a>
 		// start the motor back up
 		setMotorFwd();
- e5c:	0e 94 23 01 	call	0x246	; 0x246 <setMotorFwd>
+    11d4:	0e 94 29 01 	call	0x252	; 0x252 <setMotorFwd>
 		// clear the flag
 		motorWaitForStepper = 0;
- e60:	10 92 06 01 	sts	0x0106, r1
+    11d8:	10 92 07 01 	sts	0x0107, r1
 		// fire the exit logic again
 		exitHandler();
- e64:	0e 94 3f 02 	call	0x47e	; 0x47e <exitHandler>
+    11dc:	0e 94 7c 02 	call	0x4f8	; 0x4f8 <exitHandler>
 	}
 }
- e68:	df 91       	pop	r29
- e6a:	cf 91       	pop	r28
- e6c:	1f 91       	pop	r17
- e6e:	0f 91       	pop	r16
- e70:	ff 90       	pop	r15
- e72:	ef 90       	pop	r14
- e74:	08 95       	ret
+    11e0:	df 91       	pop	r29
+    11e2:	cf 91       	pop	r28
+    11e4:	1f 91       	pop	r17
+    11e6:	0f 91       	pop	r16
+    11e8:	ff 90       	pop	r15
+    11ea:	ef 90       	pop	r14
+    11ec:	08 95       	ret
 
-00000e76 <initializeTimer>:
+000011ee <initializeTimer>:
 #include <avr/io.h>
 
 void initializeTimer() {
 	// bitwise OR to set timer/counter control register
 	// to cpu clock, pure timer.
 	TCCR1B|=_BV(CS10);
- e76:	e1 e8       	ldi	r30, 0x81	; 129
- e78:	f0 e0       	ldi	r31, 0x00	; 0
- e7a:	80 81       	ld	r24, Z
- e7c:	81 60       	ori	r24, 0x01	; 1
- e7e:	80 83       	st	Z, r24
+    11ee:	e1 e8       	ldi	r30, 0x81	; 129
+    11f0:	f0 e0       	ldi	r31, 0x00	; 0
+    11f2:	80 81       	ld	r24, Z
+    11f4:	81 60       	ori	r24, 0x01	; 1
+    11f6:	80 83       	st	Z, r24
 } 
- e80:	08 95       	ret
+    11f8:	08 95       	ret
 
-00000e82 <delaynms>:
+000011fa <delaynms>:
 
 void delaynms(int n)   // delay milliseconds
 {
- e82:	9c 01       	movw	r18, r24
+    11fa:	9c 01       	movw	r18, r24
 	// Set waveform generator bits to 0100 (count up and
 	// reset on hit)
 	TCCR1B |=_BV(WGM12);
- e84:	e1 e8       	ldi	r30, 0x81	; 129
- e86:	f0 e0       	ldi	r31, 0x00	; 0
- e88:	80 81       	ld	r24, Z
- e8a:	88 60       	ori	r24, 0x08	; 8
- e8c:	80 83       	st	Z, r24
+    11fc:	e1 e8       	ldi	r30, 0x81	; 129
+    11fe:	f0 e0       	ldi	r31, 0x00	; 0
+    1200:	80 81       	ld	r24, Z
+    1202:	88 60       	ori	r24, 0x08	; 8
+    1204:	80 83       	st	Z, r24
 	
 	// Set the clock prescaler to 1/64th
 	TCCR1B |= 0b00000011;
- e8e:	80 81       	ld	r24, Z
- e90:	83 60       	ori	r24, 0x03	; 3
- e92:	80 83       	st	Z, r24
+    1206:	80 81       	ld	r24, Z
+    1208:	83 60       	ori	r24, 0x03	; 3
+    120a:	80 83       	st	Z, r24
 
 	for(int i=0; i<n; i++) {
- e94:	12 16       	cp	r1, r18
- e96:	13 06       	cpc	r1, r19
- e98:	a4 f4       	brge	.+40     	; 0xec2 <delaynms+0x40>
- e9a:	80 e0       	ldi	r24, 0x00	; 0
- e9c:	90 e0       	ldi	r25, 0x00	; 0
+    120c:	12 16       	cp	r1, r18
+    120e:	13 06       	cpc	r1, r19
+    1210:	a4 f4       	brge	.+40     	; 0x123a <delaynms+0x40>
+    1212:	80 e0       	ldi	r24, 0x00	; 0
+    1214:	90 e0       	ldi	r25, 0x00	; 0
 		// set the output compare register
 		// to 1 ms
 		OCR1A = 125;
- e9e:	e8 e8       	ldi	r30, 0x88	; 136
- ea0:	f0 e0       	ldi	r31, 0x00	; 0
- ea2:	4d e7       	ldi	r20, 0x7D	; 125
- ea4:	50 e0       	ldi	r21, 0x00	; 0
+    1216:	e8 e8       	ldi	r30, 0x88	; 136
+    1218:	f0 e0       	ldi	r31, 0x00	; 0
+    121a:	4d e7       	ldi	r20, 0x7D	; 125
+    121c:	50 e0       	ldi	r21, 0x00	; 0
 
 		// set initial value to zero
 		TCNT1 = 0;
- ea6:	a4 e8       	ldi	r26, 0x84	; 132
- ea8:	b0 e0       	ldi	r27, 0x00	; 0
+    121e:	a4 e8       	ldi	r26, 0x84	; 132
+    1220:	b0 e0       	ldi	r27, 0x00	; 0
 	TCCR1B |= 0b00000011;
 
 	for(int i=0; i<n; i++) {
 		// set the output compare register
 		// to 1 ms
 		OCR1A = 125;
- eaa:	51 83       	std	Z+1, r21	; 0x01
- eac:	40 83       	st	Z, r20
+    1222:	51 83       	std	Z+1, r21	; 0x01
+    1224:	40 83       	st	Z, r20
 
 		// set initial value to zero
 		TCNT1 = 0;
- eae:	11 96       	adiw	r26, 0x01	; 1
- eb0:	1c 92       	st	X, r1
- eb2:	1e 92       	st	-X, r1
+    1226:	11 96       	adiw	r26, 0x01	; 1
+    1228:	1c 92       	st	X, r1
+    122a:	1e 92       	st	-X, r1
 
 		// enable output compare interrupt enable
 		//TIMSK1|=0b00000010;
 
 		// begin timer
 		TIFR1|=_BV(OCF1A);
- eb4:	b1 9a       	sbi	0x16, 1	; 22
+    122c:	b1 9a       	sbi	0x16, 1	; 22
 
 		// poll until we reach our number of milliseconds
 		while(1) {
 			if((TIFR1 & 0x02) == 0x02) break;
- eb6:	b1 9b       	sbis	0x16, 1	; 22
- eb8:	fe cf       	rjmp	.-4      	; 0xeb6 <delaynms+0x34>
+    122e:	b1 9b       	sbis	0x16, 1	; 22
+    1230:	fe cf       	rjmp	.-4      	; 0x122e <delaynms+0x34>
 	TCCR1B |=_BV(WGM12);
 	
 	// Set the clock prescaler to 1/64th
 	TCCR1B |= 0b00000011;
 
 	for(int i=0; i<n; i++) {
- eba:	01 96       	adiw	r24, 0x01	; 1
- ebc:	82 17       	cp	r24, r18
- ebe:	93 07       	cpc	r25, r19
- ec0:	a1 f7       	brne	.-24     	; 0xeaa <delaynms+0x28>
- ec2:	08 95       	ret
+    1232:	01 96       	adiw	r24, 0x01	; 1
+    1234:	82 17       	cp	r24, r18
+    1236:	93 07       	cpc	r25, r19
+    1238:	a1 f7       	brne	.-24     	; 0x1222 <delaynms+0x28>
+    123a:	08 95       	ret
 
-00000ec4 <__divmodhi4>:
- ec4:	97 fb       	bst	r25, 7
- ec6:	09 2e       	mov	r0, r25
- ec8:	07 26       	eor	r0, r23
- eca:	0a d0       	rcall	.+20     	; 0xee0 <__divmodhi4_neg1>
- ecc:	77 fd       	sbrc	r23, 7
- ece:	04 d0       	rcall	.+8      	; 0xed8 <__divmodhi4_neg2>
- ed0:	0c d0       	rcall	.+24     	; 0xeea <__udivmodhi4>
- ed2:	06 d0       	rcall	.+12     	; 0xee0 <__divmodhi4_neg1>
- ed4:	00 20       	and	r0, r0
- ed6:	1a f4       	brpl	.+6      	; 0xede <__divmodhi4_exit>
+0000123c <__divmodhi4>:
+    123c:	97 fb       	bst	r25, 7
+    123e:	09 2e       	mov	r0, r25
+    1240:	07 26       	eor	r0, r23
+    1242:	0a d0       	rcall	.+20     	; 0x1258 <__divmodhi4_neg1>
+    1244:	77 fd       	sbrc	r23, 7
+    1246:	04 d0       	rcall	.+8      	; 0x1250 <__divmodhi4_neg2>
+    1248:	0c d0       	rcall	.+24     	; 0x1262 <__udivmodhi4>
+    124a:	06 d0       	rcall	.+12     	; 0x1258 <__divmodhi4_neg1>
+    124c:	00 20       	and	r0, r0
+    124e:	1a f4       	brpl	.+6      	; 0x1256 <__divmodhi4_exit>
 
-00000ed8 <__divmodhi4_neg2>:
- ed8:	70 95       	com	r23
- eda:	61 95       	neg	r22
- edc:	7f 4f       	sbci	r23, 0xFF	; 255
+00001250 <__divmodhi4_neg2>:
+    1250:	70 95       	com	r23
+    1252:	61 95       	neg	r22
+    1254:	7f 4f       	sbci	r23, 0xFF	; 255
 
-00000ede <__divmodhi4_exit>:
- ede:	08 95       	ret
+00001256 <__divmodhi4_exit>:
+    1256:	08 95       	ret
 
-00000ee0 <__divmodhi4_neg1>:
- ee0:	f6 f7       	brtc	.-4      	; 0xede <__divmodhi4_exit>
- ee2:	90 95       	com	r25
- ee4:	81 95       	neg	r24
- ee6:	9f 4f       	sbci	r25, 0xFF	; 255
- ee8:	08 95       	ret
+00001258 <__divmodhi4_neg1>:
+    1258:	f6 f7       	brtc	.-4      	; 0x1256 <__divmodhi4_exit>
+    125a:	90 95       	com	r25
+    125c:	81 95       	neg	r24
+    125e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1260:	08 95       	ret
 
-00000eea <__udivmodhi4>:
- eea:	aa 1b       	sub	r26, r26
- eec:	bb 1b       	sub	r27, r27
- eee:	51 e1       	ldi	r21, 0x11	; 17
- ef0:	07 c0       	rjmp	.+14     	; 0xf00 <__udivmodhi4_ep>
+00001262 <__udivmodhi4>:
+    1262:	aa 1b       	sub	r26, r26
+    1264:	bb 1b       	sub	r27, r27
+    1266:	51 e1       	ldi	r21, 0x11	; 17
+    1268:	07 c0       	rjmp	.+14     	; 0x1278 <__udivmodhi4_ep>
 
-00000ef2 <__udivmodhi4_loop>:
- ef2:	aa 1f       	adc	r26, r26
- ef4:	bb 1f       	adc	r27, r27
- ef6:	a6 17       	cp	r26, r22
- ef8:	b7 07       	cpc	r27, r23
- efa:	10 f0       	brcs	.+4      	; 0xf00 <__udivmodhi4_ep>
- efc:	a6 1b       	sub	r26, r22
- efe:	b7 0b       	sbc	r27, r23
+0000126a <__udivmodhi4_loop>:
+    126a:	aa 1f       	adc	r26, r26
+    126c:	bb 1f       	adc	r27, r27
+    126e:	a6 17       	cp	r26, r22
+    1270:	b7 07       	cpc	r27, r23
+    1272:	10 f0       	brcs	.+4      	; 0x1278 <__udivmodhi4_ep>
+    1274:	a6 1b       	sub	r26, r22
+    1276:	b7 0b       	sbc	r27, r23
 
-00000f00 <__udivmodhi4_ep>:
- f00:	88 1f       	adc	r24, r24
- f02:	99 1f       	adc	r25, r25
- f04:	5a 95       	dec	r21
- f06:	a9 f7       	brne	.-22     	; 0xef2 <__udivmodhi4_loop>
- f08:	80 95       	com	r24
- f0a:	90 95       	com	r25
- f0c:	bc 01       	movw	r22, r24
- f0e:	cd 01       	movw	r24, r26
- f10:	08 95       	ret
+00001278 <__udivmodhi4_ep>:
+    1278:	88 1f       	adc	r24, r24
+    127a:	99 1f       	adc	r25, r25
+    127c:	5a 95       	dec	r21
+    127e:	a9 f7       	brne	.-22     	; 0x126a <__udivmodhi4_loop>
+    1280:	80 95       	com	r24
+    1282:	90 95       	com	r25
+    1284:	bc 01       	movw	r22, r24
+    1286:	cd 01       	movw	r24, r26
+    1288:	08 95       	ret
 
-00000f12 <_exit>:
- f12:	f8 94       	cli
+0000128a <_exit>:
+    128a:	f8 94       	cli
 
-00000f14 <__stop_program>:
- f14:	ff cf       	rjmp	.-2      	; 0xf14 <__stop_program>
+0000128c <__stop_program>:
+    128c:	ff cf       	rjmp	.-2      	; 0x128c <__stop_program>

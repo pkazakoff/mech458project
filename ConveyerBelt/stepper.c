@@ -11,6 +11,7 @@
 #include "interrupts.h"
 #include <avr/io.h>
 #include "SevenSegmentDisplay.h"
+#include <stdlib.h>
 
 
 // possible states

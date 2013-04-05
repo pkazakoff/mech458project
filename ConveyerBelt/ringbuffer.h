@@ -36,6 +36,13 @@ extern int bufLength;
 extern char inPause;
 extern char shutdown;
 
+// global totals
+extern int totalSorted;
+extern int blackSorted;
+extern int aluminumSorted;
+extern int steelSorted;
+extern int whiteSorted;
+
 // function prototypes
 void initRingBuf();
 int newRingBufItem();

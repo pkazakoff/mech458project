@@ -9,7 +9,7 @@
 #include "timer.h"
 #include "SevenSegmentDisplay.h"
 
-#define DISPLAY_DIGITS 3
+#define DISPLAY_DIGITS 5
 
 /* char getPatFromHex(char number)
    Purpose: looks up the appropriate pattern for 
@@ -85,6 +85,120 @@ void writePattern(char pattern) {
 		// falling edge
 		PORTA = (PORTA & 0b01111111);
 	}
+}
+
+/* void writeError(int code)
+   Purpose: displays "ErrXX" on the 
+   display, where XX is the hex representation of the integer
+   */
+void writeError(int code) {
+	// write the error code
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(code % 16));
+		code = code / 16;
+	}
+	// write "r"
+	writePattern(0b00001010);
+	// write "r"
+	writePattern(0b00001010);
+	// write "E"
+	writePattern(0b10011110);
+}
+
+/* void writeTotal(int count)
+   Purpose: displays "totXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeTotal(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "t"
+	writePattern(0b00011110);
+	// write "o"
+	writePattern(0b00111010);
+	// write "t"
+	writePattern(0b00011110);
+}
+
+
+/* void writeAluminum(int count)
+   Purpose: displays "ALUXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeAluminum(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "U"
+	writePattern(0b01111100);
+	// write "L"
+	writePattern(0b00011100);
+	// write "A"
+	writePattern(0b11101110);
+}
+
+/* void writeSteel(int count)
+   Purpose: displays "StLXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeSteel(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "L"
+	writePattern(0b00011100);
+	// write "t"
+	writePattern(0b00011110);
+	// write "S"
+	writePattern(0b10110110);
+}
+
+/* void writeBlack(int count)
+   Purpose: displays "bLAXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeBlack(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "A"
+	writePattern(0b11101110);
+	// write "L"
+	writePattern(0b00011100);
+	// write "b"
+	writePattern(0b00111110);
+}
+
+/* void writeWhite(int count)
+   Purpose: displays "LtEXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeWhite(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "E"
+	writePattern(0b10011110);
+	// write "t"
+	writePattern(0b00011110);
+	// write "L"
+	writePattern(0b00011100);
 }
 
 /* void writeDecInt(int number)

@@ -96,7 +96,6 @@ void makeDecision(int index) {
 	}
 	writeHexInt(0xEF);	
 	return;
-	// TODO: jumps to error if gets here and type is still UNDEF
 }
 
 /* void firstLaserHandler()
@@ -156,46 +155,60 @@ void secondLaserHandler() {
    Purpose: handles the exit sensor
    */
 void exitHandler() {
-	writeDecInt(bufLength);
 	// is there an item on the queue?
-	if(bufLength==0) return; // Throw an error here
+	if(bufLength==0) return;
+	// if we're in pause, ignore it as it's probably
+	// the operator pulling the piece off
+	if(inPause==1) return;
 	// are we in position?
 	switch(ringBuf[ringTop].type) {
 		case BLACK:
-			writeHexInt(0xEB);
 			if(steps==BLACK_POSITION) {
+				blackSorted++;
+				totalSorted++;
+				writeBlack(blackSorted);
 				popBuf();
 				return;
 			}
 			break;
 		case STEEL:
-			writeHexInt(0xE5);
 			if(steps==STEEL_POSITION) {
+				steelSorted++;
+				totalSorted++;
+				writeSteel(steelSorted);
 				popBuf();
 				return;
 			}
 			break;
 		case ALUMINUM:
-			writeHexInt(0xEA);
 			if(steps==ALUMINUM_POSIITION) {
+				aluminumSorted++;
+				totalSorted++;
+				writeAluminum(aluminumSorted);
 				popBuf();
 				return;
 			}
 			break;
 		case WHITE:
-			writeHexInt(0xE0);
 			if(steps==WHITE_POSITION) {
+				whiteSorted++;
+				totalSorted++;
+				writeWhite(whiteSorted);
 				popBuf();
 				return;
 			}
 			break;
 		default:
+			//undefined item
+			writeError(0xF0);
+			pausedForUndef = 1;
+			pausedHandler();
+			return;
 			break;
 	}			
 	// we got here, so we're not at the correct position yet.
 	// stop the motor
 	setMotorBrake();
-	writeDecInt(ringBuf[ringTop].minRefl);
 	// set a flag to let the stepper know we're waiting
 	motorWaitForStepper = 1;
 }
@@ -205,6 +218,38 @@ void shutdownHandler() {
 		delaynms(500);
 		setMotorBrake();
 		while(1);
+	}
+}
+
+void pausedHandler() {
+	if(inPause == 1) {
+		inPause = 0;
+		// restore the motor state
+		switch (pausedMotorState) {
+			case FORWARD:
+				setMotorFwd();
+				break;
+			case REVERSE:
+				setMotorRev();
+				break;
+			case BRAKE:
+				setMotorBrake();
+				break;
+			case COAST:
+				setMotorCoast();
+				break;
+			default:
+				break;
+		}
+		// see if the last item was undefined
+		if(pausedForUndef) {
+			popBuf();
+		}
+	} else {
+		// store the motor state
+		pausedMotorState = motorState;
+		setMotorBrake();
+		inPause = 1;
 	}
 }
 
@@ -272,6 +317,6 @@ ISR(INT5_vect) {
 ISR(INT6_vect){
 	delaynms(BUTTON_DEBOUNCE_DELAY);
 	if((PINE & (1 << 6)) == 0) {
-		
+		pausedHandler();
 	}
 }

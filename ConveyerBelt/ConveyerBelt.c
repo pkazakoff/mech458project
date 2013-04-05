@@ -73,6 +73,23 @@ int main(void)
 	setMotorFwd();
 	
 	while(1) {
+		// pause if we need to
+		while(inPause == 1) {
+			writeTotal(totalSorted);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeWhite(whiteSorted);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeBlack(blackSorted);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeSteel(steelSorted);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeAluminum(aluminumSorted);
+			delaynms(2000);
+		}
 		// check the next item off the conveyer belt, rotate to the correct position
 		delaynms(100);
 		if(bufLength != 0) {

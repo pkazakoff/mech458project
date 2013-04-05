@@ -17,6 +17,12 @@ int bufLength;
 char inPause;
 char shutdown;
 
+int totalSorted;
+int whiteSorted;
+int blackSorted;
+int steelSorted;
+int aluminumSorted;
+
 /* void initRingBuf()
    Purpose: initializes the ring buffer
    */
@@ -28,6 +34,12 @@ void initRingBuf() {
 	bufLength = 0;
 	inPause = 0;
 	shutdown = 0;
+	
+	totalSorted = 0;
+	whiteSorted = 0;
+	blackSorted = 0;
+	steelSorted = 0;
+	aluminumSorted = 0;
 }
 
 /* int newRingBufItem()
