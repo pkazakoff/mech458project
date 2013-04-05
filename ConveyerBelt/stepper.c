@@ -95,7 +95,7 @@ int forwardSteps(int current, int target) {
 	if(target > current) stepsRequired = abs(target - current);
 	
 	// wrap arround
-	else stepsRequired = abs(200 - (target - current));
+	else stepsRequired = abs(200 - abs(target - current));
 	
 	return stepsRequired;
 }
@@ -107,7 +107,7 @@ int reverseSteps(int current, int target) {
 	if(target < current) stepsRequired = abs(target - current);
 
 	// no wrap around
-	else stepsRequired = abs(200 - (target - current));
+	else stepsRequired = abs(200 - abs(target - current));
 	
 	return stepsRequired;
 }

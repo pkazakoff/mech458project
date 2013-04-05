@@ -163,7 +163,7 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x128e
+.text           0x00000000     0x127c
  *(.vectors)
  .vectors       0x00000000       0x98 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr51/crtusb1286.o
                 0x00000000                __vector_default
@@ -262,74 +262,74 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
                 0x00000262                setMotorRev
                 0x00000272                setMotorBrake
                 0x0000027e                setMotorCoast
- .text          0x0000028e      0x676 interrupts.o
+ .text          0x0000028e      0x650 interrupts.o
                 0x0000028e                pausedHandler
-                0x000002e8                vectorInterrupts
-                0x00000366                makeDecision
-                0x00000428                firstLaserHandler
-                0x00000458                metalHandler
-                0x00000482                secondLaserHandler
-                0x000004f8                exitHandler
-                0x00000668                shutdownHandler
-                0x00000684                __vector_1
-                0x000006e0                __vector_2
-                0x0000073c                __vector_3
-                0x0000078c                __vector_4
-                0x000007e8                __vector_5
-                0x00000846                __vector_6
-                0x000008a8                __vector_7
- .text          0x00000904      0x1a6 ConveyerBelt.o
-                0x00000904                main
- .text          0x00000aaa      0x100 metalqueue.o
-                0x00000aaa                initMetalQueue
-                0x00000acc                getMetalOffset
-                0x00000ae2                popMetal
-                0x00000b3a                newMetal
- .text          0x00000baa      0x136 ringbuffer.o
-                0x00000baa                initRingBuf
-                0x00000c08                getBufOffset
-                0x00000c1e                popBuf
-                0x00000c66                newRingBufItem
- .text          0x00000ce0      0x31c SevenSegmentDisplay.o
-                0x00000ce0                getPatFomHex
-                0x00000d6c                writePattern
-                0x00000da4                writeError
-                0x00000dfa                writeTotal
-                0x00000e42                writeAluminum
-                0x00000e8a                writeSteel
-                0x00000ed2                writeBlack
-                0x00000f1a                writeWhite
-                0x00000f62                writeDecInt
-                0x00000fa4                writeHexInt
- .text          0x00000ffc      0x1f2 stepper.o
-                0x00000ffc                initalizeStepper
-                0x00001024                stepTime
-                0x00001106                forwardSteps
-                0x00001136                reverseSteps
-                0x00001166                stepperMoveTo
- .text          0x000011ee       0x4e timer.o
-                0x000011ee                initializeTimer
-                0x000011fa                delaynms
- .text          0x0000123c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
- .text          0x0000123c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
- .text          0x0000123c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
- .text          0x0000123c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
- .text          0x0000123c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
-                0x0000123c                . = ALIGN (0x2)
+                0x000002ec                vectorInterrupts
+                0x0000036a                makeDecision
+                0x000003fe                firstLaserHandler
+                0x0000042e                metalHandler
+                0x00000458                secondLaserHandler
+                0x000004ce                exitHandler
+                0x00000642                shutdownHandler
+                0x0000065e                __vector_1
+                0x000006ba                __vector_2
+                0x00000716                __vector_3
+                0x00000766                __vector_4
+                0x000007c2                __vector_5
+                0x00000820                __vector_6
+                0x00000882                __vector_7
+ .text          0x000008de      0x1a6 ConveyerBelt.o
+                0x000008de                main
+ .text          0x00000a84      0x100 metalqueue.o
+                0x00000a84                initMetalQueue
+                0x00000aa6                getMetalOffset
+                0x00000abc                popMetal
+                0x00000b14                newMetal
+ .text          0x00000b84      0x136 ringbuffer.o
+                0x00000b84                initRingBuf
+                0x00000be2                getBufOffset
+                0x00000bf8                popBuf
+                0x00000c40                newRingBufItem
+ .text          0x00000cba      0x31c SevenSegmentDisplay.o
+                0x00000cba                getPatFomHex
+                0x00000d46                writePattern
+                0x00000d7e                writeError
+                0x00000dd4                writeTotal
+                0x00000e1c                writeAluminum
+                0x00000e64                writeSteel
+                0x00000eac                writeBlack
+                0x00000ef4                writeWhite
+                0x00000f3c                writeDecInt
+                0x00000f7e                writeHexInt
+ .text          0x00000fd6      0x206 stepper.o
+                0x00000fd6                initalizeStepper
+                0x00000ffe                stepTime
+                0x000010e0                forwardSteps
+                0x0000111a                reverseSteps
+                0x00001154                stepperMoveTo
+ .text          0x000011dc       0x4e timer.o
+                0x000011dc                initializeTimer
+                0x000011e8                delaynms
+ .text          0x0000122a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
+ .text          0x0000122a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
+ .text          0x0000122a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
+ .text          0x0000122a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
+ .text          0x0000122a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
+                0x0000122a                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x0000123c       0x26 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
-                0x0000123c                _div
-                0x0000123c                __divmodhi4
- .text.libgcc   0x00001262        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
- .text.libgcc   0x00001262        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
- .text.libgcc   0x00001262        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00001262       0x28 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
-                0x00001262                __udivmodhi4
-                0x0000128a                . = ALIGN (0x2)
+ .text.libgcc   0x0000122a       0x26 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
+                0x0000122a                _div
+                0x0000122a                __divmodhi4
+ .text.libgcc   0x00001250        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x00001250        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001250        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00001250       0x28 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
+                0x00001250                __udivmodhi4
+                0x00001278                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000128a        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
-                0x0000128a                _exit
-                0x0000128a                exit
+ .fini9         0x00001278        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
+                0x00001278                _exit
+                0x00001278                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -348,11 +348,11 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000128a        0x4 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
+ .fini0         0x00001278        0x4 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000128e                _etext = .
+                0x0000127c                _etext = .
 
-.data           0x00800100        0x4 load address 0x0000128e
+.data           0x00800100        0x4 load address 0x0000127c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr51/crtusb1286.o
@@ -431,8 +431,8 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
                 0x008001b4                steps
                 0x008001b6                hallLow
                 0x008001b7                PROVIDE (__bss_end, .)
-                0x0000128e                __data_load_start = LOADADDR (.data)
-                0x00001292                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000127c                __data_load_start = LOADADDR (.data)
+                0x00001280                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008001b7        0x0
                 0x008001b7                PROVIDE (__noinit_start, .)
@@ -561,22 +561,22 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
  .debug_abbrev  0x000007b2       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
  .debug_abbrev  0x000007c6       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
 
-.debug_line     0x00000000      0xca0
+.debug_line     0x00000000      0xc9f
  *(.debug_line)
  .debug_line    0x00000000      0x10e adc.o
  .debug_line    0x0000010e       0xff dcmotor.o
- .debug_line    0x0000020d      0x1e0 interrupts.o
- .debug_line    0x000003ed      0x136 ConveyerBelt.o
- .debug_line    0x00000523       0x7b metalqueue.o
- .debug_line    0x0000059e       0x8c ringbuffer.o
- .debug_line    0x0000062a      0x174 SevenSegmentDisplay.o
- .debug_line    0x0000079e      0x142 stepper.o
- .debug_line    0x000008e0       0xe1 timer.o
- .debug_line    0x000009c1       0x99 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
- .debug_line    0x00000a5a       0x88 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
- .debug_line    0x00000ae2       0x96 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
- .debug_line    0x00000b78       0x8e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
- .debug_line    0x00000c06       0x9a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
+ .debug_line    0x0000020d      0x1df interrupts.o
+ .debug_line    0x000003ec      0x136 ConveyerBelt.o
+ .debug_line    0x00000522       0x7b metalqueue.o
+ .debug_line    0x0000059d       0x8c ringbuffer.o
+ .debug_line    0x00000629      0x174 SevenSegmentDisplay.o
+ .debug_line    0x0000079d      0x142 stepper.o
+ .debug_line    0x000008df       0xe1 timer.o
+ .debug_line    0x000009c0       0x99 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_divmodhi4.o)
+ .debug_line    0x00000a59       0x88 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_exit.o)
+ .debug_line    0x00000ae1       0x96 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_copy_data.o)
+ .debug_line    0x00000b77       0x8e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_clear_bss.o)
+ .debug_line    0x00000c05       0x9a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1.95/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr51\libgcc.a(_udivmodhi4.o)
 
 .debug_frame    0x00000000      0x74c
  *(.debug_frame)
@@ -611,15 +611,15 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.1
  .debug_str     0x000005a1       0x60 timer.o
                                  0xe4 (size before relaxing)
 
-.debug_loc      0x00000000     0x10a3
+.debug_loc      0x00000000     0x107f
  *(.debug_loc)
  .debug_loc     0x00000000       0xf3 adc.o
- .debug_loc     0x000000f3      0x650 interrupts.o
- .debug_loc     0x00000743      0x102 metalqueue.o
- .debug_loc     0x00000845       0x76 ringbuffer.o
- .debug_loc     0x000008bb      0x5c9 SevenSegmentDisplay.o
- .debug_loc     0x00000e84      0x1d3 stepper.o
- .debug_loc     0x00001057       0x4c timer.o
+ .debug_loc     0x000000f3      0x62c interrupts.o
+ .debug_loc     0x0000071f      0x102 metalqueue.o
+ .debug_loc     0x00000821       0x76 ringbuffer.o
+ .debug_loc     0x00000897      0x5c9 SevenSegmentDisplay.o
+ .debug_loc     0x00000e60      0x1d3 stepper.o
+ .debug_loc     0x00001033       0x4c timer.o
 
 .debug_macinfo
  *(.debug_macinfo)

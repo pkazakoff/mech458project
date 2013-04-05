@@ -202,6 +202,7 @@ void exitHandler() {
 			//undefined item
 			writeError(0xF0);
 			pausedForUndef = 1;
+			setMotorBrake();
 			pausedHandler();
 			return;
 			break;
@@ -244,6 +245,7 @@ void pausedHandler() {
 		// see if the last item was undefined
 		if(pausedForUndef) {
 			popBuf();
+			setMotorFwd();
 		}
 	} else {
 		// store the motor state

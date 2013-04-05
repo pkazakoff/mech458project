@@ -5,8 +5,10 @@
  *  Author: Peter
  */ 
 
-#define STEEL_MAX 250
-#define STEEL_MIN 56
+/*#define STEEL_MAX 250
+#define STEEL_MIN 56*/
+#define STEEL_MAX 100
+#define STEEL_MIN 99
 #define ALUMINUM_MAX 54
 #define ALUMINUM_MIN 30
 #define BLACK_MAX 520
