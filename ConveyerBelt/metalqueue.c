@@ -27,8 +27,6 @@ void initMetalQueue() {
    Purpose: adds an item to the ring buffer and returns its index
    */
 int newMetal(int content) {
-	// if bottom is lagging behind top, reset bottom
-	if(metalCount==0) metalBottom = metalTop;
 	// this next line is for cases when queue is not empty
 	if(metalCount > 0) metalBottom = getMetalOffset(metalBottom, 1);
 	metalCount++;
@@ -43,7 +41,7 @@ int popMetal() {
 	// if the buffer is empty, break
 	if (metalCount == 0) return -1;
 	int content = metalQueue[metalTop];
-	metalTop = getMetalOffset(metalTop, 1);
+	if (metalCount>1) metalTop = getMetalOffset(metalTop, 1);
 	metalCount--;
 	return content;
 }

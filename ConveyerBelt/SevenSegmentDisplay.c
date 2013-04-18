@@ -124,6 +124,25 @@ void writeTotal(int count) {
 	writePattern(0b00011110);
 }
 
+/* void writeBelt(int count)
+   Purpose: displays "bELXX" on the 
+   display, where XX is the decimal
+   representation of the integer
+   */
+void writeBelt(int count) {
+	// write the count
+	for (int i=0; i < 2; i++) {
+		writePattern(getPatFomHex(count % 10));
+		count = count / 10;
+	}
+	// write "L"
+	writePattern(0b00011100);
+	// write "E"
+	writePattern(0b10011110);
+	// write "b"
+	writePattern(0b00111110);
+}
+
 
 /* void writeAluminum(int count)
    Purpose: displays "ALUXX" on the 

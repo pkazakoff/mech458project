@@ -46,10 +46,10 @@ void initRingBuf() {
    Purpose: adds an item to the ring buffer and returns its index
    */
 int newRingBufItem() {
-	// if bottom is lagging behind top, reset bottom
-	if(bufLength==0) ringBottom = ringTop;
 	// this next line is for cases when queue is not empty
-	if(bufLength > 0) ringBottom = getBufOffset(ringBottom, 1);
+	if(bufLength > 0) {
+		ringBottom = getBufOffset(ringBottom, 1);
+	}		
 	bufLength++;
 	ringBuf[ringBottom].minRefl = 1024;
 	ringBuf[ringBottom].reflSamples = 0;
@@ -64,8 +64,13 @@ int newRingBufItem() {
 void popBuf() {
 	// if the buffer is empty, break
 	if (bufLength == 0) return;
-	ringTop = getBufOffset(ringTop, 1);
-	bufLength--;
+	// case for length is 1
+	if(bufLength == 1) {
+		bufLength--;
+	} else {
+		ringTop = getBufOffset(ringTop, 1);
+		bufLength--;
+	}	
 	if((bufLength == 0) && (shutdown == 1)) {
 		shutdownHandler();
 	}

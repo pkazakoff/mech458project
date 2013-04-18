@@ -30,7 +30,7 @@ void vectorInterrupts() {
 	DDRE = DDRE & 0x0F;
 	
 	// INT0 - First Laser
-	// Falling-edge interrupt
+	// Rising-edge interrupt
 	EICRA |= _BV(ISC01);
 	EICRA &= ~(_BV(ISC00));
 	
@@ -76,25 +76,24 @@ void makeDecision(int index) {
 	//writeHexInt(ringBuf[index].avgRefl);
 	int refl = ringBuf[index].minRefl;
 	if(ringBuf[index].metal == 1) {
-		if((refl < STEEL_MAX) && (refl > STEEL_MIN)) {
+		if((refl <= STEEL_MAX) && (refl >= STEEL_MIN)) {
 			ringBuf[index].type = STEEL;
 			return;
 		}
-		if((refl < ALUMINUM_MAX) && (refl > ALUMINUM_MIN)) {
+		if((refl <= ALUMINUM_MAX) && (refl >= ALUMINUM_MIN)) {
 			ringBuf[index].type = ALUMINUM;
 			return;
 		}
 	} else {	
-		if((refl < BLACK_MAX) && (refl > BLACK_MIN)) {
+		if((refl <= BLACK_MAX) && (refl >= BLACK_MIN)) {
 			ringBuf[index].type = BLACK;
 			return;
 		}
-		if((refl < WHITE_MAX) && (refl > WHITE_MIN)) {
+		if((refl <= WHITE_MAX) && (refl >= WHITE_MIN)) {
 			ringBuf[index].type = WHITE;
 			return;
 		}
-	}
-	writeHexInt(0xEF);	
+	}	
 	return;
 }
 
@@ -130,17 +129,19 @@ void metalHandler() {
 void secondLaserHandler() {
 	if(ADC_is_running == 1) {
 		// debounce
-		Ignore_ADC_samples = 1;
-		delaynms(DEBOUNCE_DELAY);
-		Ignore_ADC_samples = 0;
-		if((PIND & 0b00000100) == 0b100) return;
+		for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+			delaynus(DEBOUNCE_DELAY_US);
+			if((PIND & (1 << 2)) != 0) return;
+		}
 		// stop ADC
 		stopADC();
 		makeDecision(currentRefl);
 		// TODO
 	} else {
-		delaynms(DEBOUNCE_DELAY);
-		if((PIND & 0b00000100) == 0) return;
+		for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+			delaynus(DEBOUNCE_DELAY_US);
+			if((PIND & (1 << 2)) == 0) return;
+		}
 		if(metalCount == 0) {
 			currentRefl = currentMetal;
 			currentMetal = -1;
@@ -198,13 +199,21 @@ void exitHandler() {
 				return;
 			}
 			break;
-		default:
+		case UNDEF:
 			//undefined item
 			writeError(0xF0);
-			pausedForUndef = 1;
-			setMotorBrake();
-			pausedHandler();
-			return;
+			if ((PINE & 0b1) == 0b1) {
+				// ignore error mode, just send 'er off
+				popBuf();
+				return;
+			} else {
+				pausedForUndef = 1;
+				setMotorBrake();
+				pausedHandler();
+				return;
+			}			
+			break;
+		default:
 			break;
 	}			
 	// we got here, so we're not at the correct position yet.
@@ -246,6 +255,7 @@ void pausedHandler() {
 		if(pausedForUndef) {
 			popBuf();
 			setMotorFwd();
+			pausedForUndef = 0;
 		}
 	} else {
 		// store the motor state
@@ -260,8 +270,11 @@ void pausedHandler() {
    for FIRST LASER
    */
 ISR(INT0_vect){
-	delaynms(DEBOUNCE_DELAY);
-	if((PIND & 0b1) == 0) firstLaserHandler();
+	for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+		delaynus(DEBOUNCE_DELAY_US);
+		if ((PIND & 0b1) != 0) return;
+	}
+	firstLaserHandler();
 }
 
 /* ISR(INT1_vect)
@@ -269,8 +282,11 @@ ISR(INT0_vect){
    for INDUCTIVE SENSOR
    */
 ISR(INT1_vect){
-	delaynms(DEBOUNCE_DELAY);
-	if((PIND & (1 << 1)) == 0) metalHandler();
+	for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+		delaynus(DEBOUNCE_DELAY_US);
+		if((PIND & (1 << 1)) != 0) return;
+	}
+	metalHandler();
 }
 
 /* ISR(INT2_vect)
@@ -287,8 +303,11 @@ ISR(INT2_vect){
    for EXIT SENSOR
    */
 ISR(INT3_vect) {
-	delaynms(DEBOUNCE_DELAY);
-	if((PIND & (1 << 3)) == 0) exitHandler();
+	for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+		delaynus(DEBOUNCE_DELAY_US);
+		if((PIND & (1 << 3)) != 0) return;
+	}
+	exitHandler();
 }
 
 /* ISR(INT4_vect)
@@ -296,8 +315,11 @@ ISR(INT3_vect) {
    for HALL EFFECT SENSOR
    */
 ISR(INT4_vect) {
-	delaynms(DEBOUNCE_DELAY);
-	if((PINE & (1 << 4)) == 0) hallLow = 1;
+	for (int i=0; i<DEBOUNCE_SAMPLES; i++) {
+		delaynus(DEBOUNCE_DELAY_US);
+		if((PINE & (1 << 4)) != 0) return;
+	}
+	hallLow = 1;
 }
 
 /* ISR(INT5_vect)
@@ -308,7 +330,6 @@ ISR(INT5_vect) {
 	delaynms(BUTTON_DEBOUNCE_DELAY);
 	if((PINE & (1 << 5)) == 0) {
 		shutdown = 1;
-		shutdownHandler();
 	}
 }
 

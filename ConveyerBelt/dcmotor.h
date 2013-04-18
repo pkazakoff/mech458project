@@ -5,7 +5,7 @@
  *  Author: Peter
  */ 
 
-#define MOTOR_DEF_SPEED 0xBF
+#define MOTOR_DEF_SPEED 0x9F
 #define MOTOR_BITMASK 0xF0
 #define MOTOR_FWD_PATTERN 0b00001000
 #define MOTOR_REV_PATTERN 0b00000001

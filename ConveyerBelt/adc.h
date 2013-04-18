@@ -5,12 +5,11 @@
  *  Author: Peter
  */ 
 
-#define REFL_MIN 50
+#define REFL_MIN 1
 #define REFL_MAX 1024
-#define REFL_MAX_SAMPLES 200
+#define REFL_MAX_SAMPLES 1000
 
 extern char ADC_is_running;
-extern char Ignore_ADC_samples;
 
 void setupADC();
 void startADC();

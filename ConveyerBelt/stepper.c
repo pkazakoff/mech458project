@@ -22,7 +22,12 @@ int currentState;
 int steps;
 // variable for when hall effect sensor goes low
 char hallLow;
-
+// delay modifier for acceleration
+int modifier;
+// count current steps in direction for acceleration
+int currentSteps;
+// limit when stepper should stop accelerating
+int accelLimit;
 
 // set initial values for stepper
 void initalizeStepper() {
@@ -42,6 +47,7 @@ void stepTime(int stepTime, char direction) {
 		if (currentState==4) currentState = 0;
 		PORTA = (PORTA & 0b11000000) | states[currentState];
 		steps++;
+		currentSteps++;
 		if(hallLow == 1) {
 			steps = 0;
 			hallLow = 0;
@@ -52,6 +58,7 @@ void stepTime(int stepTime, char direction) {
 		if (currentState==-1) currentState = 3;
 		PORTA = (PORTA & 0b11000000) | states[currentState];
 		steps--;
+		currentSteps++;
 		if(steps < 0) steps = 199;
 		if(hallLow == 1) {
 			steps = 0;
@@ -62,18 +69,36 @@ void stepTime(int stepTime, char direction) {
 
 // function to calculate how stepper should rotate
 void stepperMoveTo(int nextPosition){
+	currentSteps = 0;
+	modifier = 0;
 	if (steps == nextPosition) return;
 	if(forwardSteps(steps, nextPosition) < reverseSteps(steps, nextPosition)) {
+		accelLimit = KNEE_NUMERATOR * forwardSteps(steps,nextPosition) / KNEE_DENOMINATOR;
 		while(steps != nextPosition) {
-			stepTime(15,0);
+			stepTime((STEP_BASE_SPEED + modifier),0);
+			writeDecInt(abs(modifier));
+			// decrease delay to accelerate stepper
+			if( ((currentSteps % ACCEL_INTERVAL) == 0) && (currentSteps < accelLimit) && (modifier > MODIFIER_LOWER_LIMIT)) {
+				modifier--;
+			}
+			// increase delay to decelerate stepper, keep total delay less than 16 ms
+			if( (currentSteps >= accelLimit) && (modifier < MODIFIER_UPPER_LIMIT))	modifier++;
 		}
 	}
 	
 	else {
-			while(steps != nextPosition) {
-				stepTime(15,1);
-			}			
+		accelLimit = KNEE_NUMERATOR * reverseSteps(steps,nextPosition) / KNEE_DENOMINATOR;
+		while(steps != nextPosition) {
+			stepTime((STEP_BASE_SPEED + modifier),1);
+			writeDecInt(abs(modifier));
+			// decrease delay to accelerate stepper
+			if( ((currentSteps % ACCEL_INTERVAL) == 0) && (currentSteps < accelLimit) && (modifier > MODIFIER_LOWER_LIMIT)) {
+				modifier--;
+			}
+			// increase delay to decelerate stepper, keep total delay less than 16 ms
+			if( (currentSteps >= accelLimit) && (modifier < MODIFIER_UPPER_LIMIT))	modifier++;
 		}
+	}
 	
 	if(motorWaitForStepper == 1) {
 		// start the motor back up
@@ -83,7 +108,8 @@ void stepperMoveTo(int nextPosition){
 		// fire the exit logic again
 		exitHandler();
 	}
-}
+		
+}	
 
 
 

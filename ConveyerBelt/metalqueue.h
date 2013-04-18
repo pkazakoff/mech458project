@@ -5,7 +5,7 @@
  *  Author: Peter
  */ 
 
-#define METAL_QUEUE_SIZE 40
+#define METAL_QUEUE_SIZE 100
 
 extern int metalQueue[];
 extern int metalTop;

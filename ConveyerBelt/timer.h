@@ -10,3 +10,4 @@
 
 void initializeTimer();
 void delaynms(int n);
+void delaynus(int n);

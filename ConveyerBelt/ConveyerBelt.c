@@ -26,8 +26,6 @@ int main(void)
 	// Initialize hardware timer
 	initializeTimer();
 	
-	delaynms(1000);
-	
 	writeHexInt(0x50);
 	
 	// Initialize ring buffer
@@ -73,9 +71,29 @@ int main(void)
 	setMotorFwd();
 	
 	while(1) {
+		// ramp down
+		if (shutdown) {
+			delaynms(5000);
+			shutdownHandler();
+		}
 		// pause if we need to
 		while(inPause == 1) {
+			writeDecInt(ringBuf[ringTop].minRefl);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeDecInt(ringBuf[ringTop].metal);
+			delaynms(2000);
+			if(inPause == 0) break;
 			writeTotal(totalSorted);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeBelt(bufLength);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeDecInt(ringTop);
+			delaynms(2000);
+			if(inPause == 0) break;
+			writeDecInt(ringBottom);
 			delaynms(2000);
 			if(inPause == 0) break;
 			writeWhite(whiteSorted);

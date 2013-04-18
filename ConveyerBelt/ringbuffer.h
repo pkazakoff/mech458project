@@ -6,7 +6,7 @@
  */
 
 // Number of elements in ring buffer
-#define RING_BUF_SIZE 10
+#define RING_BUF_SIZE 100
 
 // define types
 typedef enum itemType {

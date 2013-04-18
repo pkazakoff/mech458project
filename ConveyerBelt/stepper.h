@@ -11,6 +11,13 @@
 #define WHITE_POSITION 100
 #define STEEL_POSITION 150
 
+#define STEP_BASE_SPEED 15
+#define ACCEL_INTERVAL 2
+#define MODIFIER_LOWER_LIMIT 0
+#define MODIFIER_UPPER_LIMIT 0
+#define KNEE_NUMERATOR 7
+#define KNEE_DENOMINATOR 8
+
 extern char hallLow;
 extern int steps;
 
